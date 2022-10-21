@@ -33,7 +33,7 @@ function Sort() {
           onClick={() => {
             setOpen(!open);
           }}>
-          {menu[selected]}
+          {!selected ? menu[0] : menu[selected]}
         </span>
       </div>
       {open && (
