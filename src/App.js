@@ -16,7 +16,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/react-pizza" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route path="/react-pizza/cart" element={<Cart />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
           {/* <NotFoundBlock /> */}
