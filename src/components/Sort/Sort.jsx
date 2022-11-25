@@ -14,6 +14,7 @@ export const sortList = [
 function Sort() {
   const dispatch = useDispatch();
   const sort = useSelector((state) => state.filter.sort);
+  const sortRef = React.useRef();
 
   const [open, setOpen] = React.useState(false);
 
@@ -22,8 +23,21 @@ function Sort() {
     setOpen(false);
   };
 
+  // Закрытие попап при нажатии на область вне попап
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.path.includes(sortRef.current)) {
+        setOpen(false);
+      }
+    };
+    document.body.addEventListener('click', handleClickOutside);
+    return () => {
+      document.body.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="sort">
+    <div ref={sortRef} className="sort">
       <div
         onClick={() => {
           setOpen(!open);
