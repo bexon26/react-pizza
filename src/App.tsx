@@ -20,11 +20,11 @@ function App() {
 
     // <div className="container">
     <Routes>
-      <Route to="/react-pizza/" element={<MainLayout />}>
-        <Route path="/react-pizza" element={<Home />} />
-        <Route path="/react-pizza/cart" element={<Cart />} />
-        <Route path="/react-pizza/pizza/:id" element={<FullPizza />} />
-        <Route path="/*" element={<NotFound />} />
+      <Route path="/react-pizza/" element={<MainLayout />}>
+        <Route path="" element={<Home />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="pizza/:id" element={<FullPizza />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
     // {/* <NotFoundBlock /> */}

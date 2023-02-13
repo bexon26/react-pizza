@@ -10,14 +10,14 @@ import styles from './Search.module.scss';
 
 export const Search = () => {
   const dispatch = useDispatch();
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = React.useState<string>('');
 
-  const inputRef = React.useRef();
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   const onClickClear = () => {
     dispatch(setSearchValue(''))
     setValue('');
-    inputRef.current.focus();
+    inputRef.current?.focus();
   };
   // отложенная функция для уменьшения запросов на сервер
   const updateSearchValue = React.useCallback(
@@ -27,11 +27,13 @@ export const Search = () => {
     [],
   );
 
-  const onChangeInput = (event) => {
+  const onChangeInput = (event:any) => {
 
     setValue(event.target.value);
     updateSearchValue(event.target.value);
   };
+
+  
 
   return (
     <div className={styles.root}>

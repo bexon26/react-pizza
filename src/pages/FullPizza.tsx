@@ -3,8 +3,12 @@ import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 
 
-const FullPizza = () => {
-   const [pizza, setPizza] = React.useState();
+const FullPizza: React.FC = () => {
+   const [pizza, setPizza] = React.useState<{
+      imageUrl: string;
+      title: string;
+      price: number;
+   }>();
    const { id } = useParams();
    const navigate = useNavigate();
 
@@ -23,7 +27,7 @@ const FullPizza = () => {
       fetchPizza();
    }, [])
    if (!pizza) {
-      return 'Загрузка ...'
+      return <>'Загрузка ...'</>
    }
 
    return (

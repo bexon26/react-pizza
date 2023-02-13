@@ -9,12 +9,12 @@ import Sort, { sortList } from '../components/Sort/Sort';
 import PizzaBlock from '../components/PizzaBlock/PizzaBlock';
 import Skeleton from '../components/Skeleton/Skeleton';
 import Pagination from '../components/Pagination';
-import { SearchContext } from '../App';
+
 
 import { selectFilter, setCategoryId, setCurrentPage, setFilters } from '../redux/slices/filterSlice';
 import { fetchPizzas, selectPizzaData } from '../redux/slices/pizzaSlice';
 
-function Home() {
+const Home:React.FC = () =>{
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isSearch = React.useRef(false);
@@ -29,12 +29,12 @@ function Home() {
 
 
 
-  const onChangeCategory = (id) => {
-    dispatch(setCategoryId(id));
+  const onChangeCategory = (idx:number) => {
+    dispatch(setCategoryId(idx));
   };
 
-  const onChangePage = (number) => {
-    dispatch(setCurrentPage(number));
+  const onChangePage = (page:number) => {
+    dispatch(setCurrentPage(page));
   };
 
   const getPizzas = async () => {
@@ -46,7 +46,9 @@ function Home() {
 
 
 
-    dispatch(fetchPizzas({
+    dispatch(
+      //@ts-ignore
+      fetchPizzas({
       order, sortBy, category, search, currentPage
     }));
 
@@ -86,7 +88,7 @@ function Home() {
     isSearch.current = false;
   }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
-  const pizzas = items.map((obj) => (
+  const pizzas = items.map((obj:any) => (
     <Link key={obj.id} to={`pizza/${obj.id}`}><PizzaBlock
 
       id={obj.id}
@@ -109,7 +111,7 @@ function Home() {
       <h2 className="content__title">Все пиццы</h2>
       {status === 'error' ? (
         <div className='content__error-info'>
-          <h2>Произошла ошибка<icon>😕</icon></h2>
+          <h2>Произошла ошибка<span>😕</span></h2>
           <p>К сожалению, не удалось получить пиццы. Попробуйте повторить попытку позже.</p>
         </div>
       ) : (<div className="content__items">{status === 'loading' ? skeletons : pizzas}</div>
