@@ -221,11 +221,30 @@ body {
             display: none;
           }
         }
+        &--disabled{
+          opacity: 0.4;
+          border-color: #8d8d8d;
+          &:active {
+            transform: none;
+          }
+          &:hover {
+            background-color: transparent;
+            svg path {
+              fill: #8d8d8d;
+              
+            }
+          }
+          svg path {
+            fill: #8d8d8d;
+            
+          }
+        }
       }
 
       b {
         font-size: 22px;
       }
+      
     }
 
     &-price {

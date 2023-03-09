@@ -11,12 +11,14 @@ import Skeleton from '../components/Skeleton/Skeleton';
 import Pagination from '../components/Pagination';
 
 
-import { selectFilter, setCategoryId, setCurrentPage, setFilters } from '../redux/slices/filterSlice';
-import { fetchPizzas, selectPizzaData } from '../redux/slices/pizzaSlice';
+import { FilterSliceState, selectFilter, setCategoryId, setCurrentPage, setFilters } from '../redux/slices/filterSlice';
+import { fetchPizzas, SearchPizzaParams, selectPizzaData } from '../redux/slices/pizzaSlice';
+import { useAppDispatch } from '../redux/store';
+
 
 const Home:React.FC = () =>{
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
 
@@ -29,9 +31,9 @@ const Home:React.FC = () =>{
 
 
 
-  const onChangeCategory = (idx:number) => {
+  const onChangeCategory = React.useCallback((idx:number) => {
     dispatch(setCategoryId(idx));
-  };
+  },[])
 
   const onChangePage = (page:number) => {
     dispatch(setCurrentPage(page));
@@ -49,7 +51,11 @@ const Home:React.FC = () =>{
     dispatch(
       //@ts-ignore
       fetchPizzas({
-      order, sortBy, category, search, currentPage
+        order, 
+        sortBy, 
+        category, 
+        search, 
+        currentPage: String(currentPage)
     }));
 
 
@@ -57,27 +63,38 @@ const Home:React.FC = () =>{
   };
 
   // Если изменили параметры и был первый рендер
-  React.useEffect(() => {
-    if (isMounted.current) {
-      const queryString = qs.stringify({
-        sortProperty: sort.sortProperty,
-        categoryId,
-        currentPage,
-      });
-      navigate(`?${queryString}`);
-    }
-    isMounted.current = true;
-  }, [categoryId, sort.sortProperty, currentPage]);
+  // React.useEffect(() => {
+  //   if (isMounted.current) {
+  //     const queryString = qs.stringify({
+  //       sortProperty: sort.sortProperty,
+  //       categoryId,
+  //       currentPage,
+  //     });
+     
+
+  //     navigate(`?${queryString}`);
+  //   }
+  //   if (!window.location.search) {
+  //     dispatch(fetchPizzas({}))
+  //   }
+  //   isMounted.current = true;
+  // }, [categoryId, sort.sortProperty, currentPage]);
 
   //Если был первый рендер, то проверяем URL параметры и сохраняем в Redux
-  React.useEffect(() => {
-    if (window.location.search) {
-      const params = qs.parse(window.location.search.substring(1));
-      const sort = sortList.find((obj) => obj.sortProperty === params.sortProperty);
-      dispatch(setFilters({ ...params, sort }));
-      isSearch.current = true;
-    }
-  }, []);
+  // React.useEffect(() => {
+  //   if (window.location.search) {
+  //     const params = qs.parse(window.location.search.substring(1)) as unknown as SearchPizzaParams;
+  //     const sort = sortList.find((obj) => obj.sortProperty === params.sortBy);
+      
+  //     dispatch(setFilters({
+  //       searchValue: params.search,
+  //       categoryId:Number(params.category),
+  //       currentPage:Number(params.currentPage),
+  //       sort: sort || sortList[0]
+  //     }));
+  //     isSearch.current = true;
+  //   }
+  // }, []);
 
   // Если был первый рендер, то запрашиваем пиццы
   React.useEffect(() => {
@@ -89,15 +106,15 @@ const Home:React.FC = () =>{
   }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
   const pizzas = items.map((obj:any) => (
-    <Link key={obj.id} to={`pizza/${obj.id}`}><PizzaBlock
-
+    <PizzaBlock
+      key = {obj.id}
       id={obj.id}
       title={obj.title}
       price={obj.price}
       image={obj.imageUrl}
       sizes={obj.sizes}
       types={obj.types}
-    /></Link>
+    />
   ));
 
   const skeletons = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
@@ -106,7 +123,7 @@ const Home:React.FC = () =>{
     <div className="container">
       <div className="content__top">
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
-        <Sort />
+        <Sort value={sort}/>
       </div>
       <h2 className="content__title">Все пиццы</h2>
       {status === 'error' ? (
