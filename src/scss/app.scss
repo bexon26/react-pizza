@@ -1,7 +1,7 @@
-@import 'variables';
-@import 'libs/normalize';
+@import "variables";
+@import "libs/normalize";
 
-@import 'components/all';
+@import "components/all";
 
 body {
   background-color: $background;
@@ -11,6 +11,7 @@ body {
   width: calc(100vw - 100px);
   height: 100%;
   background-color: #fff;
+  background-image: url(../assets/img/bg.png);
   margin: 50px auto;
   border-radius: 10px;
   max-width: 1400px;
@@ -84,7 +85,7 @@ body {
       }
     }
   }
-  &__error-info{
+  &__error-info {
     margin: 100px auto;
     max-width: 520px;
     text-align: center;
@@ -93,7 +94,7 @@ body {
       font-weight: 700;
       margin-bottom: 10px;
     }
-    p{
+    p {
       font-size: 20px;
     }
   }
@@ -221,7 +222,7 @@ body {
             display: none;
           }
         }
-        &--disabled{
+        &--disabled {
           opacity: 0.4;
           border-color: #8d8d8d;
           &:active {
@@ -231,12 +232,10 @@ body {
             background-color: transparent;
             svg path {
               fill: #8d8d8d;
-              
             }
           }
           svg path {
             fill: #8d8d8d;
-            
           }
         }
       }
@@ -244,7 +243,6 @@ body {
       b {
         font-size: 22px;
       }
-      
     }
 
     &-price {
