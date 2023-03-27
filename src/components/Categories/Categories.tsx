@@ -5,6 +5,7 @@ type CategoriesProps = {
   onChangeCategory: (idx: number) => void;
 };
 const categories = [
+  { name: "Все", image: "" },
   { name: "Салаты", image: "🥗" },
   { name: "Горячее", image: "🍲" },
   { name: "Супы", image: "🥘" },

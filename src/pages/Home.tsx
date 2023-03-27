@@ -114,10 +114,10 @@ const Home:React.FC = () =>{
       id={obj.id}
       title={obj.title}
       description={obj.description}
+      weight={obj.weight}
       price={obj.price}
       image={obj.imageUrl}
-      sizes={obj.sizes}
-      types={obj.types}
+     
     />
   ));
 

@@ -1,10 +1,11 @@
 export type Pizza = {
    id:string; 
-   title:string; 
+   title:string;
+   description: string; 
+   weight:number;
    price:number; 
    image:string; 
-   sizes:number[]; 
-   types:number[];
+
  }
  
  export enum Status {
