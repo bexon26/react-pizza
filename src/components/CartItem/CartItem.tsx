@@ -6,12 +6,12 @@ import { CartItem } from '../../redux/cart/types';
 
 
 type CartItemProps = {
-  id: string;  title: string; type:string; size:number; price:number; count:number; image:string;
+  id: string;  title: string; description:string; type:string; size:number; price:number; count:number; image:string;
 }
 
 
 
-export const CartItemBlock: React.FC<CartItemProps> = ({ id, title, type, size, price, count, image }) => {
+export const CartItemBlock: React.FC<CartItemProps> = ({ id, title, description, type, size, price, count, image }) => {
   const dispatch = useDispatch();
   const onClickPlus = () => {
     dispatch(addItem({id} as CartItem));
@@ -32,6 +32,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({ id, title, type, size, 
       </div>
       <div className="cart__item-info">
         <h3>{title}</h3>
+        
         <p>
           {type}, {size} см.
         </p>

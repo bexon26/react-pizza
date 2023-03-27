@@ -9,13 +9,14 @@ const typeNames = ['тонкое', 'традиционное'];
 
 type PizzaBlockProps = {
   id:string; 
-  title:string; 
+  title:string;
+  description: string; 
   price:number; 
   image:string; 
   sizes:number[]; 
   types:number[];
 }
-const PizzaBlock : React.FC<PizzaBlockProps> = ({ id, title, price, image, sizes, types}) =>{
+const PizzaBlock : React.FC<PizzaBlockProps> = ({ id, title, description, price, image, sizes, types}) =>{
 
   const dispatch = useDispatch();
   const cartItem = useSelector(selectCartItemById(id));
@@ -28,6 +29,7 @@ const PizzaBlock : React.FC<PizzaBlockProps> = ({ id, title, price, image, sizes
     const item : CartItem = {
       id,
       title,
+      description,
       price,
       image,
       type: typeNames[activeType],
@@ -43,6 +45,8 @@ const PizzaBlock : React.FC<PizzaBlockProps> = ({ id, title, price, image, sizes
       <Link key={id} to={`pizza/${id}`}>
         <img className="pizza-block__image" src={image} alt="Pizza" />
         <h4 className="pizza-block__title">{title}</h4>
+        <p className='pizza-block__description'>тесто дрожжевое, соус д/ пиццы, сыр Моцарелла, говядина вырезка, филей в/к, свинина вырезка, огурцы консервированные, лук, соус фирменный, зелень</p>
+        <p className='pizza-block__description'>{description}</p>
       </Link>
         <div className="pizza-block__selector">
           <ul>
