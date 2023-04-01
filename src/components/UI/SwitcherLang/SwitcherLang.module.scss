@@ -4,8 +4,8 @@
   left: 50%;
   transform: translate(0, -50%);
 }
-.select_img{
-    border: 1px solid #7b7b7b;
+.select_img {
+  border: 1px solid #7b7b7b;
 }
 
 .select_lang {
@@ -17,7 +17,6 @@
   -ms-overflow-style: none; /* IE 10+ */
   overflow: hidden;
   background: rgba(255, 255, 255, 0.5);
-  
 }
 
 .select_lang > ::-webkit-scrollbar {
@@ -61,7 +60,7 @@
 }
 
 .select_lang .options .option label {
-  display: none;
+  display: block;
 }
 
 .select_lang .options .option input {

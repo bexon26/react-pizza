@@ -19,11 +19,11 @@ const SwitcherLang = () => {
               type="radio"
               name="flag"
               id="france"
-              checked
+              
               onClick={() => {
                 $("#france").addClass("active");
-                $("#germany, #unitedKingdom").removeClass("active");
-                $("#lang1, #lang3").toggle("slow", function () {});
+                $("#unitedKingdom").removeClass("active");
+                $("#lang3").toggle("slow", function () {});
                 $(".select-lang").attr("style", "height:30px");
                 changeLanguage("ru")
               }}
@@ -43,8 +43,8 @@ const SwitcherLang = () => {
               id="unitedKingdom"
               onClick={() => {
                 $("#unitedKingdom").addClass("active");
-                $("#germany, #france").removeClass("active");
-                $("#lang1, #lang2").toggle("slow", function () {});
+                $("#france").removeClass("active");
+                $("#lang2").toggle("slow", function () {});
                 $(".select-lang").attr("style", "height:30px");
                 changeLanguage("en")
               }}
