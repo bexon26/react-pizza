@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+
 
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
@@ -10,20 +10,17 @@ import NotFound from "./pages/NotFound";
 
 import "./scss/app.scss";
 import MainLayout from "./components/layouts/MainLayout";
+import { useTranslation } from "react-i18next";
 
 function App() {
-  const { t, i18n } = useTranslation();
 
-  const changeLanguage = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+
+  
 
   return (
     // <div className="container">
     <>
-      <button type="button" onClick={() => changeLanguage("en")}>EN</button>
-      <button type="button" onClick={() => changeLanguage("ru")}>RU</button>
-      <div>{t("text")}</div>
+      
       <Routes>
         <Route path="/react-pizza/" element={<MainLayout />}>
           <Route path="" element={<Home />} />

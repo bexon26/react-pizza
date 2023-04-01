@@ -1,0 +1,86 @@
+#country-select {
+  position: relative;
+  top: 10.5rem;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+.select_img{
+    border: 1px solid #7b7b7b;
+}
+
+.select_lang {
+  width: 60px;
+  height: 32px;
+  line-height: 22px;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  
+}
+
+.select_lang > ::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+.select_lang .options {
+  background: transparent !important;
+}
+// .select_lang::after {
+//   content: "▼";
+//   font-size: 0.7em;
+//   position: absolute;
+//   top: 50%;
+//   right: 10px;
+//   transform: translate(0, -50%);
+//   color: white;
+// }
+
+// .select_lang:hover::after {
+//   top: 15%;
+//   transform: translate(0, -15%);
+// }
+
+.select_lang:hover {
+  overflow: visible;
+}
+.select_lang:hover .options .option {
+  padding: 0 0 5px 0;
+}
+.select_lang:hover .options .option:last-child {
+  padding: 0 0 0 0;
+}
+
+.select_lang:hover .options .option label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.select_lang .options .option img {
+  width: 3.25rem;
+}
+
+.select_lang .options .option label {
+  display: none;
+}
+
+.select_lang .options .option input {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  float: left;
+  display: inline-block;
+  position: absolute;
+  visibility: hidden;
+}
+
+.select_lang .options .option input:checked + label {
+  display: block;
+  width: 100%;
+}
+
+.select_lang:hover .options .option input + label {
+  display: block;
+}

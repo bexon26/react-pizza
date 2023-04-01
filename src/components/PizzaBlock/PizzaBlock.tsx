@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { selectCartItemById } from "../../redux/cart/selectors";
 import { addItem } from "../../redux/cart/slice";
 import { CartItem } from "../../redux/cart/types";
-
-const typeNames = ["тонкое", "традиционное"];
+import { useTranslation } from "react-i18next";
 
 type PizzaBlockProps = {
   id: string;
@@ -43,13 +42,15 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
     dispatch(addItem(item));
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="pizza-block-wrapper">
       <div className="pizza-block">
         <Link key={id} to={`pizza/${id}`}>
           <img className="pizza-block__image" src={image} />
-          <h4 className="pizza-block__title">{title}</h4>
-          <p className="pizza-block__description">{description}</p>
+          <h4 className="pizza-block__title">{t(`${title}.title`)}</h4>
+          <p className="pizza-block__description">{t(`${title}.description`)}</p>
           <p className="pizza-block__weigth">Вес: {weight} гр.</p>
         </Link>
         

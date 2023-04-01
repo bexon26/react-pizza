@@ -1,30 +1,34 @@
-import logoSvg from '../../assets/img/pizza-logo.svg';
-import { Link, useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import Search from '../Search/input';
+import logoSvg from "../../assets/img/pizza-logo.svg";
+import { Link, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Search from "../Search/input";
 
-import React from 'react';
-import { selectCart } from '../../redux/cart/selectors';
+import React from "react";
+import { selectCart } from "../../redux/cart/selectors";
+import SwitcherLang from "../UI/SwitcherLang/SwitcherLang";
 
 function Header() {
   const { items, totalPrice } = useSelector(selectCart);
-  const location = useLocation() // Хук 
+  const location = useLocation(); // Хук
 
-  const isMounted = React.useRef(false)
-  const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
+  const isMounted = React.useRef(false);
+  const totalCount = items.reduce(
+    (sum: number, item: any) => sum + item.count,
+    0
+  );
 
-  React.useEffect(()=>{
-    if(isMounted.current){
-      const json = JSON.stringify(items)
-      localStorage.setItem('cart', json)
-      console.log(json)
-
+  React.useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(items);
+      localStorage.setItem("cart", json);
+      console.log(json);
     }
     isMounted.current = true;
-  },[items])
+  }, [items]);
 
   return (
     <div className="header">
+     
       <div className="container">
         <Link to="/react-pizza">
           <div className="header__logo">
@@ -35,8 +39,11 @@ function Header() {
             </div>
           </div>
         </Link>
-        <Search /><div className="header__cart">
-          {location.pathname !== '/react-pizza/cart' && (
+        
+        <Search />
+        <SwitcherLang />
+        <div className="header__cart">
+          {location.pathname !== "/react-pizza/cart" && (
             <Link to="/react-pizza/cart" className="button button--cart">
               <span>{totalPrice} ₽</span>
               <div className="button__delimiter"></div>
@@ -45,7 +52,8 @@ function Header() {
                 height="18"
                 viewBox="0 0 18 18"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M6.33333 16.3333C7.06971 16.3333 7.66667 15.7364 7.66667 15C7.66667 14.2636 7.06971 13.6667 6.33333 13.6667C5.59695 13.6667 5 14.2636 5 15C5 15.7364 5.59695 16.3333 6.33333 16.3333Z"
                   stroke="white"

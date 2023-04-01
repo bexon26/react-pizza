@@ -1,3 +1,47 @@
 {
-   "text":"Some text"
+  "Шоколадный торт": {
+    "title": "Chocolate cake",
+    "description": "flour, sugar, egg, milk, cacao, butter"
+  },
+  "Маффин с изюмом": {
+    "title": "Muffins with raisins",
+    "description": "flour, sugar, egg, milk, cacao, butter, raisins"
+  },
+  "Олальи с сиропом": {
+    "title": "Pancakes with syrop",
+    "description": "rayeb, flour, egg, syrup"
+  },
+  "Фаршированные перцы": {
+    "title": "stuffed pepper ",
+    "description": "pepper, beef, rice, carrot, sour cream"
+  },
+  "Котлеты из говядины": {
+    "title": "Beef cutlets",
+    "description": "beef, chicken, onion, egg"
+  },
+  "Куриные котлеты": {
+    "title": "Cicken cultlets",
+    "description": "chicken, onion, egg"
+  },
+  "Драники": { "title": "Potato pancake", "description": "potato, sour cream" },
+  "Драники с мясом": {
+    "title": "Potato pancake with meat",
+    "description": "potato, chicken, onion, sour cream"
+  },
+  "Брокольный суп-пюре": {
+    "title": "Broccoli soup",
+    "description": "potato, broccoli, onion, carrot, cooking cream"
+  },
+  "Куриный суп с фрикаделькамми": {
+    "title": "Chicken soup with meatballs",
+    "description": "chicken, rice, potato, macaroni, onion, carrot"
+  },
+  "Красный борщ": {
+    "title": "Borshch",
+    "description": "beef, beet, potato, onion, carrot, sour cream"
+  },
+  "Салат c кукурузой": {
+    "title": "Corn salad",
+    "description": "corn, rice,egg, chicken, cucumber, mayonese"
+  }
 }
