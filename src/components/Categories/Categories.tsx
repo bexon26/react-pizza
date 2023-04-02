@@ -1,9 +1,14 @@
+
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 type CategoriesProps = {
-  value: number;
+  value: {};
   onChangeCategory: (idx: number) => void;
 };
+
+
+
 const categories = [
   { name: "Все", image: "" },
   { name: "Салаты", image: "🥗" },
@@ -16,6 +21,7 @@ const categories = [
 
 const Categories: React.FC<CategoriesProps> = React.memo(
   ({ value, onChangeCategory }) => {
+    const { t, i18n } = useTranslation();
     return (
       <div className="categories">
         <ul>
@@ -27,7 +33,7 @@ const Categories: React.FC<CategoriesProps> = React.memo(
               style={{ display: "flex", columnGap: "10px" }}
             >
               <div>{image}</div>
-              <div>{name}</div>
+              <div>{(t(`categories.${[i]}`))}</div>
             </li>
           ))}
         </ul>

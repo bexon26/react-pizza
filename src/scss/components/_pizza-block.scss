@@ -13,6 +13,8 @@
   }
   &__image {
     width: 260px;
+    filter: drop-shadow(5px 5px 10px #000);
+    filter: contrast(130%) brightness(110%) drop-shadow(5px 5px 10px #000);
     // border-radius: 50%;
   }
 

@@ -43,5 +43,6 @@
   "Салат c кукурузой": {
     "title": "Corn salad",
     "description": "corn, rice,egg, chicken, cucumber, mayonese"
-  }
+  },
+  "categories": ["All", "Salads", "Hots", "Soups", "Desert", "Souses", "Drinks"]
 }
