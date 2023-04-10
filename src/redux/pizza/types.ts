@@ -1,7 +1,9 @@
 export type Pizza = {
    id:string; 
    title:string;
-   description: string; 
+   description: string;
+   titleEN:string;
+   descriptionEN: string;  
    weight:number;
    price:number; 
    image:string; 

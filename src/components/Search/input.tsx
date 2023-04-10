@@ -5,6 +5,7 @@ import { setSearchValue } from "../../redux/filter/slice";
 import { useDispatch } from "react-redux";
 
 import styles from "./Search.module.scss";
+import { useTranslation } from "react-i18next";
 
 export const Search = () => {
   const dispatch = useDispatch();
@@ -30,6 +31,8 @@ export const Search = () => {
     updateSearchValue(event.target.value);
   };
 
+  const { t, i18n } = useTranslation();
+
   return (
     <div className={styles.root}>
       <svg
@@ -47,7 +50,7 @@ export const Search = () => {
         value={value}
         onChange={onChangeInput}
         className={styles.input}
-        placeholder="Поиск пиццы ...."
+        placeholder={`${t('search') as string}...`}
       />
       {value && (
         <svg

@@ -1,36 +1,34 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { FilterSliceState, Sort, SortPropertyEnum } from './types';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { FilterSliceState, Sort, SortPropertyEnum } from "./types";
 
-
-
- const initialState : FilterSliceState = {
-  searchValue: '',
+const initialState: FilterSliceState = {
+  searchValue: "",
   categoryId: 0,
   currentPage: 1,
   sort: {
-    name: 'популярности',
-    sortProperty:  SortPropertyEnum.RATING_DESC,
+    name: "популярности ↓",
+    sortProperty: SortPropertyEnum.RATING_DESC,
   },
 };
 
 export const filterSlice = createSlice({
-  name: 'filters',
+  name: "filters",
   initialState,
   reducers: {
-    setCategoryId(state, action:PayloadAction<number>) {
+    setCategoryId(state, action: PayloadAction<number>) {
       state.categoryId = action.payload;
     },
-    setSearchValue(state, action:PayloadAction<string>) {
+    setSearchValue(state, action: PayloadAction<string>) {
       state.searchValue = action.payload;
     },
-    setSort(state, action:PayloadAction<Sort>) {
+    setSort(state, action: PayloadAction<Sort>) {
       state.sort = action.payload;
     },
-    setCurrentPage(state, action:PayloadAction<number>) {
+    setCurrentPage(state, action: PayloadAction<number>) {
       state.currentPage = action.payload;
     },
-    setFilters(state, action:PayloadAction<FilterSliceState>) {
-      if(Object.keys(action.payload).length){
+    setFilters(state, action: PayloadAction<FilterSliceState>) {
+      if (Object.keys(action.payload).length) {
         state.sort = action.payload.sort;
         state.currentPage = Number(action.payload.currentPage);
         state.categoryId = Number(action.payload.categoryId);
@@ -38,15 +36,21 @@ export const filterSlice = createSlice({
         state.currentPage = 1;
         state.categoryId = 0;
         state.sort = {
-          name: 'популярности',
-          sortProperty: SortPropertyEnum.RATING_DESC
-        }
+          name: "",
+          sortProperty: SortPropertyEnum.RATING_DESC,
+        };
       }
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setCategoryId, setSort, setCurrentPage, setFilters, setSearchValue } = filterSlice.actions;
+export const {
+  setCategoryId,
+  setSort,
+  setCurrentPage,
+  setFilters,
+  setSearchValue,
+} = filterSlice.actions;
 
 export default filterSlice.reducer;

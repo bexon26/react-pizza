@@ -12,7 +12,7 @@
     "description": "rayeb, flour, egg, syrup"
   },
   "Фаршированные перцы": {
-    "title": "stuffed pepper ",
+    "title": "Stuffed pepper",
     "description": "pepper, beef, rice, carrot, sour cream"
   },
   "Котлеты из говядины": {
@@ -20,7 +20,7 @@
     "description": "beef, chicken, onion, egg"
   },
   "Куриные котлеты": {
-    "title": "Cicken cultlets",
+    "title": "Chicken cultlets",
     "description": "chicken, onion, egg"
   },
   "Драники": { "title": "Potato pancake", "description": "potato, sour cream" },
@@ -44,5 +44,14 @@
     "title": "Corn salad",
     "description": "corn, rice,egg, chicken, cucumber, mayonese"
   },
-  "categories": ["All", "Salads", "Hots", "Soups", "Desert", "Souses", "Drinks"]
+  "Тефтели": {
+    "title": "Tefteli",
+    "description": "chicken, rice, carrot, tomato sauce"
+  },
+  "Салат с тунцом": {
+    "title": "Tuna salad",
+    "description": "Tuna, cucumber, corn, egg, mayonese"
+  },
+  "categories": ["All", "Salads", "Hots", "Soups", "Desert", "Souses", "Drinks"],
+  "search": "Search"
 }

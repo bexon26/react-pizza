@@ -1,4 +1,4 @@
-import logoSvg from "../../assets/img/pizza-logo.svg";
+import logoSvg from "../../assets/img/logo-family-food-versi-mobile1.png";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Search from "../Search/input";
@@ -28,20 +28,20 @@ function Header() {
 
   return (
     <div className="header">
-     
       <div className="container">
         <Link to="/react-pizza">
           <div className="header__logo">
-            <img width="38" src={logoSvg} alt="Pizza logo" />
-            <div>
+            <img width="150" src={logoSvg} alt="Pizza logo" />
+            {/* <div>
               <h1>React Pizza</h1>
               <p>самая вкусная пицца во вселенной</p>
-            </div>
+            </div> */}
           </div>
         </Link>
-        
-        <Search />
-        <SwitcherLang />
+        <div className="header-center">
+          <Search />
+          <SwitcherLang />
+        </div>
         <div className="header__cart">
           {location.pathname !== "/react-pizza/cart" && (
             <Link to="/react-pizza/cart" className="button button--cart">

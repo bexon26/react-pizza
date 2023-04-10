@@ -30,12 +30,14 @@ i18n
     fallbackLng: "ru",
     debug: true,
     detection: {
-      order: ['queryString', 'cookie' ],
+      order: ['cookie' ],
       cache: ['cookie']
     },
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
   });
+
+  
 
 export default i18n;

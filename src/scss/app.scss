@@ -3,8 +3,11 @@
 
 @import "components/all";
 
+
+
 body {
   background-color: $background;
+  min-width: 380px;
 }
 
 .wrapper {
@@ -22,7 +25,7 @@ body {
 }
 
 .content {
-  padding: 40px 0;
+  padding: 30px 0;
 
   &__title {
     margin: 35px 0;
@@ -31,7 +34,9 @@ body {
     margin-top: 42px;
     margin-bottom: 40px;
   }
-
+  @media (max-width: 7800px) {
+    padding-top: 10px;
+  }
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -55,33 +60,30 @@ body {
     @media (max-width: 1260px) {
       // flex-direction: column-reverse;
     }
-    @media (max-width: 1260px) {
+    @media (max-width: 1350px) {
       .categories {
-        width: 100%;
+        width:90%;
         overflow: auto;
         margin-right: 10px;
+        padding-bottom: 15px;
         & ul {
           width: 785px;
         }
       }
       .sort b {
-        display: none;
+        // display: none;
       }
     }
+    
     @media (max-width: 780px) {
       flex-direction: column-reverse;
-      .categories {
-        margin-top: 30px;
-      }
-    }
-    @media (max-width: 780px) {
       .categories {
         ul {
           li {
             padding: 8px 20px;
           }
         }
-        margin-top: 30px;
+        margin-top: 15px;
       }
     }
   }
