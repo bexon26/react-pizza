@@ -170,7 +170,7 @@
   {
     "id": "17",
     "imageUrl": "https://ypsbmb.ru/assets/bveGQUCMXlQ8QRzWwB0RuSPo5uuxU3do08DsfJLg-removebg-preview.png",
-    "title": "1",
+    "title": "Nestle Mineral Water",
     "description": "",
     "titleEN": "Nestle Mineral Water",
     "descriptionEN": "",
@@ -182,7 +182,7 @@
   {
     "id": "18",
     "imageUrl": "https://ypsbmb.ru/assets/AvRCgg6od6LFIHKqWf7qPsBuslbZW8VyY9lUCGHE-removebg-preview.png",
-    "title": "2",
+    "title": "Pepsi Soft Drinks",
     "description": "",
     "titleEN": "Pepsi Soft Drinks",
     "descriptionEN": "",
@@ -194,7 +194,7 @@
   {
     "id": "19",
     "imageUrl": "https://ypsbmb.ru/assets/eKItwN7YxDGIIFs4S0nghGu8EUbgM6qNpyBk6QtS-removebg-preview.png",
-    "title": "3",
+    "title": "Pepsi Carbonated Drink",
     "description": "",
     "titleEN": "Pepsi Carbonated Drink",
     "descriptionEN": "",
@@ -206,7 +206,7 @@
   {
     "id": "20",
     "imageUrl": "https://ypsbmb.ru/assets/9H5oCqjQVejULGwEPnzXRtG2UJn9QU63lH0zAIl4-removebg-preview.png",
-    "title": "4",
+    "title": "Mirinda Soft Drinks Orange",
     "description": "",
     "titleEN": "Mirinda Soft Drinks Orange",
     "descriptionEN": "",
@@ -218,7 +218,7 @@
   {
     "id": "21",
     "imageUrl": "https://ypsbmb.ru/assets/9lCFxwitSvalGtN1rofR0cJl75p9LS8pq2luRaIY-removebg-preview.png",
-    "title": "5",
+    "title": "Fanta Orange Carbonated Drink",
     "description": "",
     "titleEN": "Fanta Orange Carbonated Drink",
     "descriptionEN": "",
@@ -230,7 +230,7 @@
   {
     "id": "22",
     "imageUrl": "https://ypsbmb.ru/assets/gqIkn7wguRu5guMfgMAZJftWXWqQa9pQm9Zf3rjv-removebg-preview.png",
-    "title": "6",
+    "title": "Sprite Lemon Carbonated Drink",
     "description": "",
     "titleEN": "Sprite Lemon Carbonated Drink",
     "descriptionEN": "",
@@ -242,7 +242,7 @@
   {
     "id": "23",
     "imageUrl": "https://ypsbmb.ru/assets/KWqXTWen2UMXkSlvX67OoERHsX6IJqVwSVUrxtYr-removebg-preview.png",
-    "title": "7",
+    "title": "Sprite Carbonated Drink With Lemon Pet",
     "description": "",
     "titleEN": "Sprite Carbonated Drink With Lemon Pet",
     "descriptionEN": "",
@@ -254,7 +254,7 @@
   {
     "id": "24",
     "imageUrl": "https://ypsbmb.ru/assets/1ms9P3d1OYsyLb9HskXyWuwFfHwoGrj9gVTThBMO-removebg-preview.png",
-    "title": "8",
+    "title": "Fanta Carbonated Drink With Orange Pet",
     "description": "",
     "titleEN": "Fanta Carbonated Drink With Orange Pet",
     "descriptionEN": "",
@@ -266,7 +266,7 @@
   {
     "id": "25",
     "imageUrl": "https://ypsbmb.ru/assets/yaZHyMIdWyltA1aAXx1VOBCgJD51kNXu1h5CQm9I-removebg-preview.png",
-    "title": "9",
+    "title": "Coca Cola Carbonated Drink Pet",
     "description": "",
     "titleEN": "Coca Cola Carbonated Drink Pet",
     "descriptionEN": "",
@@ -278,7 +278,7 @@
   {
     "id": "26",
     "imageUrl": "https://ypsbmb.ru/assets/nNhp6bD7EMpirsQVE0lHyBb2nLt9hhUEfYGNQpcH-removebg-preview.png",
-    "title": "10",
+    "title": "Juhayna Classic Orange Juice",
     "description": "",
     "titleEN": "Juhayna Classic Orange Juice",
     "descriptionEN": "",
@@ -286,8 +286,7 @@
     "category": 6,
     "rating": 4,
     "weight": 235
-  }
-  ,
+  },
   {
     "id": "27",
     "imageUrl": "https://ypsbmb.ru/assets/Beyti Tropicana Drink Apple.png",
