@@ -287,4 +287,125 @@
     "rating": 4,
     "weight": 235
   }
+  ,
+  {
+    "id": "27",
+    "imageUrl": "https://ypsbmb.ru/assets/Beyti Tropicana Drink Apple.png",
+    "title": "Beyti Tropicana Drink Apple",
+    "description": "",
+    "titleEN": "Beyti Tropicana Drink Apple",
+    "descriptionEN": "",
+    "price": 5.55,
+    "category": 6,
+    "rating": 4,
+    "weight": 235
+  },
+  {
+    "id": "28",
+    "imageUrl": "https://ypsbmb.ru/assets/Juhayna Mango Juice.png",
+    "title": "Juhayna Mango Juice",
+    "description": "",
+    "titleEN": "Juhayna Mango Juice",
+    "descriptionEN": "",
+    "price": 15.45,
+    "category": 6,
+    "rating": 4,
+    "weight": 1000
+  },
+  {
+    "id": "29",
+    "imageUrl": "https://ypsbmb.ru/assets/Beyti Guava Juice.png",
+    "title": "Beyti Guava Juice",
+    "description": "",
+    "titleEN": "Beyti Guava Juice",
+    "descriptionEN": "",
+    "price": 15.45,
+    "category": 6,
+    "rating": 4,
+    "weight": 1000
+  },
+  {
+    "id": "30",
+    "imageUrl": "https://ypsbmb.ru/assets/Juhayna Apple Juice.png",
+    "title": "Juhayna Apple Juice",
+    "description": "",
+    "titleEN": "Juhayna Apple Juice",
+    "descriptionEN": "",
+    "price": 14.45,
+    "category": 6,
+    "rating": 4,
+    "weight": 1000
+  },
+  {
+    "id": "31",
+    "imageUrl": "https://ypsbmb.ru/assets/Beyti Orange Juice.png",
+    "title": "Beyti Orange Juice",
+    "description": "",
+    "titleEN": "Beyti Orange Juice",
+    "descriptionEN": "",
+    "price": 15.45,
+    "category": 6,
+    "rating": 4,
+    "weight": 1000
+  },
+  {
+    "id": "32",
+    "imageUrl": "https://ypsbmb.ru/assets/Beyti Pineapple Juice.png",
+    "title": "Beyti Pineapple Juice",
+    "description": "",
+    "titleEN": "Beyti Pineapple Juice",
+    "descriptionEN": "",
+    "price": 15.45,
+    "category": 6,
+    "rating": 4,
+    "weight": 1000
+  },
+  {
+    "id": "33",
+    "imageUrl": "https://ypsbmb.ru/assets/Beyti Tropicana Drink Pineapple.png",
+    "title": "Beyti Tropicana Drink Pineapple",
+    "description": "",
+    "titleEN": "Beyti Tropicana Drink Pineapple",
+    "descriptionEN": "",
+    "price": 5.55,
+    "category": 6,
+    "rating": 4,
+    "weight": 235
+  },
+  {
+    "id": "34",
+    "imageUrl": "https://ypsbmb.ru/assets/Beyti Tropicana Drink Guava.png",
+    "title": "Beyti Tropicana Drink Guava",
+    "description": "",
+    "titleEN": "Beyti Tropicana Drink Guava",
+    "descriptionEN": "",
+    "price": 5.55,
+    "category": 6,
+    "rating": 4,
+    "weight": 235
+  },
+  {
+    "id": "35",
+    "imageUrl": "https://ypsbmb.ru/assets/Juhayna Classic Mango Juice.png",
+    "title": "Juhayna Classic Mango Juice",
+    "description": "",
+    "titleEN": "Juhayna Classic Mango Juice",
+    "descriptionEN": "",
+    "price": 5.35,
+    "category": 6,
+    "rating": 4,
+    "weight": 235
+  },
+  {
+    "id": "36",
+    "imageUrl": "https://ypsbmb.ru/assets/Juhayna Classic Orange Juice.png",
+    "title": "Juhayna Classic Orange Juice",
+    "description": "",
+    "titleEN": "Juhayna Classic Orange Juice",
+    "descriptionEN": "",
+    "price": 5.35,
+    "category": 6,
+    "rating": 4,
+    "weight": 235
+  }
 ]

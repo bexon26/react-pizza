@@ -1,50 +1,50 @@
 {
-   "Шоколадный торт": {
-     "title": "Шоколадный торт",
-     "description": "мука, сахар, яйца, молоко, какао, масло"
-   },
-   "Маффин с изюмом": {
-     "title": "Маффин с изюмом",
-     "description": "мука, сахар, яйца, молоко, масло, изюм, какао"
-   },
-   "Олальи с сиропом": {
-     "title": "Олальи с сиропом",
-     "description": "кефир, мука, яйцо, сироп"
-   },
-   "Фаршированные перцы": {
-     "title": "Фаршированные перцы",
-     "description": "перцы, говядина, рис, морковь, сметана"
-   },
-   "Котлеты из говядины": {
-     "title": "Котлеты из говядины",
-     "description": "говядина, курица, лук, яйцо"
-   },
-   "Куриные котлеты": {
-     "title": "Куриные котлеты",
-     "description": "курица, лук, яйцо"
-   },
-   "Драники": { "title": "Драники", "description": "картофель, сметана" },
-   "Драники с мясом": {
-     "title": "Драники с мясом",
-     "description": "Картофель,куриный фарш, лук, сметана"
-   },
-   "Брокольный суп-пюре": {
-     "title": "Брокольный суп-пюре",
-     "description": "картофель, брокколи,лук, мокровь, сливки"
-   },
-   "Куриный суп с фрикаделькамми": {
-     "title": "Куриный суп с фрикаделькамми",
-     "description": "курица, рис, картофель, макароны, лук, морковь"
-   },
-   "Красный борщ": {
-     "title": "Красный борщ",
-     "description": "говядина, свекла, картофель, лук, морковь, сметана"
-   },
-   "Салат c кукурузой": {
-     "title": "Салат c кукурузой",
-     "description": "Кукуруза, рис, яйцо, курица, огурец, майонез"
-   },
-   "Тефтели": {
+  "Шоколадный торт": {
+    "title": "Шоколадный торт",
+    "description": "мука, сахар, яйца, молоко, какао, масло"
+  },
+  "Маффин с изюмом": {
+    "title": "Маффин с изюмом",
+    "description": "мука, сахар, яйца, молоко, масло, изюм, какао"
+  },
+  "Олальи с сиропом": {
+    "title": "Олальи с сиропом",
+    "description": "кефир, мука, яйцо, сироп"
+  },
+  "Фаршированные перцы": {
+    "title": "Фаршированные перцы",
+    "description": "перцы, говядина, рис, морковь, сметана"
+  },
+  "Котлеты из говядины": {
+    "title": "Котлеты из говядины",
+    "description": "говядина, курица, лук, яйцо"
+  },
+  "Куриные котлеты": {
+    "title": "Куриные котлеты",
+    "description": "курица, лук, яйцо"
+  },
+  "Драники": { "title": "Драники", "description": "картофель, сметана" },
+  "Драники с мясом": {
+    "title": "Драники с мясом",
+    "description": "Картофель,куриный фарш, лук, сметана"
+  },
+  "Брокольный суп-пюре": {
+    "title": "Брокольный суп-пюре",
+    "description": "картофель, брокколи,лук, мокровь, сливки"
+  },
+  "Куриный суп с фрикаделькамми": {
+    "title": "Куриный суп с фрикаделькамми",
+    "description": "курица, рис, картофель, макароны, лук, морковь"
+  },
+  "Красный борщ": {
+    "title": "Красный борщ",
+    "description": "говядина, свекла, картофель, лук, морковь, сметана"
+  },
+  "Салат c кукурузой": {
+    "title": "Салат c кукурузой",
+    "description": "Кукуруза, рис, яйцо, курица, огурец, майонез"
+  },
+  "Тефтели": {
     "title": "Тефтели",
     "description": "Курица, рис, морковь, томатный соус"
   },
@@ -52,7 +52,90 @@
     "title": "Салат с тунцом",
     "description": "Тунец, огурец, кукуруза, яйцо, майонез"
   },
-   "categories":["Все", "Салаты", "Горячее", "Супы", "Десерты", "Соусы", "Напитки"],
-   "search": "Поиск"
-  }
- 
+  "Nestle Mineral Water": {
+    "title": "Nestle Mineral Water",
+    "description": ""
+  },
+  "Pepsi Soft Drinks": {
+    "title": "Pepsi Soft Drinks",
+    "description": ""
+  },
+  "Pepsi Carbonated Drink": {
+    "title": "Pepsi Carbonated Drink",
+    "description": ""
+  },
+  "Mirinda Soft Drinks Orange": {
+    "title": "Mirinda Soft Drinks Orange",
+    "description": ""
+  },
+  "Fanta Orange Carbonated Drink": {
+    "title": "Fanta Orange Carbonated Drink",
+    "description": ""
+  },
+  "Sprite Lemon Carbonated Drink": {
+    "title": "Sprite Lemon Carbonated Drink",
+    "description": ""
+  },
+  "Sprite Carbonated Drink With Lemon Pet": {
+    "title": "Sprite Carbonated Drink With Lemon Pet",
+    "description": ""
+  },
+  "Fanta Carbonated Drink With Orange Pet": {
+    "title": "Fanta Carbonated Drink With Orange Pet",
+    "description": ""
+  },
+  "Coca Cola Carbonated Drink Pet": {
+    "title": "Coca Cola Carbonated Drink Pet",
+    "description": ""
+  },
+  "Juhayna Classic Orange Juice": {
+    "title": "Juhayna Classic Orange Juice",
+    "description": ""
+  },
+  "Beyti Tropicana Drink Apple": {
+    "title": "Beyti Tropicana Drink Apple",
+    "description": ""
+  },
+  "Juhayna Mango Juice": {
+    "title": "Juhayna Mango Juice",
+    "description": ""
+  },
+  "Beyti Guava Juice": {
+    "title": "Beyti Guava Juice",
+    "description": ""
+  },
+  "Juhayna Apple Juice": {
+    "title": "Juhayna Apple Juice",
+    "description": ""
+  },
+  "Beyti Orange Juice": {
+    "title": "Beyti Orange Juice",
+    "description": ""
+  },
+  "Beyti Pineapple Juice": {
+    "title": "Beyti Pineapple Juice",
+    "description": ""
+  },
+  "Beyti Tropicana Drink Pineapple": {
+    "title": "Beyti Tropicana Drink Pineapple",
+    "description": ""
+  },
+  "Beyti Tropicana Drink Guava": {
+    "title": "Beyti Tropicana Drink Guava",
+    "description": ""
+  },
+  "Juhayna Classic Mango Juice": {
+    "title": "Juhayna Classic Mango Juice",
+    "description": ""
+  },
+  "categories": [
+    "Все",
+    "Салаты",
+    "Горячее",
+    "Супы",
+    "Десерты",
+    "Соусы",
+    "Напитки"
+  ],
+  "search": "Поиск"
+}
