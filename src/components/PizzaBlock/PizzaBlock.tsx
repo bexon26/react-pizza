@@ -48,7 +48,11 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
     <div className="pizza-block-wrapper">
       <div className="pizza-block">
         <Link key={id} to={`pizza/${id}`}>
+          <div className="pizza-block-container">
           <img className="pizza-block__image" src={image} />
+
+          </div>
+          
           <h4 className="pizza-block__title">{t(`${title}.title`)}</h4>
           <p className="pizza-block__description">{t(`${title}.description`)}</p>
           <p className="pizza-block__weigth">Вес: {weight} гр.</p>
