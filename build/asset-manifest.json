@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-pizza/static/css/main.6e851804.css",
+    "main.css": "/react-pizza/static/css/main.0a700bdb.css",
     "main.js": "/react-pizza/static/js/main.c89cd030.js",
     "static/media/dish-20.jpg": "/react-pizza/static/media/dish-20.6a77bd2f1c492f1419f3.jpg",
     "static/media/logo-family-food-versi-mobile1.png": "/react-pizza/static/media/logo-family-food-versi-mobile1.5e07802ef8944ea062ac.png",
@@ -15,11 +15,11 @@
     "static/media/checkMark.svg": "/react-pizza/static/media/checkMark.f17b36a61d52f069a41a.svg",
     "index.html": "/react-pizza/index.html",
     "static/media/getFetch.cjs": "/react-pizza/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.6e851804.css.map": "/react-pizza/static/css/main.6e851804.css.map",
+    "main.0a700bdb.css.map": "/react-pizza/static/css/main.0a700bdb.css.map",
     "main.c89cd030.js.map": "/react-pizza/static/js/main.c89cd030.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e851804.css",
+    "static/css/main.0a700bdb.css",
     "static/js/main.c89cd030.js"
   ]
 }
