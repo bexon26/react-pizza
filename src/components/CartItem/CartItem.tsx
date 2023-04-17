@@ -1,5 +1,7 @@
 import clsx from "clsx";
+
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, minusItem, removeItem } from "../../redux/cart/slice";
 import { CartItem } from "../../redux/cart/types";
@@ -8,20 +10,24 @@ type CartItemProps = {
   id: string;
   title: string;
   description: string;
+ 
   weight: number;
   price: number;
   count: number;
   image: string;
+  category:number;
 };
 
 export const CartItemBlock: React.FC<CartItemProps> = ({
   id,
   title,
   description,
+  
   weight,
   price,
   count,
   image,
+  category
 }) => {
   const dispatch = useDispatch();
   const onClickPlus = () => {
@@ -35,17 +41,19 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
       dispatch(removeItem(id));
     }
   };
-
+  const { t, i18n } = useTranslation();
+  console.log(title)
+  
   return (
     <div className="cart__item">
       <div className="cart__item-img">
         <img className="pizza-block__image" src={image} alt="Pizza" />
       </div>
       <div className="cart__item-info">
-        <h3>{title}</h3>
+        <h3>{t(`${title}.title`)}</h3>
 
         <p>
-          {weight*count} гр.
+          {weight*count} {category!==6?`${t("гр")}`:`${t("л")}`}
         </p>
       </div>
       <div className="cart__item-count">
@@ -98,7 +106,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
         </button>
       </div>
       <div className="cart__item-price">
-        <b>{price * count} ₽</b>
+        <b>{price * count} {t('фунтов')}</b>
       </div>
       <div className="cart__item-remove">
         <div

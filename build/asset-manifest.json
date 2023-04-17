@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-pizza/static/css/main.7e0d8126.css",
-    "main.js": "/react-pizza/static/js/main.e8d62d9e.js",
+    "main.css": "/react-pizza/static/css/main.fd0ec130.css",
+    "main.js": "/react-pizza/static/js/main.e65b417d.js",
     "static/media/dish-20.jpg": "/react-pizza/static/media/dish-20.6a77bd2f1c492f1419f3.jpg",
     "static/media/logo-family-food-versi-mobile1.png": "/react-pizza/static/media/logo-family-food-versi-mobile1.5e07802ef8944ea062ac.png",
     "static/media/bg.png": "/react-pizza/static/media/bg.10359d7714819316f24d.png",
-    "static/media/delivery-01.svg": "/react-pizza/static/media/delivery-01.bda342bfc6c01992bf9b.svg",
+    "static/media/delivery-01.svg": "/react-pizza/static/media/delivery-01.aa783d29c7102e461b21.svg",
     "static/media/empty-cart.png": "/react-pizza/static/media/empty-cart.db905d1f4b063162f25b.png",
     "static/media/online-pay-min.png": "/react-pizza/static/media/online-pay-min.e9ccfb41371a7e6350e0.png",
     "static/media/cash-min.png": "/react-pizza/static/media/cash-min.8b4cf50c499ecfae73f9.png",
-    "static/media/delivery-02.svg": "/react-pizza/static/media/delivery-02.55aa9e8c88bc60451241.svg",
-    "static/media/motivation-02.svg": "/react-pizza/static/media/motivation-02.94ff08f1d244922fdfd9.svg",
-    "static/media/motivation-01.svg": "/react-pizza/static/media/motivation-01.9616bd14214106dd8b60.svg",
-    "static/media/motivation-04.svg": "/react-pizza/static/media/motivation-04.98f67f9e4ae856ea2eb1.svg",
-    "static/media/motivation-03.svg": "/react-pizza/static/media/motivation-03.82e24a4faf4f1456e594.svg",
+    "static/media/delivery-02.svg": "/react-pizza/static/media/delivery-02.4bb0fbb7a0389b59d75e.svg",
+    "static/media/motivation-02.svg": "/react-pizza/static/media/motivation-02.6c930e1481a49a88e6b3.svg",
+    "static/media/motivation-01.svg": "/react-pizza/static/media/motivation-01.8adde866c8536110fd69.svg",
+    "static/media/motivation-04.svg": "/react-pizza/static/media/motivation-04.5d02a6b1bc9e3d449cab.svg",
+    "static/media/motivation-03.svg": "/react-pizza/static/media/motivation-03.c4c6a75d6d387b1eb04f.svg",
     "static/media/checkMark.svg": "/react-pizza/static/media/checkMark.f17b36a61d52f069a41a.svg",
     "index.html": "/react-pizza/index.html",
     "static/media/getFetch.cjs": "/react-pizza/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.7e0d8126.css.map": "/react-pizza/static/css/main.7e0d8126.css.map",
-    "main.e8d62d9e.js.map": "/react-pizza/static/js/main.e8d62d9e.js.map"
+    "main.fd0ec130.css.map": "/react-pizza/static/css/main.fd0ec130.css.map",
+    "main.e65b417d.js.map": "/react-pizza/static/js/main.e65b417d.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e0d8126.css",
-    "static/js/main.e8d62d9e.js"
+    "static/css/main.fd0ec130.css",
+    "static/js/main.e65b417d.js"
   ]
 }

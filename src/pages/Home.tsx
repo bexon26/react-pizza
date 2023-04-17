@@ -117,6 +117,7 @@ const Home:React.FC = () =>{
       weight={obj.weight}
       price={obj.price}
       image={obj.imageUrl}
+      category={obj.category}
      
     />
   ));

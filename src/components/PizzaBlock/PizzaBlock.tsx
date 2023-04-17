@@ -13,6 +13,7 @@ type PizzaBlockProps = {
   weight: number;
   price: number;
   image: string;
+  category: number;
 };
 const PizzaBlock: React.FC<PizzaBlockProps> = ({
   id,
@@ -21,6 +22,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   weight,
   price,
   image,
+  category
 }) => {
   const dispatch = useDispatch();
   const cartItem = useSelector(selectCartItemById(id));
@@ -34,9 +36,11 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
       id,
       title,
       description,
+      
       weight,
       price,
       image,
+      category,
       count: 0,
     };
     dispatch(addItem(item));
@@ -55,11 +59,11 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
           
           <h4 className="pizza-block__title">{t(`${title}.title`)}</h4>
           <p className="pizza-block__description">{t(`${title}.description`)}</p>
-          <p className="pizza-block__weigth">Вес: {weight} гр.</p>
+          <p className="pizza-block__weigth">{t('Вес')}: {weight} {category!==6?`${t("гр")}`:`${t("л")}`} </p>
         </Link>
         
         <div className="pizza-block__bottom">
-          <div className="pizza-block__price">от {price} ₽</div>
+          <div className="pizza-block__price">{price} {t('фунтов')}</div>
           <button
             onClick={onClickAdd}
             className="button button--outline button--add"
@@ -76,7 +80,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
                 fill="white"
               />
             </svg>
-            <span>Добавить</span>
+            <span>{t('Добавить')}</span>
             {addedCount > 0 && <i>{addedCount}</i>}
           </button>
         </div>
