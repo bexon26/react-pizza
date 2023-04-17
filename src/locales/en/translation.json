@@ -140,5 +140,13 @@
     "Souses",
     "Drinks"
   ],
-  "search": "Search"
+  "search": "Search",
+  "Корзина": "Cart",
+  "Очистить корзину": "Clear cart",
+  "Всего": "Total",
+  "шт": "pcs",
+  "Сумма заказа": "Order price",
+  "Вернуться назад": "Сome back",
+  "Оплатить сейчас": "Pay now",
+  "фунтов": "EGP"
 }
