@@ -1,13 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Delivery = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div>
-      <h1>Доставка и оплата</h1>
+      <h1>{t('Доставка и оплата')}</h1>
 
       <div className="container">
         <h2 className="section__title section__title-center">
-          Условия оплаты:
+        {t('Условия оплаты')}:
         </h2>
         {/* <div className="section__intro">
           <p>Доставка осуществляется курьерами в течении часа по Хургаде.</p>
@@ -20,13 +22,11 @@ const Delivery = () => {
                   <div className="pay2__thumb"></div>
                   <div className="delivery2__content">
                     <div className="delivery2__title">
-                      Оплата наличными курьеру
+                    {t('')}Оплата наличными курьеру
                     </div>
                     <div className="delivery2__text">
-                      <p>
-                        Вы можете оплатить всю сумму заказа наличными денежными
-                        средствами в момент доставки заказа непосредственно
-                        доставившему его курьеру. Будем признательны, если вы
+                      <p>{t('Вы можете оплатить всю сумму заказа наличными денежными средствами в момент доставки заказа непосредственно доставившему его курьеру. Будем признательны, если вы приготовите заранее сумму без сдачи.')}
+                         Будем признательны, если вы
                         приготовите заранее сумму без сдачи.
                       </p>
                     </div>
@@ -38,11 +38,11 @@ const Delivery = () => {
                   <div className="pay2__thumb"></div>
                   <div className="delivery2__content">
                     <div className="delivery2__title">
-                      Оплата банковской картой через интернет
+                    {t('Оплата банковской картой через интернет')}
                     </div>
                     <div className="delivery2__text">
                       <p>
-                        Мы принимаем платежи по следующим банковским картам:
+                      {t('')}Мы принимаем платежи по следующим банковским картам:
                         Visa, Visa Electron, MasterCard, Maestro.
                       </p>
                     </div>
@@ -55,10 +55,10 @@ const Delivery = () => {
       </div>
       <div className="container">
         <h2 className="section__title section__title-center">
-          Быстрая доставка
+        {t('')}Быстрая доставка
         </h2>
         <div className="section__intro">
-          <p>Доставка осуществляется курьерами в течении часа по Хургаде.</p>
+          <p>{t('')}Доставка осуществляется курьерами в течении часа по Хургаде.</p>
         </div>
         <div className="section__content">
           <div className="delivery2">
@@ -68,12 +68,12 @@ const Delivery = () => {
                   <div className="delivery2__thumb"></div>
                   <div className="delivery2__content">
                     <div className="delivery2__title">
-                      Курьером домой или в офис
+                    {t('')}Курьером домой или в офис
                     </div>
                     <div className="delivery2__text">
-                      <p>Доставка осуществляется с 11:00 - 21.00.</p>
-                      <p>Стоимось доставки - 20 EGP</p>
-                      <p>Минимальная сумма заказа – 200 EGP.</p>
+                      <p>{t('Доставка осуществляется с 11:00 - 21.00')}.</p>
+                      <p>{t('')}Стоимось доставки - 20 EGP</p>
+                      <p>{t('Минимальная сумма заказа – 200 EGP.')}</p>
                     </div>
                   </div>
                 </div>
@@ -83,10 +83,10 @@ const Delivery = () => {
                   <div className="delivery2__thumb"></div>
                   <div className="delivery2__content">
                     <div className="delivery2__title">
-                      Возможность самовывоза
+                    {t('')}Возможность самовывоза
                     </div>
                     <div className="delivery2__text">
-                      <p>Самовывоз - пн.-вс. с 10.00 до 21.00.</p>
+                      <p>{t('')}Самовывоз - пн.-вс. с 10.00 до 21.00.</p>
                     </div>
                   </div>
                 </div>
