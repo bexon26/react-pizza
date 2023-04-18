@@ -37,7 +37,7 @@
   },
   {
     "id": "6",
-    "imageUrl": "https://ypsbmb.ru/assets/soup-broccoli_640x640.png",
+    "imageUrl": "https://ypsbmb.ru/assets/soup_brokolli.png",
     "title": "Брокольный суп-пюре",
     "description": "картофель, брокколи,лук, мокровь, сливки",
     "titleEN": "Broccoli soup",
@@ -109,7 +109,7 @@
   },
   {
     "id": "12",
-    "imageUrl": "https://ypsbmb.ru/assets/kolduni_640x640.png",
+    "imageUrl": "https://ypsbmb.ru/assets/draniki_meat.png",
     "title": "Драники с мясом",
     "description": "Томат, огурец, микс салатов, сыр Фетаки, перец сладкий, заправка 'Итальянская', маслины, петрушка",
     "titleEN": "Potato pancake with meat",
@@ -177,7 +177,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 1500
+    "weight": 1.5
   },
   {
     "id": "18",
@@ -189,7 +189,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 970
+    "weight": 0.97
   },
   {
     "id": "19",
@@ -201,7 +201,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 400
+    "weight": 0.4
   },
   {
     "id": "20",
@@ -213,7 +213,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 970
+    "weight": 0.97
   },
   {
     "id": "21",
@@ -225,7 +225,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 330
+    "weight": 0.33
   },
   {
     "id": "22",
@@ -237,7 +237,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 1950
+    "weight": 1.95
   },
   {
     "id": "23",
@@ -249,7 +249,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 950
+    "weight": 0.95
   },
   {
     "id": "24",
@@ -261,7 +261,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 260
+    "weight": 0.26
   },
   {
     "id": "25",
@@ -273,7 +273,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 950
+    "weight": 0.95
   },
   {
     "id": "26",
@@ -285,7 +285,7 @@
     "price": 9,
     "category": 6,
     "rating": 4,
-    "weight": 235
+    "weight": 0.235
   },
   {
     "id": "27",
@@ -297,7 +297,7 @@
     "price": 5.55,
     "category": 6,
     "rating": 4,
-    "weight": 235
+    "weight": 0.235
   },
   {
     "id": "28",
@@ -309,7 +309,7 @@
     "price": 15.45,
     "category": 6,
     "rating": 4,
-    "weight": 1000
+    "weight": 1
   },
   {
     "id": "29",
@@ -321,7 +321,7 @@
     "price": 15.45,
     "category": 6,
     "rating": 4,
-    "weight": 1000
+    "weight": 1
   },
   {
     "id": "30",
@@ -333,7 +333,7 @@
     "price": 14.45,
     "category": 6,
     "rating": 4,
-    "weight": 1000
+    "weight": 1
   },
   {
     "id": "31",
@@ -345,7 +345,7 @@
     "price": 15.45,
     "category": 6,
     "rating": 4,
-    "weight": 1000
+    "weight": 1
   },
   {
     "id": "32",
@@ -357,7 +357,7 @@
     "price": 15.45,
     "category": 6,
     "rating": 4,
-    "weight": 1000
+    "weight": 1
   },
   {
     "id": "33",
@@ -369,7 +369,7 @@
     "price": 5.55,
     "category": 6,
     "rating": 4,
-    "weight": 235
+    "weight": 0.235
   },
   {
     "id": "34",
@@ -381,7 +381,7 @@
     "price": 5.55,
     "category": 6,
     "rating": 4,
-    "weight": 235
+    "weight": 0.235
   },
   {
     "id": "35",
@@ -393,7 +393,7 @@
     "price": 5.35,
     "category": 6,
     "rating": 4,
-    "weight": 235
+    "weight": 0.235
   },
   {
     "id": "36",
@@ -405,6 +405,78 @@
     "price": 5.35,
     "category": 6,
     "rating": 4,
-    "weight": 235
+    "weight": 0.235
+  },
+  {
+    "id": "37",
+    "imageUrl": "https://ypsbmb.ru/assets/batat-soup.png",
+    "title": "Батат суп-пюре",
+    "description": "батат",
+    "titleEN": "Sweet potato soup",
+    "descriptionEN": "sweet potato",
+    "price": 9,
+    "category": 3,
+    "rating": 4,
+    "weight": 260
+  },
+  {
+    "id": "38",
+    "imageUrl": "https://ypsbmb.ru/assets/carrot-soup.png",
+    "title": "Морковный суп-пюре",
+    "description": "морковь",
+    "titleEN": "Carrot soup",
+    "descriptionEN": "carrot",
+    "price": 9,
+    "category": 3,
+    "rating": 4,
+    "weight": 260
+  },
+  {
+    "id": "39",
+    "imageUrl": "https://ypsbmb.ru/assets/grechka.png",
+    "title": "Гречка",
+    "description": "гречка",
+    "titleEN": "Buckwheat",
+    "descriptionEN": "buckwheat",
+    "price": 9,
+    "category": 2,
+    "rating": 4,
+    "weight": 260
+  },
+  {
+    "id": "40",
+    "imageUrl": "https://ypsbmb.ru/assets/patatoes.png",
+    "title": "Картофельное пюре",
+    "description": "картофель",
+    "titleEN": "Mashed potatoes",
+    "descriptionEN": "patato",
+    "price": 9,
+    "category": 2,
+    "rating": 4,
+    "weight": 260
+  },
+  {
+    "id": "41",
+    "imageUrl": "https://ypsbmb.ru/assets/rice.png",
+    "title": "Рис",
+    "description": "рис",
+    "titleEN": "Rice",
+    "descriptionEN": "rice",
+    "price": 9,
+    "category": 2,
+    "rating": 4,
+    "weight": 260
+  },
+  {
+    "id": "42",
+    "imageUrl": "https://ypsbmb.ru/assets/macarons_cheese.png",
+    "title": "Макароны с сыром",
+    "description": "макароны, сыр",
+    "titleEN": "Pasta with cheese",
+    "descriptionEN": "pasta, cheese",
+    "price": 9,
+    "category": 2,
+    "rating": 4,
+    "weight": 260
   }
 ]

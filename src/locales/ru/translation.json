@@ -53,81 +53,106 @@
     "description": "Тунец, огурец, кукуруза, яйцо, майонез"
   },
   "Nestle Mineral Water": {
-    "title": "Nestle Mineral Water",
+    "title": "Nestle Mineral Water 1.5L",
     "description": ""
   },
   "Pepsi Soft Drinks": {
-    "title": "Pepsi Soft Drinks",
+    "title": "Pepsi 0.97L",
     "description": ""
   },
   "Pepsi Carbonated Drink": {
-    "title": "Pepsi Carbonated Drink",
+    "title": "Pepsi 0.4L",
     "description": ""
   },
   "Mirinda Soft Drinks Orange": {
-    "title": "Mirinda Soft Drinks Orange",
+    "title": "Mirinda Orange 0.97L",
     "description": ""
   },
   "Fanta Orange Carbonated Drink": {
-    "title": "Fanta Orange Carbonated Drink",
+    "title": "Fanta Orange 0.33L",
     "description": ""
   },
   "Sprite Lemon Carbonated Drink": {
-    "title": "Sprite Lemon Carbonated Drink",
+    "title": "Sprite Lemon 1.95L",
     "description": ""
   },
   "Sprite Carbonated Drink With Lemon Pet": {
-    "title": "Sprite Carbonated Drink With Lemon Pet",
+    "title": "Sprite Lemon 0.95L",
     "description": ""
   },
   "Fanta Carbonated Drink With Orange Pet": {
-    "title": "Fanta Carbonated Drink With Orange Pet",
+    "title": "Fanta Orange 0.26L",
     "description": ""
   },
   "Coca Cola Carbonated Drink Pet": {
-    "title": "Coca Cola Carbonated Drink Pet",
+    "title": "Coca Cola 0.95L",
     "description": ""
   },
   "Juhayna Classic Orange Juice": {
-    "title": "Juhayna Classic Orange Juice",
+    "title": "Juhayna Orange Juice 0.235L",
     "description": ""
   },
   "Beyti Tropicana Drink Apple": {
-    "title": "Beyti Tropicana Drink Apple",
+    "title": "Beyti Apple 0.235L",
     "description": ""
   },
   "Juhayna Mango Juice": {
-    "title": "Juhayna Mango Juice",
+    "title": "Juhayna Mango Juice 1L",
     "description": ""
   },
   "Beyti Guava Juice": {
-    "title": "Beyti Guava Juice",
+    "title": "Beyti Guava Juice 1L",
     "description": ""
   },
   "Juhayna Apple Juice": {
-    "title": "Juhayna Apple Juice",
+    "title": "Juhayna Apple Juice 1L",
     "description": ""
   },
   "Beyti Orange Juice": {
-    "title": "Beyti Orange Juice",
+    "title": "Beyti Orange Juice 1L",
     "description": ""
   },
   "Beyti Pineapple Juice": {
-    "title": "Beyti Pineapple Juice",
+    "title": "Beyti Pineapple Juice 1L",
     "description": ""
   },
   "Beyti Tropicana Drink Pineapple": {
-    "title": "Beyti Tropicana Drink Pineapple",
+    "title": "Beyti Pineapple Juice 0.235L",
     "description": ""
   },
   "Beyti Tropicana Drink Guava": {
-    "title": "Beyti Tropicana Drink Guava",
+    "title": "Beyti Guava Juice 0.235L",
     "description": ""
   },
   "Juhayna Classic Mango Juice": {
-    "title": "Juhayna Classic Mango Juice",
+    "title": "Juhayna Mango Juice Juice 0.235L",
     "description": ""
   },
+  "Батат суп-пюре": {
+    "title": "Батат суп-пюре",
+    "description": "батат"
+  },
+  "Морковный суп-пюре": {
+    "title": "Морковный суп-пюре",
+    "description": "морковь"
+  },
+  "Гречка": {
+    "title": "Гречка",
+    "description": "гречка"
+  },
+  "Картофельное пюре": {
+    "title": "Картофельное пюре",
+    "description": "картофель"
+  },
+  "Рис": {
+    "title": "Рис",
+    "description": "рис"
+  },
+  "Макароны с сыром": {
+    "title": "Макароны с сыром",
+    "description": "макароны, сыр"
+  },
+  
   "categories": [
     "Все",
     "Салаты",
