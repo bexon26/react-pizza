@@ -1,5 +1,5 @@
 import React from "react";
-import dishJPG from "../assets/img/dish-20.jpg";
+import dishJPG from "../assets/img/o-nas.jpeg";
 import checkSVG from "../assets/img/checkMark.svg";
 import { useTranslation } from "react-i18next";
 
