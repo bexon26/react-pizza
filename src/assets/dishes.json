@@ -9,7 +9,7 @@
     "price": 9,
     "category": 3,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "3",
@@ -21,7 +21,7 @@
     "price": 9,
     "category": 4,
     "rating": 4,
-    "weight": 260
+    "weight": 190
   },
   {
     "id": "5",
@@ -33,7 +33,7 @@
     "price": 9,
     "category": 4,
     "rating": 4,
-    "weight": 260
+    "weight": 1200
   },
   {
     "id": "6",
@@ -45,7 +45,7 @@
     "price": 9,
     "category": 3,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "7",
@@ -57,7 +57,7 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
+    "weight": 380
   },
   {
     "id": "8",
@@ -69,19 +69,7 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
-  },
-  {
-    "id": "9",
-    "imageUrl": "https://ypsbmb.ru/assets/keksi_640x640.png",
-    "title": "Маффин с изюмом",
-    "description": "мука, сахар, яйца, молоко, масло, изюм, какао",
-    "titleEN": "Muffins with raisins",
-    "descriptionEN": "flour, sugar, egg, milk, cacao, butter, raisins",
-    "price": 9,
-    "category": 4,
-    "rating": 4,
-    "weight": 260
+    "weight": 240
   },
   {
     "id": "10",
@@ -93,7 +81,7 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
+    "weight": 240
   },
   {
     "id": "11",
@@ -105,7 +93,7 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
+    "weight": 230
   },
   {
     "id": "12",
@@ -117,7 +105,7 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
+    "weight": 340
   },
   {
     "id": "13",
@@ -129,7 +117,7 @@
     "price": 9,
     "category": 3,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "14",
@@ -141,7 +129,7 @@
     "price": 9,
     "category": 1,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "15",
@@ -153,19 +141,7 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
-  },
-  {
-    "id": "16",
-    "imageUrl": "https://ypsbmb.ru/assets/tune_salad_640x640.png",
-    "title": "Салат с тунцом",
-    "description": "Тунец, огурец, кукуруза, яйцо, майонез",
-    "titleEN": "Tuna salad",
-    "descriptionEN": "Tuna, cucumber, corn, egg, mayonese",
-    "price": 9,
-    "category": 1,
-    "rating": 4,
-    "weight": 260
+    "weight": 230
   },
   {
     "id": "17",
@@ -417,7 +393,7 @@
     "price": 9,
     "category": 3,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "38",
@@ -429,7 +405,7 @@
     "price": 9,
     "category": 3,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "39",
@@ -441,7 +417,7 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
+    "weight": 250
   },
   {
     "id": "40",
@@ -453,7 +429,7 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
+    "weight": 250
   },
   {
     "id": "41",
@@ -465,19 +441,19 @@
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
+    "weight": 250
   },
   {
     "id": "42",
     "imageUrl": "https://ypsbmb.ru/assets/macarons_cheese.png",
-    "title": "Макароны с сыром",
-    "description": "макароны, сыр",
-    "titleEN": "Pasta with cheese",
-    "descriptionEN": "pasta, cheese",
+    "title": "Макароны",
+    "description": "макароны",
+    "titleEN": "Pasta",
+    "descriptionEN": "pasta",
     "price": 9,
     "category": 2,
     "rating": 4,
-    "weight": 260
+    "weight": 250
   },
   {
     "id": "43",
@@ -489,7 +465,7 @@
     "price": 9,
     "category": 3,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "44",
@@ -501,7 +477,7 @@
     "price": 9,
     "category": 3,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "45",
@@ -526,5 +502,29 @@
     "category": 4,
     "rating": 4,
     "weight": 260
+  },
+  {
+    "id": "47",
+    "imageUrl": "https://ypsbmb.ru/assets/orange-cake.png",
+    "title": "Апельсиновый кекс",
+    "description": "апельсин, мука, сахар, яйца, масло",
+    "titleEN": "Orange cake",
+    "descriptionEN": "orange, flour, sugar, eggs, butter",
+    "price": 9,
+    "category": 4,
+    "rating": 4,
+    "weight": 550
+  },
+  {
+    "id": "48",
+    "imageUrl": "https://ypsbmb.ru/assets/lemon-cake.png",
+    "title": "Лимонный кекс",
+    "description": "лимон, мука, сахар, яйца, масло",
+    "titleEN": "Lemon cake",
+    "descriptionEN": "Lemon, flour, sugar, eggs, butter",
+    "price": 9,
+    "category": 4,
+    "rating": 4,
+    "weight": 550
   }
 ]

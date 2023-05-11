@@ -3,10 +3,6 @@
     "title": "Chocolate cake",
     "description": "flour, sugar, egg, milk, cacao, butter"
   },
-  "Маффин с изюмом": {
-    "title": "Muffins with raisins",
-    "description": "flour, sugar, egg, milk, cacao, butter, raisins"
-  },
   "Олальи с сиропом": {
     "title": "Pancakes with syrop",
     "description": "rayeb, flour, egg, syrup"
@@ -19,6 +15,15 @@
     "title": "Pancakes with cottage cheese",
     "description": "flour, sugar, egg, milk, cottage cheese"
   },
+  "Апельсиновый кекс": {
+    "title": "Orange cake",
+    "description": "orange, flour, sugar, eggs, butter"
+  },
+  "Лимонный кекс": {
+    "title": "Lemon cake",
+    "description": "Lemon, flour, sugar, eggs, butter"
+  },
+  
   "Фаршированные перцы": {
     "title": "Stuffed pepper",
     "description": "pepper, beef, rice, carrot, sour cream"
@@ -55,10 +60,6 @@
   "Тефтели": {
     "title": "Tefteli",
     "description": "chicken, rice, carrot, tomato sauce"
-  },
-  "Салат с тунцом": {
-    "title": "Tuna salad",
-    "description": "Tuna, cucumber, corn, egg, mayonese"
   },
   "Nestle Mineral Water": {
     "title": "Nestle Mineral Water 1.5L",
@@ -165,9 +166,9 @@
     "title": "Rice",
     "description": "rice"
   },
-  "Макароны с сыром": {
-    "title": "Pasta with cheese",
-    "description": "pasta, cheese"
+  "Макароны": {
+    "title": "Pasta",
+    "description": "pasta"
   },
   
 
