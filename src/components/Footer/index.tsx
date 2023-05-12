@@ -12,7 +12,7 @@ const Footer = () => {
         <li><Link to="about">О нас</Link></li>
         <li><Link to="delivery">Доставка и оплата</Link></li>
         <li><Link to="contacts">Контакты</Link></li>
-        <li><Link to="time">Время работы</Link></li>
+        {/* <li><Link to="time">Время работы</Link></li> */}
       </nav>
     </div>
   );

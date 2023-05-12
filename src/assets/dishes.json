@@ -6,7 +6,7 @@
     "description": "курица, рис, картофель, макароны, лук, морковь",
     "titleEN": "Chicken soup with meatballs",
     "descriptionEN": "chicken, rice, potato, macaroni, onion, carrot",
-    "price": 9,
+    "price": 35,
     "category": 3,
     "rating": 4,
     "weight": 300
@@ -18,7 +18,7 @@
     "description": "кефир, мука, яйцо, сироп",
     "titleEN": "Pancakes with syrop",
     "descriptionEN": "rayeb, flour, egg, syrup",
-    "price": 9,
+    "price": 40,
     "category": 4,
     "rating": 4,
     "weight": 190
@@ -30,7 +30,7 @@
     "description": "мука, сахар, яйца, молоко, какао, масло",
     "titleEN": "Chocolate cake",
     "descriptionEN": "flour, sugar, egg, milk, cacao, butter",
-    "price": 9,
+    "price": 200,
     "category": 4,
     "rating": 4,
     "weight": 1200
@@ -42,7 +42,7 @@
     "description": "картофель, брокколи,лук, мокровь, сливки",
     "titleEN": "Broccoli soup",
     "descriptionEN": "potato, broccoli, onion, carrot, cooking cream",
-    "price": 9,
+    "price": 35,
     "category": 3,
     "rating": 4,
     "weight": 300
@@ -54,7 +54,7 @@
     "description": "перцы, говядина, рис, морковь, сметана",
     "titleEN": "Stuffed pepper",
     "descriptionEN": "pepper, beef, rice, carrot, sour cream",
-    "price": 9,
+    "price": 115,
     "category": 2,
     "rating": 4,
     "weight": 380
@@ -66,7 +66,7 @@
     "description": "говядина, курица, лук, яйцо",
     "titleEN": "Beef cutlets",
     "descriptionEN": "beef, chicken, onion, egg",
-    "price": 9,
+    "price": 95,
     "category": 2,
     "rating": 4,
     "weight": 240
@@ -78,31 +78,31 @@
     "description": "Томат, огурец, микс салатов, сыр Фетаки, перец сладкий, заправка 'Итальянская', маслины, петрушка",
     "titleEN": "Chicken cultlets",
     "descriptionEN": "chicken, onion, egg",
-    "price": 9,
+    "price": 80,
     "category": 2,
     "rating": 4,
     "weight": 240
   },
   {
     "id": "11",
-    "imageUrl": "https://ypsbmb.ru/assets/draniki_640x640.png",
+    "imageUrl": "https://ypsbmb.ru/assets/draniki_meat.png",
     "title": "Драники",
     "description": "Томат, огурец, микс салатов, сыр Фетаки, перец сладкий, заправка 'Итальянская', маслины, петрушка",
     "titleEN": "Potato pancake",
     "descriptionEN": "potato, sour cream",
-    "price": 9,
+    "price": 35,
     "category": 2,
     "rating": 4,
     "weight": 230
   },
   {
     "id": "12",
-    "imageUrl": "https://ypsbmb.ru/assets/draniki_meat.png",
+    "imageUrl": "https://ypsbmb.ru/assets/draniki-s-myasom.png",
     "title": "Драники с мясом",
     "description": "Томат, огурец, микс салатов, сыр Фетаки, перец сладкий, заправка 'Итальянская', маслины, петрушка",
     "titleEN": "Potato pancake with meat",
     "descriptionEN": "potato, chicken, onion, sour cream",
-    "price": 9,
+    "price": 55,
     "category": 2,
     "rating": 4,
     "weight": 340
@@ -114,7 +114,7 @@
     "description": "Томат, огурец, микс салатов, сыр Фетаки, перец сладкий, заправка 'Итальянская', маслины, петрушка",
     "titleEN": "Borshch",
     "descriptionEN": "beef, beet, potato, onion, carrot, sour cream",
-    "price": 9,
+    "price": 35,
     "category": 3,
     "rating": 4,
     "weight": 300
@@ -126,7 +126,7 @@
     "description": "Томат, огурец, микс салатов, сыр Фетаки, перец сладкий, заправка 'Итальянская', маслины, петрушка",
     "titleEN": "Corn salad",
     "descriptionEN": "corn, rice,egg, chicken, cucumber, mayonese",
-    "price": 9,
+    "price": 50,
     "category": 1,
     "rating": 4,
     "weight": 300
@@ -138,7 +138,7 @@
     "description": "Курица, рис, морковь, томатный соус",
     "titleEN": "Tefteli",
     "descriptionEN": "chicken, rice, carrot, tomato sauce",
-    "price": 9,
+    "price": 70,
     "category": 2,
     "rating": 4,
     "weight": 230
@@ -150,7 +150,7 @@
     "description": "",
     "titleEN": "Nestle Mineral Water",
     "descriptionEN": "",
-    "price": 9,
+    "price": 7,
     "category": 6,
     "rating": 4,
     "weight": 1.5
@@ -162,7 +162,7 @@
     "description": "",
     "titleEN": "Pepsi Soft Drinks",
     "descriptionEN": "",
-    "price": 9,
+    "price": 14,
     "category": 6,
     "rating": 4,
     "weight": 0.97
@@ -174,7 +174,7 @@
     "description": "",
     "titleEN": "Pepsi Carbonated Drink",
     "descriptionEN": "",
-    "price": 9,
+    "price": 7,
     "category": 6,
     "rating": 4,
     "weight": 0.4
@@ -186,7 +186,7 @@
     "description": "",
     "titleEN": "Mirinda Soft Drinks Orange",
     "descriptionEN": "",
-    "price": 9,
+    "price": 14,
     "category": 6,
     "rating": 4,
     "weight": 0.97
@@ -210,7 +210,7 @@
     "description": "",
     "titleEN": "Sprite Lemon Carbonated Drink",
     "descriptionEN": "",
-    "price": 9,
+    "price": 20,
     "category": 6,
     "rating": 4,
     "weight": 1.95
@@ -222,7 +222,7 @@
     "description": "",
     "titleEN": "Sprite Carbonated Drink With Lemon Pet",
     "descriptionEN": "",
-    "price": 9,
+    "price": 14,
     "category": 6,
     "rating": 4,
     "weight": 0.95
@@ -234,10 +234,10 @@
     "description": "",
     "titleEN": "Fanta Carbonated Drink With Orange Pet",
     "descriptionEN": "",
-    "price": 9,
+    "price": 8,
     "category": 6,
     "rating": 4,
-    "weight": 0.26
+    "weight": 0.25
   },
   {
     "id": "25",
@@ -246,7 +246,7 @@
     "description": "",
     "titleEN": "Coca Cola Carbonated Drink Pet",
     "descriptionEN": "",
-    "price": 9,
+    "price": 14,
     "category": 6,
     "rating": 4,
     "weight": 0.95
@@ -258,7 +258,7 @@
     "description": "",
     "titleEN": "Juhayna Classic Orange Juice",
     "descriptionEN": "",
-    "price": 9,
+    "price": 7,
     "category": 6,
     "rating": 4,
     "weight": 0.235
@@ -270,7 +270,7 @@
     "description": "",
     "titleEN": "Beyti Tropicana Drink Apple",
     "descriptionEN": "",
-    "price": 5.55,
+    "price": 7,
     "category": 6,
     "rating": 4,
     "weight": 0.235
@@ -282,7 +282,7 @@
     "description": "",
     "titleEN": "Juhayna Mango Juice",
     "descriptionEN": "",
-    "price": 15.45,
+    "price": 17,
     "category": 6,
     "rating": 4,
     "weight": 1
@@ -294,7 +294,7 @@
     "description": "",
     "titleEN": "Beyti Guava Juice",
     "descriptionEN": "",
-    "price": 15.45,
+    "price": 17,
     "category": 6,
     "rating": 4,
     "weight": 1
@@ -306,7 +306,7 @@
     "description": "",
     "titleEN": "Juhayna Apple Juice",
     "descriptionEN": "",
-    "price": 14.45,
+    "price": 17,
     "category": 6,
     "rating": 4,
     "weight": 1
@@ -318,7 +318,7 @@
     "description": "",
     "titleEN": "Beyti Orange Juice",
     "descriptionEN": "",
-    "price": 15.45,
+    "price": 17,
     "category": 6,
     "rating": 4,
     "weight": 1
@@ -330,7 +330,7 @@
     "description": "",
     "titleEN": "Beyti Pineapple Juice",
     "descriptionEN": "",
-    "price": 15.45,
+    "price": 17,
     "category": 6,
     "rating": 4,
     "weight": 1
@@ -342,7 +342,7 @@
     "description": "",
     "titleEN": "Beyti Tropicana Drink Pineapple",
     "descriptionEN": "",
-    "price": 5.55,
+    "price": 7,
     "category": 6,
     "rating": 4,
     "weight": 0.235
@@ -354,7 +354,7 @@
     "description": "",
     "titleEN": "Beyti Tropicana Drink Guava",
     "descriptionEN": "",
-    "price": 5.55,
+    "price": 7,
     "category": 6,
     "rating": 4,
     "weight": 0.235
@@ -366,7 +366,7 @@
     "description": "",
     "titleEN": "Juhayna Classic Mango Juice",
     "descriptionEN": "",
-    "price": 5.35,
+    "price": 7,
     "category": 6,
     "rating": 4,
     "weight": 0.235
@@ -378,7 +378,7 @@
     "description": "",
     "titleEN": "Juhayna Classic Orange Juice",
     "descriptionEN": "",
-    "price": 5.35,
+    "price": 7,
     "category": 6,
     "rating": 4,
     "weight": 0.235
@@ -390,7 +390,7 @@
     "description": "бабат, лук, мокровь, сливки",
     "titleEN": "Sweet potato soup",
     "descriptionEN": "sweet potato, onion, carrot, cooking cream",
-    "price": 9,
+    "price": 35,
     "category": 3,
     "rating": 4,
     "weight": 300
@@ -402,7 +402,7 @@
     "description": "картофель, лук, мокровь, сливки",
     "titleEN": "Carrot soup",
     "descriptionEN": "potato, onion, carrot, cooking cream",
-    "price": 9,
+    "price": 35,
     "category": 3,
     "rating": 4,
     "weight": 300
@@ -414,7 +414,7 @@
     "description": "гречка",
     "titleEN": "Buckwheat",
     "descriptionEN": "buckwheat",
-    "price": 9,
+    "price": 25,
     "category": 2,
     "rating": 4,
     "weight": 250
@@ -426,7 +426,7 @@
     "description": "картофель",
     "titleEN": "Mashed potatoes",
     "descriptionEN": "patato",
-    "price": 9,
+    "price": 20,
     "category": 2,
     "rating": 4,
     "weight": 250
@@ -438,7 +438,7 @@
     "description": "рис",
     "titleEN": "Rice",
     "descriptionEN": "rice",
-    "price": 9,
+    "price": 20,
     "category": 2,
     "rating": 4,
     "weight": 250
@@ -450,7 +450,7 @@
     "description": "макароны",
     "titleEN": "Pasta",
     "descriptionEN": "pasta",
-    "price": 9,
+    "price": 20,
     "category": 2,
     "rating": 4,
     "weight": 250
@@ -462,7 +462,7 @@
     "description": "капуста, картофель, курица, помидоры, перец, лук, морковь",
     "titleEN": "Borsch with cabbage",
     "descriptionEN": "cabbage, potato, chicken, tomato, pepper, onion, carrot",
-    "price": 9,
+    "price": 35,
     "category": 3,
     "rating": 4,
     "weight": 300
@@ -474,7 +474,7 @@
     "description": "картофель, цукини, лук, мокровь, сливки",
     "titleEN": "Cream-soup with zucchini",
     "descriptionEN": "potato, zucchini, onion, carrot, cooking cream",
-    "price": 9,
+    "price": 35,
     "category": 3,
     "rating": 4,
     "weight": 300
@@ -486,10 +486,10 @@
     "description": "мука, сахар, яйцо, молоко",
     "titleEN": "Pancakes",
     "descriptionEN": "flour, sugar, egg, milk",
-    "price": 9,
+    "price": 50,
     "category": 4,
     "rating": 4,
-    "weight": 260
+    "weight": 300
   },
   {
     "id": "46",
@@ -498,10 +498,10 @@
     "description": "мука, сахар, яйцо, молоко, творог",
     "titleEN": "Pancakes with cottage cheese",
     "descriptionEN": "flour, sugar, egg, milk, cottage cheese",
-    "price": 9,
+    "price": 90,
     "category": 4,
     "rating": 4,
-    "weight": 260
+    "weight": 450
   },
   {
     "id": "47",
@@ -510,7 +510,7 @@
     "description": "апельсин, мука, сахар, яйца, масло",
     "titleEN": "Orange cake",
     "descriptionEN": "orange, flour, sugar, eggs, butter",
-    "price": 9,
+    "price": 135,
     "category": 4,
     "rating": 4,
     "weight": 550
@@ -522,9 +522,69 @@
     "description": "лимон, мука, сахар, яйца, масло",
     "titleEN": "Lemon cake",
     "descriptionEN": "Lemon, flour, sugar, eggs, butter",
-    "price": 9,
+    "price": 135,
     "category": 4,
     "rating": 4,
     "weight": 550
+  },
+  {
+    "id": "49",
+    "imageUrl": "https://ypsbmb.ru/assets/mayonnaise.png",
+    "title": "Майонез",
+    "description": "",
+    "titleEN": "Mayonnaise",
+    "descriptionEN": "",
+    "price": 5,
+    "category": 5,
+    "rating": 4,
+    "weight": 30
+  },
+  {
+    "id": "50",
+    "imageUrl": "https://ypsbmb.ru/assets/ketchup.png",
+    "title": "Кетчуп",
+    "description": "",
+    "titleEN": "Ketchup",
+    "descriptionEN": "",
+    "price": 5,
+    "category": 5,
+    "rating": 4,
+    "weight": 30
+  },
+  {
+    "id": "51",
+    "imageUrl": "https://ypsbmb.ru/assets/mustard.png",
+    "title": "Горчичный соус",
+    "description": "",
+    "titleEN": "Mustard Souce",
+    "descriptionEN": "",
+    "price": 7,
+    "category": 5,
+    "rating": 4,
+    "weight": 30
+  },
+  {
+    "id": "52",
+    "imageUrl": "https://ypsbmb.ru/assets/sour-cream.png",
+    "title": "Сметана",
+    "description": "",
+    "titleEN": "Sour Cream",
+    "descriptionEN": "",
+    "price": 10,
+    "category": 5,
+    "rating": 4,
+    "weight": 30
+  },
+  {
+    "id": "53",
+    "imageUrl": "https://ypsbmb.ru/assets/soya-sauce.png",
+    "title": "Соевый соус",
+    "description": "",
+    "titleEN": "Soya Sauce",
+    "descriptionEN": "",
+    "price": 5,
+    "category": 5,
+    "rating": 4,
+    "weight": 30
   }
 ]

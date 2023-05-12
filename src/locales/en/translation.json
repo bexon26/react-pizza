@@ -170,6 +170,26 @@
     "title": "Pasta",
     "description": "pasta"
   },
+  "Майонез": {
+    "title": "Mayonnaise",
+    "description": ""
+  },
+  "Кетчуп": {
+    "title": "Ketchup",
+    "description": ""
+  },
+  "Горчичный соус": {
+    "title": "Mustard Souce",
+    "description": ""
+  },
+  "Сметана": {
+    "title": "Sour Cream",
+    "description": ""
+  },
+  "Соевый соус": {
+    "title": "Soya Sauce",
+    "description": ""
+  },
   
 
   
