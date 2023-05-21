@@ -33,6 +33,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start node.js": "npx nodemon server.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
@@ -60,6 +61,7 @@
   "devDependencies": {
     "@types/jquery": "^3.5.16",
     "@types/lodash.debounce": "^4.0.7",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "nodemon": "^2.0.22"
   }
 }
