@@ -3,9 +3,9 @@
     "title": "Chocolate cake",
     "description": "flour, sugar, egg, milk, cacao, butter"
   },
-  "Олальи с сиропом": {
-    "title": "Pancakes with syrop",
-    "description": "rayeb, flour, egg, syrup"
+  "Оладьи": {
+    "title": "Pancakes",
+    "description": "rayeb, flour, egg"
   },
   "Блинчики": {
     "title": "Pancakes",
@@ -189,6 +189,22 @@
   "Соевый соус": {
     "title": "Soya Sauce",
     "description": ""
+  },
+  "Греческий салат": {
+    "title": "Greek salad",
+    "description": "olives, tomatoes, feta cheese, cucumber, lettuce"
+  },
+  "Цезарь": {
+    "title": "Caesar salad",
+    "description": "lettuce, tomatoes, chicken, cheese, croutons"
+  },
+  "Блинчики с курицей": {
+    "title": "Pancakes with chicken",
+    "description": "chicken, greens, flour, sugar, egg, milk"
+  },
+  "Блинчики с яблоками": {
+    "title": "Pancakes with apples",
+    "description": "apples, flour, sugar, egg, milk"
   },
   
 
