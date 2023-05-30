@@ -2,7 +2,7 @@ import express from "express";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 
-mongoose.connect('mongodb+srv://admin:wwwwww@cluster0.mf1g6f3.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://admin:wwwwww@cluster0.mf1g6f3.mongodb.net/?retryWrites=true&w=majority',)
 .then(()=>{console.log('DB ok')})
 .catch((err)=>{console.log('DB ERROR'), err})
 
