@@ -505,7 +505,7 @@
   },
   {
     "id": "47",
-    "imageUrl": "https://ypsbmb.ru/assets/orange-cake.png",
+    "imageUrl": "https://ypsbmb.ru/assets/lemon-cake.png",
     "title": "Апельсиновый кекс",
     "description": "апельсин, мука, сахар, яйца, масло",
     "titleEN": "Orange cake",
@@ -517,7 +517,7 @@
   },
   {
     "id": "48",
-    "imageUrl": "https://ypsbmb.ru/assets/lemon-cake.png",
+    "imageUrl": "https://ypsbmb.ru/assets/orange-cake.png",
     "title": "Лимонный кекс",
     "description": "лимон, мука, сахар, яйца, масло",
     "titleEN": "Lemon cake",
@@ -620,7 +620,7 @@
     "titleEN": "Pancakes with chicken",
     "descriptionEN": "chicken, greens, flour, sugar, egg, milk",
     "price": 90,
-    "category": 4,
+    "category": 2,
     "rating": 4,
     "weight": 450
   },

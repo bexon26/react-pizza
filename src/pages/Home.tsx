@@ -5,11 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 import Categories from '../components/Categories/Categories';
+
 import Sort, { sortList } from '../components/Sort/Sort';
 import PizzaBlock from '../components/PizzaBlock/PizzaBlock';
 import Skeleton from '../components/Skeleton/Skeleton';
 import Pagination from '../components/Pagination';
-
+import { useTranslation } from "react-i18next";
 
 import { setCategoryId, setCurrentPage, setFilters } from '../redux/filter/slice';
 
@@ -20,6 +21,7 @@ import { fetchPizzas } from '../redux/pizza/asynkActions';
 
 
 const Home:React.FC = () =>{
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const isSearch = React.useRef(false);
@@ -130,7 +132,7 @@ const Home:React.FC = () =>{
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
         <Sort value={sort}/>
       </div>
-      <h2 className="content__title">Все пиццы</h2>
+      <h2 className="content__title">{t(`categories.${[categoryId]}`)}</h2>
       {status === 'error' ? (
         <div className='content__error-info'>
           <h2>Произошла ошибка<span>😕</span></h2>
