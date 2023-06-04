@@ -72,6 +72,18 @@
     "weight": 240
   },
   {
+    "id": "9",
+    "imageUrl": "https://ypsbmb.ru/assets/vegetable-salad.png",
+    "title": "Овощой салат",
+    "description": "Огурец, помидоры, перец, зелень",
+    "titleEN": "Vegetable salad",
+    "descriptionEN": "Cucumber, tomato, pepper, greens",
+    "price": 50,
+    "category": 1,
+    "rating": 4,
+    "weight": 300
+  },
+  {
     "id": "10",
     "imageUrl": "https://ypsbmb.ru/assets/koylet-chiken_640x640.png",
     "title": "Куриные котлеты",
@@ -138,6 +150,18 @@
     "description": "Курица, рис, морковь, томатный соус",
     "titleEN": "Tefteli",
     "descriptionEN": "chicken, rice, carrot, tomato sauce",
+    "price": 70,
+    "category": 2,
+    "rating": 4,
+    "weight": 230
+  },
+  {
+    "id": "16",
+    "imageUrl": "https://ypsbmb.ru/assets/chiken-v-clyare.png",
+    "title": "Курица в кляре",
+    "description": "Курица, молоко, яйцо, мука",
+    "titleEN": "Chicken fillet in butter",
+    "descriptionEN": "Chicken, milk, egg, flour",
     "price": 70,
     "category": 2,
     "rating": 4,

@@ -32,6 +32,10 @@
     "title": "Beef cutlets",
     "description": "beef, chicken, onion, egg"
   },
+  "Овощой салат": {
+    "title": "Vegetable salad",
+    "description": "Cucumber, tomato, pepper, greens"
+  },
   "Куриные котлеты": {
     "title": "Chicken cultlets",
     "description": "chicken, onion, egg"
@@ -60,6 +64,10 @@
   "Тефтели": {
     "title": "Tefteli",
     "description": "chicken, rice, carrot, tomato sauce"
+  },
+  "Курица в кляре": {
+    "title": "Chicken fillet in butter",
+    "description": "Chicken, milk, egg, flour"
   },
   "Nestle Mineral Water": {
     "title": "Nestle Mineral Water 1.5L",
