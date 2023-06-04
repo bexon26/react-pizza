@@ -78,7 +78,7 @@
     "description": "Огурец, помидоры, перец, зелень",
     "titleEN": "Vegetable salad",
     "descriptionEN": "Cucumber, tomato, pepper, greens",
-    "price": 50,
+    "price": 20,
     "category": 1,
     "rating": 4,
     "weight": 300
@@ -530,7 +530,7 @@
   {
     "id": "47",
     "imageUrl": "https://ypsbmb.ru/assets/lemon-cake.png",
-    "title": "Апельсиновый кекс",
+    "title": "Апельсиновый пирог",
     "description": "апельсин, мука, сахар, яйца, масло",
     "titleEN": "Orange cake",
     "descriptionEN": "orange, flour, sugar, eggs, butter",
@@ -542,7 +542,7 @@
   {
     "id": "48",
     "imageUrl": "https://ypsbmb.ru/assets/orange-cake.png",
-    "title": "Лимонный кекс",
+    "title": "Лимонный пирог",
     "description": "лимон, мука, сахар, яйца, масло",
     "titleEN": "Lemon cake",
     "descriptionEN": "Lemon, flour, sugar, eggs, butter",

@@ -644,11 +644,11 @@ body {
 .contacts_row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px;
+  gap: 20px;
   justify-content: space-between;
+  margin-top: 40px;
   .col {
-    margin: 40px 0;
+    // margin: 40px 0;
 
     .c_item {
       display: flex;
@@ -673,7 +673,8 @@ body {
 
   .social_contacts {
     display: flex;
-    li a {
+    column-gap: 15px;
+    li a img{
       width: 48px;
       height: 48px;
     }

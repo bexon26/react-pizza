@@ -1,4 +1,9 @@
 import React from "react";
+import instagram_logo from "../assets/img/instagram_logo.png";
+import facebook_logo from "../assets/img/facebook_logo.png";
+import telegram_logo from "../assets/img/telegram_logo.svg.png";
+import whatsApp_logo from "../assets/img/whatsApp_logo.png";
+
 
 const Contacts = () => {
   return (
@@ -37,19 +42,7 @@ const Contacts = () => {
             </div>
           </div>
         </div>
-        <div className="col">
-          <div className="c_item">
-            <picture>
-              <img src="https://cactus-gomel.by/wp-content/themes/cactus/img/icons/mail.svg" />
-            </picture>
-            <div className="text">
-              <span>Вопросы и предложения</span>
-              <a href="mailto:cactusby@mail.ru" itemProp="email">
-                cactusby@mail.ru
-              </a>
-            </div>
-          </div>
-        </div>
+        
         <div className="col">
           <ul className="social_contacts">
             <li>
@@ -58,7 +51,7 @@ const Contacts = () => {
                 target="_blank"
                 href="https://www.instagram.com/cactusgomel/"
               >
-                <img src="./assets/img/instagram_logo.png" />
+                <img src={instagram_logo} />
               </a>
             </li>
             <li>
@@ -67,7 +60,7 @@ const Contacts = () => {
                 target="_blank"
                 href="https://www.instagram.com/cactusgomel/"
               >
-                <img src="./assets/img/facebook_logo.png" />
+                <img src={facebook_logo} />
               </a>
             </li>
             <li>
@@ -76,7 +69,7 @@ const Contacts = () => {
                 target="_blank"
                 href="https://www.instagram.com/cactusgomel/"
               >
-                <img src="./assets/img/telegram_logo.svg.png" />
+                <img src={telegram_logo} />
               </a>
             </li>
             <li>
@@ -85,7 +78,7 @@ const Contacts = () => {
                 target="_blank"
                 href="https://www.instagram.com/cactusgomel/"
               >
-                <img src="./assets/img/whatsApp_logo.png" />
+                <img src={whatsApp_logo} />
               </a>
             </li>
           </ul>
