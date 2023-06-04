@@ -638,3 +638,53 @@ body {
   left: 0;
   top: 2px;
 }
+
+//contacts
+
+.contacts_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+  justify-content: space-between;
+  .col {
+    margin: 40px 0;
+
+    .c_item {
+      display: flex;
+      picture {
+        width: 48px;
+        min-width: 48px;
+        height: 48px;
+        background: #079d28;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .social_contacts {
+    display: flex;
+    li a {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+.map {
+  width: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
