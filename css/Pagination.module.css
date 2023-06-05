@@ -1,0 +1,38 @@
+.root li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.root li a {
+  color: #0ead09;
+  padding: 10px;
+  border: 1px solid #0ead09;
+  border-radius: 30px;
+  width: 45px;
+  height: 45px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.root li a:hover {
+  background-color: #0ead09;
+  color: white;
+}
+
+.root :global .selected a {
+  background-color: #0ead09;
+  color: white;
+}
