@@ -31,11 +31,11 @@ app.post("/auth/login", loginValidation, UserController.login);
 app.post("/auth/register", registerValidation, UserController.register);
 app.get("/auth/me", checkAuth, UserController.getMe);
 
-// app.get("/dish", PostController.getAll);
-// app.get("/dish/:id", PostController.getOne);
+app.get("/dish", PostController.getAll);
+app.get("/dish/:id", PostController.getOne);
 app.post("/dish",checkAuth, dishCreateValidation, PostController.create);
-// app.delete("/dish", PostController.remove);
-// app.patch("/dish", PostController.update);
+app.delete("/dish/:id",checkAuth, PostController.remove);
+app.patch("/dish/:id",checkAuth, PostController.update);
 
 
 
