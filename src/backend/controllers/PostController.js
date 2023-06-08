@@ -81,7 +81,7 @@ export const create = async (req, res) => {
 export const update = async (req, res) => {
   try {
     const dishId = req.params.id;
-    await DishModel.updateOne(
+    const dish = await DishModel.findOneAndUpdate(
       { id: dishId },
       {
         id: req.body.id,
@@ -97,6 +97,12 @@ export const update = async (req, res) => {
         user: req.userId,
       }
     );
+    if (!dish) {
+      res.status(404).json({
+        message: "Не удалось найти обновляемое блюдо",
+      });
+      return;
+    }
 
     res.json({
       success:true
