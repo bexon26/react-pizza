@@ -19,7 +19,10 @@ import {
 import { useAppDispatch } from "../redux/store";
 import { selectFilter } from "../redux/filter/selectors";
 import { selectPizzaData } from "../redux/pizza/selectors";
-import { fetchDish, fetchPizzas, instance } from "../redux/pizza/asynkActions"; 
+import { fetchPizzas } from "../redux/pizza/asynkActions"; 
+import axios from "axios";
+import { fetchDish } from "../redux/dish/asynkActions";
+
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -73,7 +76,8 @@ const Home: React.FC = () => {
   //Запрос к бекенд
 
   React.useEffect(() => {
-   dispatch(fetchDish)
+    // axios.get('http://localhost:4444/dish')
+    dispatch(fetchDish())
    
   }, []);
 

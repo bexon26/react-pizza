@@ -14,10 +14,3 @@ export const fetchPizzas = createAsyncThunk<Pizza[], Record<string, string>>(
   }
 );
 
-export const instance = axios.create({
-  baseURL: "http://localhost:4444",
-});
-export const fetchDish = createAsyncThunk("dish/fetchDish", async () => {
-  const {data} = await instance.get("/dish");
-  return data;
-});
