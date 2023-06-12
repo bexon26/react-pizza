@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Delivery from "./pages/Delivery";
 import Contacts from "./pages/Contacts";
 import Time from "./pages/Time";
+import {Login, Registration} from "./pages";
 
 function App() {
   return (
@@ -29,7 +30,9 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="delivery" element={<Delivery />} />
           <Route path="contacts" element={<Contacts />} />
-          {/* <Route path="time" element={<Time />} /> */}
+          <Route path="time" element={<Time />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Registration />} />
         </Route>
       </Routes>
     </>

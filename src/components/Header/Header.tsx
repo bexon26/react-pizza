@@ -7,7 +7,18 @@ import React from "react";
 import { selectCart } from "../../redux/cart/selectors";
 import SwitcherLang from "../UI/SwitcherLang/SwitcherLang";
 
+import Button from '@mui/material/Button';
+
+import styles from './Header.module.scss';
+import Container from '@mui/material/Container';
+
+
+
 function Header() {
+  const isAuth = false;
+
+  const onClickLogout = () => {};
+
   const { items, totalPrice } = useSelector(selectCart);
   const location = useLocation(); // Хук
 
@@ -42,6 +53,31 @@ function Header() {
           <Search />
           <SwitcherLang />
         </div>
+        <Container maxWidth="sm">
+        <div className={styles.inner}>
+          <div className={styles.buttons}>
+            {isAuth ? (
+              <>
+                <Link to="/react-pizza/dish/create">
+                  <Button variant="contained">Написать статью</Button>
+                </Link>
+                <Button onClick={onClickLogout} variant="contained" color="error">
+                  Выйти
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link to="/react-pizza/login">
+                  <Button variant="outlined">Войти</Button>
+                </Link>
+                <Link to="/react-pizza/register">
+                  <Button variant="contained">Регистрация</Button>
+                </Link>
+              </>
+            )}
+          </div>
+        </div>
+      </Container>
         <div className="header__cart">
           {location.pathname !== "/react-pizza/cart" && (
             <Link to="/react-pizza/cart" className="button button--cart">
