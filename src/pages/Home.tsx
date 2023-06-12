@@ -22,6 +22,7 @@ import { selectPizzaData } from "../redux/pizza/selectors";
 import { fetchPizzas } from "../redux/pizza/asynkActions"; 
 import axios from "axios";
 import { fetchDish } from "../redux/dish/asynkActions";
+import { selectDishData } from "../redux/dish/selectors";
 
 
 const Home: React.FC = () => {
@@ -30,7 +31,10 @@ const Home: React.FC = () => {
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
 
-  const { items, status } = useSelector(selectPizzaData); // вытаскиваем данные
+  // const { items, status } = useSelector(selectPizzaData); // вытаскиваем данные из запроса к мокапи
+  const { items, status } = useSelector(selectDishData); // вытаскиваем данные из запроса к своему бекенду
+  
+  
   const { categoryId, sort, currentPage, searchValue } = useSelector(
     selectFilter
   );
