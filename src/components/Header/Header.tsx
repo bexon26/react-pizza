@@ -11,13 +11,24 @@ import Button from '@mui/material/Button';
 
 import styles from './Header.module.scss';
 import Container from '@mui/material/Container';
+import { logOut, selectIsAuth } from "../../redux/auth/auth";
+import { useAppDispatch } from "../../redux/store";
 
 
 
 function Header() {
-  const isAuth = false;
 
-  const onClickLogout = () => {};
+  
+  const dispatch = useAppDispatch();
+  const isAuth = useSelector(selectIsAuth);
+
+  const onClickLogout = () => {
+    if (window.confirm('Вы действительно хотите выйти?')){
+      dispatch(logOut())
+
+    }
+
+  };
 
   const { items, totalPrice } = useSelector(selectCart);
   const location = useLocation(); // Хук
