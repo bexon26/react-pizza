@@ -5,11 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 import Categories from "../components/Categories/Categories";
+
 import Sort, { sortList } from "../components/Sort/Sort";
 import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
 import Skeleton from "../components/Skeleton/Skeleton";
 import Pagination from "../components/Pagination";
-
+import { useTranslation } from "react-i18next";
 import {
   setCategoryId,
   setCurrentPage,
@@ -26,7 +27,9 @@ import { selectDishData } from "../redux/dish/selectors";
 import { selectAuthData } from "../redux/auth/selectors";
 
 
-const Home: React.FC = () => {
+
+const Home:React.FC = () =>{
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const isSearch = React.useRef(false);
@@ -138,7 +141,7 @@ const Home: React.FC = () => {
         </div>
       ) : (
         <div className="content__items">
-          {status === "loading" ? skeletons : [...pizzas1,pizzas]}
+          {status === "loading" ? skeletons : [...pizzas1, ...pizzas]}
         </div>
       )}
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />

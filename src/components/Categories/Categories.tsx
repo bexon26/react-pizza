@@ -9,7 +9,7 @@ type CategoriesProps = {
 
 
 
-const categories = [
+const listCategories = [
   { name: "Все", image: "" },
   { name: "Салаты", image: "🥗" },
   { name: "Горячее", image: "🍲" },
@@ -25,7 +25,7 @@ const Categories: React.FC<CategoriesProps> = React.memo(
     return (
       <div className="categories">
         <ul>
-          {categories.map(({ name, image }, i) => (
+          {listCategories.map(({ name, image }, i) => (
             <li
               key={i}
               onClick={() => onChangeCategory(i)}

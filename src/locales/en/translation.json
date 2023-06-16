@@ -3,9 +3,9 @@
     "title": "Chocolate cake",
     "description": "flour, sugar, egg, milk, cacao, butter"
   },
-  "Олальи с сиропом": {
-    "title": "Pancakes with syrop",
-    "description": "rayeb, flour, egg, syrup"
+  "Оладьи": {
+    "title": "Pancakes",
+    "description": "rayeb, flour, egg"
   },
   "Блинчики": {
     "title": "Pancakes",
@@ -31,6 +31,10 @@
   "Котлеты из говядины": {
     "title": "Beef cutlets",
     "description": "beef, chicken, onion, egg"
+  },
+  "Овощой салат": {
+    "title": "Vegetable salad",
+    "description": "Cucumber, tomato, pepper, greens"
   },
   "Куриные котлеты": {
     "title": "Chicken cultlets",
@@ -60,6 +64,10 @@
   "Тефтели": {
     "title": "Tefteli",
     "description": "chicken, rice, carrot, tomato sauce"
+  },
+  "Курица в кляре": {
+    "title": "Chicken fillet in butter",
+    "description": "Chicken, milk, egg, flour"
   },
   "Nestle Mineral Water": {
     "title": "Nestle Mineral Water 1.5L",
@@ -189,6 +197,22 @@
   "Соевый соус": {
     "title": "Soya Sauce",
     "description": ""
+  },
+  "Греческий салат": {
+    "title": "Greek salad",
+    "description": "olives, tomatoes, feta cheese, cucumber, lettuce"
+  },
+  "Цезарь": {
+    "title": "Caesar salad",
+    "description": "lettuce, tomatoes, chicken, cheese, croutons"
+  },
+  "Блинчики с курицей": {
+    "title": "Pancakes with chicken",
+    "description": "chicken, greens, flour, sugar, egg, milk"
+  },
+  "Блинчики с яблоками": {
+    "title": "Pancakes with apples",
+    "description": "apples, flour, sugar, egg, milk"
   },
   
 

@@ -13,11 +13,11 @@
   },
   {
     "id": "3",
-    "imageUrl": "https://ypsbmb.ru/assets/dish4_640x640.png",
-    "title": "Олальи с сиропом",
-    "description": "кефир, мука, яйцо, сироп",
-    "titleEN": "Pancakes with syrop",
-    "descriptionEN": "rayeb, flour, egg, syrup",
+    "imageUrl": "https://ypsbmb.ru/assets/pankakes.png",
+    "title": "Оладьи",
+    "description": "кефир, мука, яйцо",
+    "titleEN": "Pancakes",
+    "descriptionEN": "rayeb, flour, egg",
     "price": 40,
     "category": 4,
     "rating": 4,
@@ -70,6 +70,18 @@
     "category": 2,
     "rating": 4,
     "weight": 240
+  },
+  {
+    "id": "9",
+    "imageUrl": "https://ypsbmb.ru/assets/vegetable-salad.png",
+    "title": "Овощой салат",
+    "description": "Огурец, помидоры, перец, зелень",
+    "titleEN": "Vegetable salad",
+    "descriptionEN": "Cucumber, tomato, pepper, greens",
+    "price": 20,
+    "category": 1,
+    "rating": 4,
+    "weight": 300
   },
   {
     "id": "10",
@@ -138,6 +150,18 @@
     "description": "Курица, рис, морковь, томатный соус",
     "titleEN": "Tefteli",
     "descriptionEN": "chicken, rice, carrot, tomato sauce",
+    "price": 70,
+    "category": 2,
+    "rating": 4,
+    "weight": 230
+  },
+  {
+    "id": "16",
+    "imageUrl": "https://ypsbmb.ru/assets/chiken-v-clyare.png",
+    "title": "Курица в кляре",
+    "description": "Курица, молоко, яйцо, мука",
+    "titleEN": "Chicken fillet in butter",
+    "descriptionEN": "Chicken, milk, egg, flour",
     "price": 70,
     "category": 2,
     "rating": 4,
@@ -505,8 +529,8 @@
   },
   {
     "id": "47",
-    "imageUrl": "https://ypsbmb.ru/assets/orange-cake.png",
-    "title": "Апельсиновый кекс",
+    "imageUrl": "https://ypsbmb.ru/assets/lemon-cake.png",
+    "title": "Апельсиновый пирог",
     "description": "апельсин, мука, сахар, яйца, масло",
     "titleEN": "Orange cake",
     "descriptionEN": "orange, flour, sugar, eggs, butter",
@@ -517,8 +541,8 @@
   },
   {
     "id": "48",
-    "imageUrl": "https://ypsbmb.ru/assets/lemon-cake.png",
-    "title": "Лимонный кекс",
+    "imageUrl": "https://ypsbmb.ru/assets/orange-cake.png",
+    "title": "Лимонный пирог",
     "description": "лимон, мука, сахар, яйца, масло",
     "titleEN": "Lemon cake",
     "descriptionEN": "Lemon, flour, sugar, eggs, butter",
@@ -586,5 +610,54 @@
     "category": 5,
     "rating": 4,
     "weight": 30
+  }
+  ,
+  {
+    "id": "54",
+    "imageUrl": "https://ypsbmb.ru/assets/greek-salad.png",
+    "title": "Греческий салат",
+    "description": "маслины, помидоры, сыр фета, огурец, салат",
+    "titleEN": "Greek salad",
+    "descriptionEN": "olives, tomatoes, feta cheese, cucumber, lettuce",
+    "price": 50,
+    "category": 1,
+    "rating": 4,
+    "weight": 300
+  },
+  {
+    "id": "55",
+    "imageUrl": "https://ypsbmb.ru/assets/121212.png",
+    "title": "Цезарь",
+    "description": "салат, помидоры, курица, сыр, сухарики",
+    "titleEN": "Caesar salad",
+    "descriptionEN": "lettuce, tomatoes, chicken, cheese, croutons",
+    "price": 50,
+    "category": 1,
+    "rating": 4,
+    "weight": 300
+  },
+  {
+    "id": "56",
+    "imageUrl": "https://ypsbmb.ru/assets/pancakes-chicken.png",
+    "title": "Блинчики с курицей",
+    "description": "курица, зелень, мука, сахар, яйцо, молоко",
+    "titleEN": "Pancakes with chicken",
+    "descriptionEN": "chicken, greens, flour, sugar, egg, milk",
+    "price": 90,
+    "category": 2,
+    "rating": 4,
+    "weight": 450
+  },
+  {
+    "id": "57",
+    "imageUrl": "https://ypsbmb.ru/assets/pancakes-apples.png",
+    "title": "Блинчики с яблоками",
+    "description": "яблоки, мука, сахар, яйцо, молоко",
+    "titleEN": "Pancakes with apples",
+    "descriptionEN": "apples, flour, sugar, egg, milk",
+    "price": 90,
+    "category": 4,
+    "rating": 4,
+    "weight": 450
   }
 ]
