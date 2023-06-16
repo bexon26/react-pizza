@@ -23,6 +23,7 @@ import { fetchPizzas } from "../redux/pizza/asynkActions";
 import axios from "axios";
 import { fetchDish } from "../redux/dish/asynkActions";
 import { selectDishData } from "../redux/dish/selectors";
+import { selectAuthData } from "../redux/auth/selectors";
 
 
 const Home: React.FC = () => {
@@ -32,9 +33,9 @@ const Home: React.FC = () => {
   const isMounted = React.useRef(false);
 
   // const { items, status } = useSelector(selectPizzaData); // вытаскиваем данные из запроса к мокапи
-  const { items, status } = useSelector(selectDishData); // вытаскиваем данные из запроса к своему бекенду
-  
-  
+  const { items, status } = useSelector(selectDishData); // вытаскиваем данные из стэйта запроса к своему бекенду
+  const userData = useSelector(selectAuthData); //  вытаскиваем данные о авторизованном пользователе
+ console.log(userData.admin)
   const { categoryId, sort, currentPage, searchValue } = useSelector(
     selectFilter
   );
@@ -95,6 +96,7 @@ const Home: React.FC = () => {
       price={obj.price}
       image={obj.imageUrl}
       category={obj.category}
+      isEditable = {userData.admin?userData.admin:false}
     />
   ));
 

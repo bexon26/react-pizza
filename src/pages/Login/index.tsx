@@ -13,7 +13,7 @@ import { Navigate } from "react-router-dom";
 
 export const Login = () => {
   const isAuth = useSelector(selectIsAuth);
-  
+
   const dispatch = useAppDispatch();
   const {
     register,
@@ -25,15 +25,21 @@ export const Login = () => {
       email: "",
       password: "",
     },
-    mode: 'onChange'
+    mode: "onChange",
   });
 
-  const onSubmit = (values: { email: String; password: String }) => {
-   dispatch(fetchAuth(values))
+  const onSubmit = async (values: { email: String; password: String }) => {
+    const data = await dispatch(fetchAuth(values));
+    if (!data.payload) {
+      return alert("Не удалось авторизоваться!");
+    }
+    if ("token" in data.payload) {
+      window.localStorage.setItem("token", data.payload.token);
+    }
   };
-  if(isAuth){
-    return <Navigate to="/react-pizza/" />
-   }
+  if (isAuth) {
+    return <Navigate to="/react-pizza/" />;
+  }
   return (
     <Paper classes={{ root: styles.root }}>
       <Typography classes={{ root: styles.title }} variant="h5">
@@ -44,7 +50,7 @@ export const Login = () => {
           className={styles.field}
           label="E-Mail"
           type="email"
-          error= {Boolean(errors.email?.message)}
+          error={Boolean(errors.email?.message)}
           helperText={errors.email?.message}
           {...register("email", { required: "Укажите почту" })}
           fullWidth
@@ -52,7 +58,7 @@ export const Login = () => {
         <TextField
           className={styles.field}
           label="Пароль"
-          error= {Boolean(errors.password?.message)}
+          error={Boolean(errors.password?.message)}
           helperText={errors.password?.message}
           {...register("password", { required: "Введите пароль" })}
           fullWidth

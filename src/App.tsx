@@ -15,8 +15,17 @@ import Delivery from "./pages/Delivery";
 import Contacts from "./pages/Contacts";
 import Time from "./pages/Time";
 import {Login, Registration} from "./pages";
+import { useAppDispatch } from "./redux/store";
+import { fetchAuthMe, selectIsAuth } from "./redux/auth/auth";
+import { useSelector } from "react-redux";
+import { AddDish } from "./components/AddDish";
 
 function App() {
+  const dispatch = useAppDispatch();
+  const isAuth = useSelector(selectIsAuth);
+  React.useEffect(()=>{
+    dispatch(fetchAuthMe())
+  },[])
   return (
     // <div className="container">
     <>
@@ -33,6 +42,7 @@ function App() {
           <Route path="time" element={<Time />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Registration />} />
+          <Route path="dish/create" element={<AddDish />} />
         </Route>
       </Routes>
     </>

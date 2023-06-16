@@ -5,9 +5,10 @@ export type Pizza = {
    titleEN:string;
    descriptionEN: string;  
    weight:number;
+   raiting:number;
    price:number; 
    image:string; 
-
+   admin:boolean;
  }
  
  export enum Status {

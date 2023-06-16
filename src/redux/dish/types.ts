@@ -3,11 +3,13 @@ export type Dish = {
    title:string;
    description: string;
    titleEN:string;
-   descriptionEN: string;  
+   descriptionEN: string;
+   category:number; 
+   raiting:number; 
    weight:number;
    price:number; 
    image:string; 
-
+   
  }
  
  export enum Status {

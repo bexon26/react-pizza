@@ -25,7 +25,7 @@ function Header() {
   const onClickLogout = () => {
     if (window.confirm('Вы действительно хотите выйти?')){
       dispatch(logOut())
-
+      window.localStorage.removeItem('token')
     }
 
   };
@@ -70,7 +70,7 @@ function Header() {
             {isAuth ? (
               <>
                 <Link to="/react-pizza/dish/create">
-                  <Button variant="contained">Написать статью</Button>
+                  <Button variant="contained">Добавить блюдо</Button>
                 </Link>
                 <Button onClick={onClickLogout} variant="contained" color="error">
                   Выйти

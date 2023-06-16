@@ -5,6 +5,10 @@ import { selectCartItemById } from "../../redux/cart/selectors";
 import { addItem } from "../../redux/cart/slice";
 import { CartItem } from "../../redux/cart/types";
 import { useTranslation } from "react-i18next";
+import { IconButton } from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
+
+import DeleteIcon from "@mui/icons-material/Clear";
 
 type PizzaBlockProps = {
   id: string;
@@ -14,6 +18,7 @@ type PizzaBlockProps = {
   price: number;
   image: string;
   category: number;
+  isEditable: boolean;
 };
 const PizzaBlock: React.FC<PizzaBlockProps> = ({
   id,
@@ -22,7 +27,8 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   weight,
   price,
   image,
-  category
+  category,
+  isEditable ,
 }) => {
   const dispatch = useDispatch();
   const cartItem = useSelector(selectCartItemById(id));
@@ -36,34 +42,52 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
       id,
       title,
       description,
-      
+
       weight,
       price,
       image,
       category,
+      
       count: 0,
     };
     dispatch(addItem(item));
   };
 
   const { t, i18n } = useTranslation();
-
+  const onClickRemove = () => {};
   return (
     <div className="pizza-block-wrapper">
       <div className="pizza-block">
-        <Link key={id} to={`pizza/${id}`}>
-          <div className="pizza-block-container">
-          <img className="pizza-block__image" src={image} />
-
+        {isEditable && (
+          <div className="edit-buttons">
+            <a href={`/posts/${id}/edit`}>
+              <IconButton color="primary">
+                <EditIcon />
+              </IconButton>
+            </a>
+            <IconButton onClick={onClickRemove} color="secondary">
+              <DeleteIcon />
+            </IconButton>
           </div>
-          
+        )}
+        <Link key={id} to={`pizza/${id}`} >
+          <div className="pizza-block-container">
+            <img className="pizza-block__image" src={image} />
+          </div>
+
           <h4 className="pizza-block__title">{t(`${title}.title`)}</h4>
-          <p className="pizza-block__description">{t(`${title}.description`)}</p>
-          <p className="pizza-block__weigth">{t('Вес')}: {weight} {category!==6?`${t("гр")}`:`${t("л")}`} </p>
+          <p className="pizza-block__description">
+            {t(`${title}.description`)}
+          </p>
+          <p className="pizza-block__weigth">
+            {t("Вес")}: {weight} {category !== 6 ? `${t("гр")}` : `${t("л")}`}{" "}
+          </p>
         </Link>
-        
+
         <div className="pizza-block__bottom">
-          <div className="pizza-block__price">{price} {t('фунтов')}</div>
+          <div className="pizza-block__price">
+            {price} {t("фунтов")}
+          </div>
           <button
             onClick={onClickAdd}
             className="button button--outline button--add"
@@ -80,7 +104,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
                 fill="white"
               />
             </svg>
-            <span>{t('Добавить')}</span>
+            <span>{t("Добавить")}</span>
             {addedCount > 0 && <i>{addedCount}</i>}
           </button>
         </div>
