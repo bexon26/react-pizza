@@ -20,8 +20,8 @@ export type Dish = {
  
  
  export interface DishSliceState {
-   items: Dish[];
-   status: 'loading' | 'success' | 'error'
+   items1: Dish[];
+   status1: 'loading' | 'success' | 'error'
  }
  
  

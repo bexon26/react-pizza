@@ -4,8 +4,8 @@ import { fetchDish } from "./asynkActions";
 import { Dish, DishSliceState, Status } from "./types";
 
 export const initialState: DishSliceState = {
-  items: [],
-  status: Status.LOADING, // loading | success | error
+  items1: [],
+  status1: Status.LOADING, // loading | success | error
 };
 
 export const dishSlice = createSlice({
@@ -13,21 +13,21 @@ export const dishSlice = createSlice({
   initialState,
   reducers: {
     setItems(state, action: PayloadAction<Dish[]>) {
-      state.items = action.payload;
+      state.items1 = action.payload;
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchDish.pending, (state, action) => {
-      state.status = Status.LOADING;
-      state.items = [];
+      state.status1 = Status.LOADING;
+      state.items1 = [];
     });
     builder.addCase(fetchDish.fulfilled, (state, action) => {
-      state.status = Status.SUCCESS;
-      state.items = action.payload;
+      state.status1 = Status.SUCCESS;
+      state.items1 = action.payload;
     });
     builder.addCase(fetchDish.rejected, (state, action) => {
-      state.status = Status.ERROR;
-      state.items = [];
+      state.status1 = Status.ERROR;
+      state.items1 = [];
     });
   },
 });

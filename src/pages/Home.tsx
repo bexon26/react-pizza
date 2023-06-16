@@ -32,8 +32,8 @@ const Home: React.FC = () => {
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
 
-  // const { items, status } = useSelector(selectPizzaData); // вытаскиваем данные из запроса к мокапи
-  const { items, status } = useSelector(selectDishData); // вытаскиваем данные из стэйта запроса к своему бекенду
+   const { items, status } = useSelector(selectPizzaData); // вытаскиваем данные из запроса к мокапи
+  const { items1, status1 } = useSelector(selectDishData); // вытаскиваем данные из стэйта запроса к своему бекенду
   const userData = useSelector(selectAuthData); //  вытаскиваем данные о авторизованном пользователе
  console.log(userData.admin)
   const { categoryId, sort, currentPage, searchValue } = useSelector(
@@ -86,6 +86,21 @@ const Home: React.FC = () => {
    
   }, []);
 
+
+  const pizzas1 = items1.map((obj: any) => (
+    <PizzaBlock
+      key={obj.id}
+      id={obj.id}
+      title={obj.title}
+      description={obj.description}
+      weight={obj.weight}
+      price={obj.price}
+      image={obj.imageUrl}
+      category={obj.category}
+      isEditable = {userData.admin?userData.admin:false}
+    />
+  ));
+
   const pizzas = items.map((obj: any) => (
     <PizzaBlock
       key={obj.id}
@@ -123,7 +138,7 @@ const Home: React.FC = () => {
         </div>
       ) : (
         <div className="content__items">
-          {status === "loading" ? skeletons : pizzas}
+          {status === "loading" ? skeletons : [...pizzas1,pizzas]}
         </div>
       )}
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
