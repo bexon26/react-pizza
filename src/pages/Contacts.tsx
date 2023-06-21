@@ -16,7 +16,7 @@ const Contacts = () => {
         <div className="col">
           <div className="c_item">
             <picture>
-              <img src="https://cactus-gomel.by/wp-content/themes/cactus/img/icons/mdi_location_on.svg" />
+              <img src="https://cactus-gomel.by/wp-content/themes/cactus/img/icons/mdi_location_on.svg" alt="mdi_location_on"/>
             </picture>
             <div className="text">
               <span>Адрес</span>
@@ -32,7 +32,7 @@ const Contacts = () => {
         <div className="col">
           <div className="c_item">
             <picture>
-              <img src="https://cactus-gomel.by/wp-content/themes/cactus/img/icons/phone1.svg" />
+              <img src="https://cactus-gomel.by/wp-content/themes/cactus/img/icons/phone1.svg" alt="phone1"/>
             </picture>
             <div className="text">
               <span>Телефон</span>
@@ -47,44 +47,46 @@ const Contacts = () => {
           <ul className="social_contacts">
             <li>
               <a
-                rel="nofollow"
+               rel="noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/cactusgomel/"
               >
-                <img src={instagram_logo} />
+                <img src={instagram_logo} alt="instagram_logo"/>
               </a>
             </li>
             <li>
               <a
-                rel="nofollow"
+               rel="noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/cactusgomel/"
               >
-                <img src={facebook_logo} />
+                <img src={facebook_logo} alt="facebook_logo"/>
               </a>
             </li>
             <li>
               <a
-                rel="nofollow"
+                rel="noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/cactusgomel/"
               >
-                <img src={telegram_logo} />
+                <img src={telegram_logo} alt="telegram_logo"/>
               </a>
             </li>
             <li>
               <a
-                rel="nofollow"
+                // rel="nofollow"
+                rel="noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/cactusgomel/"
               >
-                <img src={whatsApp_logo} />
+                <img src={whatsApp_logo} alt="whatsApp_logo"/>
               </a>
             </li>
           </ul>
         </div>
         <div className="col map">
           <iframe
+          title="yandex-map"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A8a5aa135edfa26b479a9ec97dfdf50d94721b1f280ce5b2f51cad533b399cc55&amp;source=constructor"
             width="100%"
             height="500"

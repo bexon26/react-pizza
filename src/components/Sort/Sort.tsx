@@ -1,11 +1,10 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setSort } from "../../redux/filter/slice";
 import useWhyDidYouUpdate from "ahooks/lib/useWhyDidYouUpdate";
 import { Sort, SortPropertyEnum } from "../../redux/filter/types";
 
 import i18n from "../../i18n";
-
 
 type SortItem = {
   name: string;
@@ -16,20 +15,26 @@ type PupupClick = MouseEvent & {
   path: Node[];
 };
 
-
-
 export const sortList: SortItem[] = [
   { name: "популярности ↓", sortProperty: SortPropertyEnum.RATING_DESC },
   { name: "популярности ↑", sortProperty: SortPropertyEnum.RATING_ASC },
   { name: "цене ↓", sortProperty: SortPropertyEnum.PRICE_DESC },
   { name: "цене ↑", sortProperty: SortPropertyEnum.PRICE_ASC },
-  { name: "алфавиту ↓", sortProperty: i18n.language === "en" ? SortPropertyEnum.TTTLE_DESC_EN : SortPropertyEnum.TITLE_DESC  },
-  { name: "алфавиту ↑", sortProperty: i18n.language === "en" ? SortPropertyEnum.TTTLE_ASC_EN : SortPropertyEnum.TITLE_ASC  },
+  {
+    name: "алфавиту ↓",
+    sortProperty:
+      i18n.language === "en"
+        ? SortPropertyEnum.TTTLE_DESC_EN
+        : SortPropertyEnum.TITLE_DESC,
+  },
+  {
+    name: "алфавиту ↑",
+    sortProperty:
+      i18n.language === "en"
+        ? SortPropertyEnum.TTTLE_ASC_EN
+        : SortPropertyEnum.TITLE_ASC,
+  },
 ];
-
-
-
-
 
 type SortPopupProps = {
   value: Sort;
@@ -55,7 +60,7 @@ const SortPopup: React.FC<SortPopupProps> = React.memo(({ value }) => {
   // Закрытие попап при нажатии на область вне попап
   React.useEffect(() => {
     console.log(i18n.language);
-    
+
     const handleClickOutside = (event: MouseEvent) => {
       const _event = event as PupupClick;
 
@@ -68,9 +73,6 @@ const SortPopup: React.FC<SortPopupProps> = React.memo(({ value }) => {
       document.body.removeEventListener("click", handleClickOutside);
     };
   }, []);
-
-  
-
 
   return (
     <div ref={sortRef} className="sort">

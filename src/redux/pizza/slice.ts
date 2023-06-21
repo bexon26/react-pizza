@@ -1,6 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
-import { fetchRemoveDish } from "../dish/asynkActions";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
 import { fetchPizzas } from "./asynkActions";
 import { Pizza, PizzaSliceState, Status } from "./types";
 
@@ -30,7 +29,6 @@ export const pizzaSlice = createSlice({
       state.status = Status.ERROR;
       state.items = [];
     });
-      
   },
 });
 

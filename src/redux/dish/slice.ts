@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
+import {  createSlice, PayloadAction } from "@reduxjs/toolkit";
+
 import { fetchDish, fetchRemoveDish } from "./asynkActions";
 import { Dish, DishSliceState, Status } from "./types";
 

@@ -19,8 +19,7 @@ export const Search = () => {
     inputRef.current?.focus();
   };
   // отложенная функция для уменьшения запросов на сервер
-
-  
+  // eslint-disable-next-line
   const updateSearchValue = React.useCallback(
     debounce((str) => {
       dispatch(setSearchValue(str));

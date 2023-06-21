@@ -1,10 +1,10 @@
 import React from "react";
 import dishJPG from "../assets/img/o-nas.jpeg";
-import checkSVG from "../assets/img/checkMark.svg";
+
 import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div>
       <div className="container">
@@ -24,8 +24,10 @@ const About = () => {
                 "Вкусное и сбалансированное питание – залог здоровья и хорошего настроения. Наш сервис специально для тех, кто привык питаться настоящей домашней едой, но не готов тратить время на поход в магазин и приготовление пищи."
               )}
             </p>
-            <p>{t('Мы решим эту проблему. Подбирайте подходящий рацион и наслаждайтесь домашней едой без хлопот!')}
-              
+            <p>
+              {t(
+                "Мы решим эту проблему. Подбирайте подходящий рацион и наслаждайтесь домашней едой без хлопот!"
+              )}
             </p>
             <ul className="checklist">
               <li>{t("Доставка в течении часа в герметичных контейнерах")}</li>
@@ -38,13 +40,17 @@ const About = () => {
         </div>
       </div>
       <div className="container">
-        <h2 className="section__title section__title-center">{t('Почему мы')}?</h2>
+        <h2 className="section__title section__title-center">
+          {t("Почему мы")}?
+        </h2>
 
         <div className="motivations">
           <div className="about-block">
             <div className="motivations__item">
               <div className="motivations__icon motivations__icon-1"></div>
-              <div className="motivations__text">{t('Вкусная домашняя еда')}</div>
+              <div className="motivations__text">
+                {t("Вкусная домашняя еда")}
+              </div>
             </div>
           </div>
           <div className="about-block">
@@ -52,7 +58,7 @@ const About = () => {
               <div className="motivations__icon motivations__icon-2"></div>
 
               <div className="motivations__text">
-              {t('Не нужно ходить в магазин, не нужно готовить')}
+                {t("Не нужно ходить в магазин, не нужно готовить")}
               </div>
             </div>
           </div>
@@ -60,13 +66,13 @@ const About = () => {
             <div className="motivations__item ">
               <div className="motivations__icon motivations__icon-3"></div>
 
-              <div className="motivations__text">{t('Свежие продукты')}</div>
+              <div className="motivations__text">{t("Свежие продукты")}</div>
             </div>
           </div>
           <div className="about-block">
             <div className="motivations__item">
               <div className="motivations__icon motivations__icon-4"></div>
-              <div className="motivations__text">{t('Быстрая доставка')}</div>
+              <div className="motivations__text">{t("Быстрая доставка")}</div>
             </div>
           </div>
         </div>

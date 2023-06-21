@@ -21,7 +21,7 @@ const Cart: React.FC = () => {
       dispatch(clearItems());
     }
   };
-  const { t, i18n } = useTranslation();
+  const { t} = useTranslation();
 
   if (!totalPrice) {
     return <CartEmty />;

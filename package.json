@@ -51,7 +51,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start node.js": "npx nodemon app.js",
-    "predeploy": "Snpm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",

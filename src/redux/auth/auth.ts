@@ -1,7 +1,7 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Status } from "../dish/types";
 import { RootState } from "../store";
-import { Auth } from "./types";
+
 import instance from "../dish/asynkActions";
 
 export const fetchAuth = createAsyncThunk(
