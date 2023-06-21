@@ -11,8 +11,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Clear";
 
 import { fetchRemoveDish } from "../../redux/dish/asynkActions";
-import { store, useAppDispatch } from "../../redux/store";
-
+import { useAppDispatch } from "../../redux/store";
 
 type PizzaBlockProps = {
   _id: string;
@@ -32,7 +31,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   price,
   image,
   category,
-  isEditable ,
+  isEditable,
 }) => {
   const dispatch = useDispatch();
   const useDeleteDispatch = useAppDispatch();
@@ -41,31 +40,27 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   // const [activeSize, setActiveSize] = React.useState(0);
 
   const addedCount = cartItem ? cartItem.count : 0;
-  
+
   const onClickAdd = () => {
     const item: CartItem = {
       _id,
       title,
       description,
-
       weight,
       price,
       image,
       category,
-      
       count: 0,
     };
     dispatch(addItem(item));
   };
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const OnClickRemove =  () => {
-    if (window.confirm('Вы действительно удалить блюдо?')){
-      
-      
+  const OnClickRemove = () => {
+    if (window.confirm("Вы действительно удалить блюдо?")) {
     }
-    useDeleteDispatch(fetchRemoveDish(_id))
+    useDeleteDispatch(fetchRemoveDish(_id));
   };
   return (
     <div className="pizza-block-wrapper">
@@ -82,9 +77,9 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
             </IconButton>
           </div>
         )}
-        <Link key={_id} to={`pizza/${_id}`} >
+        <Link key={_id} to={`pizza/${_id}`}>
           <div className="pizza-block-container">
-            <img className="pizza-block__image" src={image} />
+            <img className="pizza-block__image" src={image} alt={image} />
           </div>
 
           <h4 className="pizza-block__title">{t(`${title}.title`)}</h4>

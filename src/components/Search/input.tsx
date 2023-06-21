@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler } from "react";
+import React from "react";
 import debounce from "lodash.debounce";
 
 import { setSearchValue } from "../../redux/filter/slice";
@@ -19,11 +19,13 @@ export const Search = () => {
     inputRef.current?.focus();
   };
   // отложенная функция для уменьшения запросов на сервер
+
+  
   const updateSearchValue = React.useCallback(
     debounce((str) => {
       dispatch(setSearchValue(str));
     }, 500),
-    []
+    [debounce]
   );
 
   const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +33,7 @@ export const Search = () => {
     updateSearchValue(event.target.value);
   };
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className={styles.root}>
@@ -50,7 +52,7 @@ export const Search = () => {
         value={value}
         onChange={onChangeInput}
         className={styles.input}
-        placeholder={`${t('search') as string}...`}
+        placeholder={`${t("search") as string}...`}
       />
       {value && (
         <svg

@@ -7,27 +7,22 @@ import React from "react";
 import { selectCart } from "../../redux/cart/selectors";
 import SwitcherLang from "../UI/SwitcherLang/SwitcherLang";
 
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
-import styles from './Header.module.scss';
-import Container from '@mui/material/Container';
+import styles from "./Header.module.scss";
+import Container from "@mui/material/Container";
 import { logOut, selectIsAuth } from "../../redux/auth/auth";
 import { useAppDispatch } from "../../redux/store";
 
-
-
 function Header() {
-
-  
   const dispatch = useAppDispatch();
   const isAuth = useSelector(selectIsAuth);
 
   const onClickLogout = () => {
-    if (window.confirm('Вы действительно хотите выйти?')){
-      dispatch(logOut())
-      window.localStorage.removeItem('token')
+    if (window.confirm("Вы действительно хотите выйти?")) {
+      dispatch(logOut());
+      window.localStorage.removeItem("token");
     }
-
   };
 
   const { items, totalPrice } = useSelector(selectCart);
@@ -65,30 +60,34 @@ function Header() {
           <SwitcherLang />
         </div>
         <Container maxWidth="sm">
-        <div className={styles.inner}>
-          <div className={styles.buttons}>
-            {isAuth ? (
-              <>
-                <Link to="/react-pizza/dish/create">
-                  <Button variant="contained">Добавить блюдо</Button>
-                </Link>
-                <Button onClick={onClickLogout} variant="contained" color="error">
-                  Выйти
-                </Button>
-              </>
-            ) : (
-              <>
-                <Link to="/react-pizza/login">
-                  <Button variant="outlined">Войти</Button>
-                </Link>
-                <Link to="/react-pizza/register">
-                  <Button variant="contained">Регистрация</Button>
-                </Link>
-              </>
-            )}
+          <div className={styles.inner}>
+            <div className={styles.buttons}>
+              {isAuth ? (
+                <>
+                  <Link to="/react-pizza/dish/create">
+                    <Button variant="contained">Добавить блюдо</Button>
+                  </Link>
+                  <Button
+                    onClick={onClickLogout}
+                    variant="contained"
+                    color="error"
+                  >
+                    Выйти
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Link to="/react-pizza/login">
+                    <Button variant="outlined">Войти</Button>
+                  </Link>
+                  <Link to="/react-pizza/register">
+                    <Button variant="contained">Регистрация</Button>
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
         <div className="header__cart">
           {location.pathname !== "/react-pizza/cart" && (
             <Link to="/react-pizza/cart" className="button button--cart">

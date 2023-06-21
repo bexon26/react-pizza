@@ -8,16 +8,15 @@ import Button from "@mui/material/Button";
 import styles from "./AddDish.module.scss";
 import { useSelector } from "react-redux";
 import { selectIsAuthAdmin } from "../../redux/auth/auth";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import instance from "../../redux/dish/asynkActions";
-import { setSearchValue } from "../../redux/filter/slice";
 
 export const AddDish = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const isAuthAdmin = useSelector(selectIsAuthAdmin);
 
-  const [isLoading, setLoading] = React.useState(false);
+  // const [isLoading, setLoading] = React.useState(false);
   const [imageUrl, setImageUrl] = React.useState("");
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
@@ -35,7 +34,7 @@ export const AddDish = () => {
     try {
       const formData = new FormData();
       const file = event.target.files[0];
-      
+
       formData.set("image", file);
 
       const { data } = await instance({
@@ -61,7 +60,7 @@ export const AddDish = () => {
 
   const onSubmit = async () => {
     try {
-      setLoading(true);
+      // setLoading(true);
       const fields = {
         title,
         description,
@@ -73,10 +72,10 @@ export const AddDish = () => {
         price,
         imageUrl,
       };
-      const { data } = isEditing
+      isEditing
         ? await instance.patch(`/dish/${id}`, fields)
         : await instance.post("/dish", fields);
-        // alert(id)
+      // alert(id)
       // const id = data._id
       // navigate(`/dish/${id}`)
     } catch (error) {
@@ -87,7 +86,7 @@ export const AddDish = () => {
   React.useEffect(() => {
     if (id) {
       instance.get(`/dish/${id}`).then(({ data }) => {
-       console.log(id,data)
+        console.log(id, data);
         setTitle(data.title);
         setDescription(data.description);
         setTitleEN(data.titleEN);
@@ -99,12 +98,13 @@ export const AddDish = () => {
         setImageUrl(data.imageUrl);
       });
     }
-  },[]);
+  }, [id]);
 
-  console.log(selectIsAuthAdmin, isAuthAdmin);
   if (!isAuthAdmin) {
+    alert("dfsfs");
     // return <Navigate to="/react-pizza/" />;
   }
+  console.log(selectIsAuthAdmin, isAuthAdmin);
 
   return (
     <Paper style={{ padding: 30 }}>
