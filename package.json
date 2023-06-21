@@ -51,9 +51,9 @@
   "scripts": {
     "start": "react-scripts start",
     "start node.js": "npx nodemon app.js",
-    "predeploy": "SET \"DISABLE_ESLINT_PLUGIN=true\" && npm run build",
+    "predeploy": "Snpm run build",
     "deploy": "gh-pages -d build",
-    "build": "SET \"DISABLE_ESLINT_PLUGIN=true\" && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
