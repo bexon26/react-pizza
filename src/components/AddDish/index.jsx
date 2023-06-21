@@ -8,11 +8,12 @@ import Button from "@mui/material/Button";
 import styles from "./AddDish.module.scss";
 import { useSelector } from "react-redux";
 import { selectIsAuthAdmin } from "../../redux/auth/auth";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import instance from "../../redux/dish/asynkActions";
 import { setSearchValue } from "../../redux/filter/slice";
 
 export const AddDish = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
   const isAuthAdmin = useSelector(selectIsAuthAdmin);
 
@@ -28,11 +29,13 @@ export const AddDish = () => {
   const [price, setPrice] = React.useState("");
   const inputFileRef = React.useRef(null);
 
+  const isEditing = Boolean(id);
+  console.log(id);
   const handleChangeFile = async (event) => {
     try {
       const formData = new FormData();
       const file = event.target.files[0];
-      console.log(file);
+      
       formData.set("image", file);
 
       const { data } = await instance({
@@ -60,7 +63,6 @@ export const AddDish = () => {
     try {
       setLoading(true);
       const fields = {
-        id : 44,
         title,
         description,
         titleEN,
@@ -71,14 +73,37 @@ export const AddDish = () => {
         price,
         imageUrl,
       };
-      const { data } = await instance.post("/dish", fields);
-      const id = data._id
+      const { data } = isEditing
+        ? await instance.patch(`/dish/${id}`, fields)
+        : await instance.post("/dish", fields);
+        // alert(id)
+      // const id = data._id
       // navigate(`/dish/${id}`)
-    } catch (error) {}
+    } catch (error) {
+      alert("Ошибка при добавлении блюда!");
+    }
   };
 
+  React.useEffect(() => {
+    if (id) {
+      instance.get(`/dish/${id}`).then(({ data }) => {
+       console.log(id,data)
+        setTitle(data.title);
+        setDescription(data.description);
+        setTitleEN(data.titleEN);
+        setDescriptionEN(data.descriptionEN);
+        setCategory(data.category);
+        setRaiting(data.raiting);
+        setWeight(data.weight);
+        setPrice(data.price);
+        setImageUrl(data.imageUrl);
+      });
+    }
+  },[]);
+
+  console.log(selectIsAuthAdmin, isAuthAdmin);
   if (!isAuthAdmin) {
-    return <Navigate to="/react-pizza/" />;
+    // return <Navigate to="/react-pizza/" />;
   }
 
   return (
@@ -183,7 +208,7 @@ export const AddDish = () => {
       {/* <SimpleMDE className={styles.editor} value={value} onChange={onChange} options={options} /> */}
       <div className={styles.buttons}>
         <Button onClick={onSubmit} size="large" variant="contained">
-          Опубликовать
+          {isEditing ? "Сохранить" : "Опубликовать"}
         </Button>
         <a href="/">
           <Button size="large">Отмена</Button>

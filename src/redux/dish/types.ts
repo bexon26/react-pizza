@@ -1,5 +1,5 @@
 export type Dish = {
-   id:string; 
+  _id:string;
    title:string;
    description: string;
    titleEN:string;
@@ -24,13 +24,15 @@ export type Dish = {
    status1: 'loading' | 'success' | 'error'
  }
  
- 
+ export type MetaDishParams= {
+  arg:string
+}
 
  
- export type SearchDishParams= {
-   order:string;
-   sortBy:string;
-   category:string; 
-   search:string;
-   currentPage:string;
- }
+//  export type SearchDishParams= {
+//    order:string;
+//    sortBy:string;
+//    category:string; 
+//    search:string;
+//    currentPage:string;
+//  }

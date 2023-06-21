@@ -38,7 +38,7 @@ const Home:React.FC = () =>{
    const { items, status } = useSelector(selectPizzaData); // вытаскиваем данные из запроса к мокапи
   const { items1, status1 } = useSelector(selectDishData); // вытаскиваем данные из стэйта запроса к своему бекенду
   const userData = useSelector(selectAuthData); //  вытаскиваем данные о авторизованном пользователе
- console.log(userData.admin)
+//  console.log(userData.admin)
   const { categoryId, sort, currentPage, searchValue } = useSelector(
     selectFilter
   );
@@ -92,13 +92,13 @@ const Home:React.FC = () =>{
 
   const pizzas1 = items1.map((obj: any) => (
     <PizzaBlock
-      key={obj.id}
-      id={obj.id}
+      key={obj._id}
+      _id={obj._id}
       title={obj.title}
       description={obj.description}
       weight={obj.weight}
       price={obj.price}
-      image={obj.imageUrl}
+      image={obj.imageUrl?`http://localhost:4444/src/assets` + obj.imageUrl:''}
       category={obj.category}
       isEditable = {userData.admin?userData.admin:false}
     />
@@ -106,8 +106,8 @@ const Home:React.FC = () =>{
 
   const pizzas = items.map((obj: any) => (
     <PizzaBlock
-      key={obj.id}
-      id={obj.id}
+      key={obj._id}
+      _id={obj._id}
       title={obj.title}
       description={obj.description}
       weight={obj.weight}

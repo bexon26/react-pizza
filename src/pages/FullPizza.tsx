@@ -9,13 +9,13 @@ const FullPizza: React.FC = () => {
       title: string;
       price: number;
    }>();
-   const { id } = useParams();
+   const { _id } = useParams();
    const navigate = useNavigate();
 
    React.useEffect(() => {
       async function fetchPizza() {
          try {
-            const { data } = await axios.get('https://63527937a9f3f34c373e9fa1.mockapi.io/Items/' + id)
+            const { data } = await axios.get('https://63527937a9f3f34c373e9fa1.mockapi.io/Items/' + _id)
             setPizza(data);
 
          } catch (error) {

@@ -35,6 +35,7 @@ function App() {
 
           <Route path="cart" element={<Cart />} />
           <Route path="pizza/:id" element={<FullPizza />} />
+          <Route path="dish/:id/edit" element={<AddDish />} />
           <Route path="*" element={<NotFound />} />
           <Route path="about" element={<About />} />
           <Route path="delivery" element={<Delivery />} />

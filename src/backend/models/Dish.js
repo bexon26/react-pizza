@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const DishSchema = new mongoose.Schema({
-   id:Number,
+   
    title: {
       type: String,
       required: true,

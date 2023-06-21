@@ -14,7 +14,7 @@ export const getAll = async (req, res) => {
 export const getOne = async (req, res) => {
   try {
     const dishId = req.params.id;
-    const dish = await DishModel.findOne({ id: dishId });
+    const dish = await DishModel.findOne({ _id: dishId });
     if (!dish) {
       res.status(404).json({
         message: "Не удалось найти блюдо",
@@ -32,7 +32,7 @@ export const getOne = async (req, res) => {
 
 export const remove = async (req, res) => {
   try {
-    const dishId = req.params.id;
+    const dishId = req.params._id;
     const dish = await DishModel.findOneAndDelete({ id: dishId });
     if (!dish) {
       res.status(404).json({
@@ -79,12 +79,13 @@ export const create = async (req, res) => {
 };
 
 export const update = async (req, res) => {
+  console.log(req.params)
   try {
     const dishId = req.params.id;
     const dish = await DishModel.findOneAndUpdate(
-      { id: dishId },
+      { _id: dishId },
       {
-        id: req.body.id,
+        
         title: req.body.title,
         description: req.body.description,
         titleEN: req.body.titleEN,

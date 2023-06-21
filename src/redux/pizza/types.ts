@@ -1,5 +1,5 @@
 export type Pizza = {
-   id:string; 
+   _id:string; 
    title:string;
    description: string;
    titleEN:string;
@@ -26,10 +26,10 @@ export type Pizza = {
  
 
  
- export type SearchPizzaParams= {
-   order:string;
-   sortBy:string;
-   category:string; 
-   search:string;
-   currentPage:string;
- }
+//  export type SearchPizzaParams= {
+//    order:string;
+//    sortBy:string;
+//    category:string; 
+//    search:string;
+//    currentPage:string;
+//  }

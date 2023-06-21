@@ -52,7 +52,7 @@ const authSlice = createSlice({
       state.data = { admin: false };
     });
     builder.addCase(fetchAuthMe.pending, (state, action) => {
-      state.status = Status.LOADING;
+      // state.status = Status.LOADING;
       state.data = { admin: false };
     });
     builder.addCase(fetchAuthMe.fulfilled, (state, action) => {

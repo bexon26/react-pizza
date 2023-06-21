@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-import { fetchDish } from "./asynkActions";
+import { fetchDish, fetchRemoveDish } from "./asynkActions";
 import { Dish, DishSliceState, Status } from "./types";
 
 export const initialState: DishSliceState = {
@@ -15,8 +15,15 @@ export const dishSlice = createSlice({
     setItems(state, action: PayloadAction<Dish[]>) {
       state.items1 = action.payload;
     },
+    // removeDish(state, action) {
+    //   state.items1 = state.items1.filter((obj) => {
+    //     console.log(obj._id,action.payload);
+    //     return obj._id === action.payload;
+    //   });
+    // },
   },
   extraReducers: (builder) => {
+    //Получение блюда
     builder.addCase(fetchDish.pending, (state, action) => {
       state.status1 = Status.LOADING;
       state.items1 = [];
@@ -28,6 +35,11 @@ export const dishSlice = createSlice({
     builder.addCase(fetchDish.rejected, (state, action) => {
       state.status1 = Status.ERROR;
       state.items1 = [];
+    });
+    // Удаление блюда
+    builder.addCase(fetchRemoveDish.pending, (state, action) => {
+      console.log(action)
+      state.items1 = state.items1.filter(obj => obj._id !== action.meta.arg);
     });
   },
 });

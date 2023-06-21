@@ -10,8 +10,12 @@ import EditIcon from "@mui/icons-material/Edit";
 
 import DeleteIcon from "@mui/icons-material/Clear";
 
+import { fetchRemoveDish } from "../../redux/dish/asynkActions";
+import { store, useAppDispatch } from "../../redux/store";
+
+
 type PizzaBlockProps = {
-  id: string;
+  _id: string;
   title: string;
   description: string;
   weight: number;
@@ -21,7 +25,7 @@ type PizzaBlockProps = {
   isEditable: boolean;
 };
 const PizzaBlock: React.FC<PizzaBlockProps> = ({
-  id,
+  _id,
   title,
   description,
   weight,
@@ -31,15 +35,16 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   isEditable ,
 }) => {
   const dispatch = useDispatch();
-  const cartItem = useSelector(selectCartItemById(id));
+  const useDeleteDispatch = useAppDispatch();
+  const cartItem = useSelector(selectCartItemById(_id));
   // const [activeType, setActiveType] = React.useState(0);
   // const [activeSize, setActiveSize] = React.useState(0);
 
   const addedCount = cartItem ? cartItem.count : 0;
-
+  
   const onClickAdd = () => {
     const item: CartItem = {
-      id,
+      _id,
       title,
       description,
 
@@ -54,23 +59,30 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   };
 
   const { t, i18n } = useTranslation();
-  const onClickRemove = () => {};
+
+  const OnClickRemove =  () => {
+    if (window.confirm('Вы действительно удалить блюдо?')){
+      
+      
+    }
+    useDeleteDispatch(fetchRemoveDish(_id))
+  };
   return (
     <div className="pizza-block-wrapper">
       <div className="pizza-block">
         {isEditable && (
           <div className="edit-buttons">
-            <a href={`/posts/${id}/edit`}>
+            <a href={`/react-pizza/dish/${_id}/edit`}>
               <IconButton color="primary">
                 <EditIcon />
               </IconButton>
             </a>
-            <IconButton onClick={onClickRemove} color="secondary">
+            <IconButton onClick={OnClickRemove} color="secondary">
               <DeleteIcon />
             </IconButton>
           </div>
         )}
-        <Link key={id} to={`pizza/${id}`} >
+        <Link key={_id} to={`pizza/${_id}`} >
           <div className="pizza-block-container">
             <img className="pizza-block__image" src={image} />
           </div>

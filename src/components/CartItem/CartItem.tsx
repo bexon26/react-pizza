@@ -7,7 +7,7 @@ import { addItem, minusItem, removeItem } from "../../redux/cart/slice";
 import { CartItem } from "../../redux/cart/types";
 
 type CartItemProps = {
-  id: string;
+  _id: string;
   title: string;
   description: string;
  
@@ -19,7 +19,7 @@ type CartItemProps = {
 };
 
 export const CartItemBlock: React.FC<CartItemProps> = ({
-  id,
+  _id,
   title,
   description,
   
@@ -31,14 +31,14 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
 }) => {
   const dispatch = useDispatch();
   const onClickPlus = () => {
-    dispatch(addItem({ id } as CartItem));
+    dispatch(addItem({ _id } as CartItem));
   };
   const onClickMinus = () => {
-    dispatch(minusItem(id));
+    dispatch(minusItem(_id));
   };
   const onClickRemove = () => {
     if (window.confirm("Ты дейсвитльно хочешь удалить эту позицию")) {
-      dispatch(removeItem(id));
+      dispatch(removeItem(_id));
     }
   };
   const { t, i18n } = useTranslation();
