@@ -93,7 +93,7 @@ const Home: React.FC = () => {
       weight={obj.weight}
       price={obj.price}
       image={
-        obj.imageUrl ? `http://localhost:4444/src/assets` + obj.imageUrl : ""
+        obj.imageUrl ? `https://family-food-backend-production.up.railway.app` + obj.imageUrl : ""
       }
       category={obj.category}
       isEditable={userData.admin ? userData.admin : false}

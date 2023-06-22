@@ -132,7 +132,7 @@ export const AddDish = () => {
           </Button>
           <img
             className={styles.image}
-            src={`http://localhost:4444/src/assets${imageUrl}`}
+            src={`https://family-food-backend-production.up.railway.app${imageUrl}`}
             alt="Uploaded"
           />
         </>
