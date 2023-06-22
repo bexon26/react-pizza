@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-pizza/static/css/main.b0715bc3.css",
-    "main.js": "/react-pizza/static/js/main.1d258f8c.js",
+    "main.css": "/react-pizza/static/css/main.53bebda1.css",
+    "main.js": "/react-pizza/static/js/main.eab304c3.js",
     "static/media/o-nas.jpeg": "/react-pizza/static/media/o-nas.999362ea8678ff905180.jpeg",
     "static/media/whatsApp_logo.png": "/react-pizza/static/media/whatsApp_logo.d75a64b5b2c342e079a7.png",
     "static/media/logo-family-food-versi-mobile1.png": "/react-pizza/static/media/logo-family-food-versi-mobile1.5e07802ef8944ea062ac.png",
@@ -18,14 +18,14 @@
     "static/media/motivation-01.svg": "/react-pizza/static/media/motivation-01.8adde866c8536110fd69.svg",
     "static/media/motivation-04.svg": "/react-pizza/static/media/motivation-04.5d02a6b1bc9e3d449cab.svg",
     "static/media/motivation-03.svg": "/react-pizza/static/media/motivation-03.c4c6a75d6d387b1eb04f.svg",
-    "static/media/checkMark.svg": "/react-pizza/static/media/checkMark.f17b36a61d52f069a41a.svg",
+    "static/media/checkMark.svg": "/react-pizza/static/media/checkMark.9ba1c02351b019e67358.svg",
     "index.html": "/react-pizza/index.html",
     "static/media/getFetch.cjs": "/react-pizza/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.b0715bc3.css.map": "/react-pizza/static/css/main.b0715bc3.css.map",
-    "main.1d258f8c.js.map": "/react-pizza/static/js/main.1d258f8c.js.map"
+    "main.53bebda1.css.map": "/react-pizza/static/css/main.53bebda1.css.map",
+    "main.eab304c3.js.map": "/react-pizza/static/js/main.eab304c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0715bc3.css",
-    "static/js/main.1d258f8c.js"
+    "static/css/main.53bebda1.css",
+    "static/js/main.eab304c3.js"
   ]
 }
