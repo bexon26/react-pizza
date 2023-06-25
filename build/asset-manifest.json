@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-pizza/static/css/main.134239a4.css",
-    "main.js": "/react-pizza/static/js/main.c92493a7.js",
+    "main.js": "/react-pizza/static/js/main.2f012aed.js",
     "static/media/o-nas.jpeg": "/react-pizza/static/media/o-nas.999362ea8678ff905180.jpeg",
     "static/media/whatsApp_logo.png": "/react-pizza/static/media/whatsApp_logo.d75a64b5b2c342e079a7.png",
     "static/media/logo-family-food-versi-mobile1.png": "/react-pizza/static/media/logo-family-food-versi-mobile1.5e07802ef8944ea062ac.png",
@@ -22,10 +22,10 @@
     "index.html": "/react-pizza/index.html",
     "static/media/getFetch.cjs": "/react-pizza/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.134239a4.css.map": "/react-pizza/static/css/main.134239a4.css.map",
-    "main.c92493a7.js.map": "/react-pizza/static/js/main.c92493a7.js.map"
+    "main.2f012aed.js.map": "/react-pizza/static/js/main.2f012aed.js.map"
   },
   "entrypoints": [
     "static/css/main.134239a4.css",
-    "static/js/main.c92493a7.js"
+    "static/js/main.2f012aed.js"
   ]
 }
