@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import { selectIsAuthAdmin } from "../../redux/auth/auth";
 import { useParams } from "react-router-dom";
 import instance from "../../redux/dish/asynkActions";
+// import { read } from "fs";
 
 export const AddDish = () => {
   const { id } = useParams();
@@ -17,6 +18,7 @@ export const AddDish = () => {
   const isAuthAdmin = useSelector(selectIsAuthAdmin);
 
   // const [isLoading, setLoading] = React.useState(false);
+  const [image, setImage] = React.useState("");
   const [imageUrl, setImageUrl] = React.useState("");
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
@@ -32,22 +34,46 @@ export const AddDish = () => {
   console.log(id);
   const handleChangeFile = async (event) => {
     try {
-      const formData = new FormData();
+      console.log(event)
+      var reader = new FileReader();
       const file = event.target.files[0];
+      reader.readAsDataURL(file)
+      reader.onload =()=>{
+        console.log(reader.result)
+        const formData = new FormData();
+  
+        formData.set("image", reader.result);
+        setImageUrl(reader.result)
+      }
 
-      formData.set("image", file);
-
-      const { data } = await instance({
-        method: "post",
-        url: "/upload",
-        data: formData,
-        headers: { "content-type": "application/x-www-form-urlencoded" },
-      });
-      setImageUrl(data.url);
+      // const { data } = await instance({
+      //   method: "post",
+      //   url: "/upload",
+      //   data: formData,
+      //   headers: { "content-type": "application/x-www-form-urlencoded" },
+      // });
+      // setImageUrl(data.url);
     } catch (error) {
       console.warn(error);
       alert("Ошибка при загрузке файла!");
     }
+    // try {
+    //   const formData = new FormData();
+    //   const file = event.target.files[0];
+
+    //   formData.set("image", file);
+
+      // const { data } = await instance({
+      //   method: "post",
+      //   url: "/upload",
+      //   data: formData,
+      //   headers: { "content-type": "application/x-www-form-urlencoded" },
+      // });
+    //   setImageUrl(data.url);
+    // } catch (error) {
+    //   console.warn(error);
+    //   alert("Ошибка при загрузке файла!");
+    // }
   };
 
   const onClickRemoveImage = () => {
@@ -106,6 +132,17 @@ export const AddDish = () => {
   }
   console.log(selectIsAuthAdmin, isAuthAdmin);
 
+  function convertToBase64(e){
+    console.log(e)
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0])
+    reader.onload =()=>{
+      console.log(reader.result)
+      setImageUrl(reader.result)
+    }
+    // reader.onerror('Error', error)
+  }
+
   return (
     <Paper style={{ padding: 30 }}>
       <Button
@@ -119,6 +156,7 @@ export const AddDish = () => {
         type="file"
         ref={inputFileRef}
         onChange={handleChangeFile}
+        // onChange={convertToBase64}
         hidden
       />
       {imageUrl && (
@@ -132,7 +170,8 @@ export const AddDish = () => {
           </Button>
           <img
             className={styles.image}
-            src={`http://localhost:4444${imageUrl}`}
+            // src={`http://localhost:4444${imageUrl}`}
+            src={imageUrl} //from base 64
             // src={`https://family-food-backend-production.up.railway.app${imageUrl}`}
             alt="Uploaded"
           />

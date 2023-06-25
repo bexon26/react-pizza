@@ -435,6 +435,17 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.pizza-block-wrapper:hover {
+  border: 1px solid #4361ee;
+  -webkit-box-shadow: 0 0 0 1px #4361ee;
+          box-shadow: 0 0 0 1px #4361ee;
+}
+
+.pizza-block-wrapper:hover .edit-buttons {
+  opacity: 1;
 }
 
 .pizza-block-container {
@@ -547,6 +558,20 @@ a {
   font-size: 22px;
   line-height: 27px;
   letter-spacing: 0.015em;
+}
+
+.edit-buttons {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  z-index: 1;
 }
 
 body {
@@ -1368,4 +1393,71 @@ body {
   position: absolute;
   left: 0;
   top: 2px;
+}
+
+.contacts_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+.contacts_row .col .c_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts_row .col .c_item picture {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  background: #079d28;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-justify-content: center;
+  margin-right: 10px;
+}
+
+.contacts_row .social_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.contacts_row .social_contacts li a img {
+  width: 48px;
+  height: 48px;
+}
+
+.map {
+  width: 100%;
+}
+
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }

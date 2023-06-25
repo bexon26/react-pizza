@@ -85,11 +85,13 @@ const Home: React.FC = () => {
       key={obj._id}
       _id={obj._id}
       title={obj.title}
+      titleEN={obj.titleEN}
       description={obj.description}
+      descriptionEN={obj.descriptionEN}
       weight={obj.weight}
       price={obj.price}
       image={
-        obj.imageUrl ? `http://localhost:4444` + obj.imageUrl : ""
+        obj.imageUrl ? obj.imageUrl : ""
         // obj.imageUrl ? `https://family-food-backend-production.up.railway.app` + obj.imageUrl : ""
       }
       category={obj.category}
@@ -102,7 +104,9 @@ const Home: React.FC = () => {
       key={obj._id}
       _id={obj._id}
       title={obj.title}
+      titleEN={obj.titleEN}
       description={obj.description}
+      descriptionEN={obj.descriptionEN}
       weight={obj.weight}
       price={obj.price}
       image={obj.imageUrl}

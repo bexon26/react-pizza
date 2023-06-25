@@ -12,11 +12,17 @@ import DeleteIcon from "@mui/icons-material/Clear";
 
 import { fetchRemoveDish } from "../../redux/dish/asynkActions";
 import { useAppDispatch } from "../../redux/store";
+import i18n from "../../i18n";
+
 
 type PizzaBlockProps = {
   _id: string;
   title: string;
+  titleEN: string;
+
   description: string;
+  descriptionEN: string;
+  
   weight: number;
   price: number;
   image: string;
@@ -26,7 +32,9 @@ type PizzaBlockProps = {
 const PizzaBlock: React.FC<PizzaBlockProps> = ({
   _id,
   title,
+  titleEN,
   description,
+  descriptionEN,
   weight,
   price,
   image,
@@ -56,6 +64,9 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   };
 
   const { t } = useTranslation();
+  console.log(i18n.language)
+  const lang = i18n.language;
+
 
   const OnClickRemove = () => {
     if (window.confirm("Вы действительно удалить блюдо?")) {
@@ -82,12 +93,15 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
             <img className="pizza-block__image" src={image} alt={image} />
           </div>
 
-          <h4 className="pizza-block__title">{t(`${title}.title`)}</h4>
+          <h4 className="pizza-block__title">{lang === "ru"?title:titleEN}</h4>
+          {/* <h4 className="pizza-block__title">{t(`${title}.title`)}</h4> */}
           <p className="pizza-block__description">
-            {t(`${title}.description`)}
+            {lang === "ru"?description:descriptionEN}
+            {/* {t(`${title}.description`)} */}
           </p>
           <p className="pizza-block__weigth">
             {t("Вес")}: {weight} {category !== 6 ? `${t("гр")}` : `${t("л")}`}{" "}
+            
           </p>
         </Link>
 
