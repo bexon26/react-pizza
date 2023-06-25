@@ -1,6 +1,6 @@
 import React from "react";
 
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 // import {  useNavigate } from "react-router-dom";
 
 import Categories from "../components/Categories/Categories";
@@ -9,11 +9,7 @@ import Sort from "../components/Sort/Sort";
 import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
 import Skeleton from "../components/Skeleton/Skeleton";
 import Pagination from "../components/Pagination";
-import {
-  setCategoryId,
-  setCurrentPage,
- 
-} from "../redux/filter/slice";
+import { setCategoryId, setCurrentPage } from "../redux/filter/slice";
 
 import { useAppDispatch } from "../redux/store";
 import { selectFilter } from "../redux/filter/selectors";
@@ -93,7 +89,8 @@ const Home: React.FC = () => {
       weight={obj.weight}
       price={obj.price}
       image={
-        obj.imageUrl ? `https://family-food-backend-production.up.railway.app` + obj.imageUrl : ""
+        obj.imageUrl ? `http://localhost:4444` + obj.imageUrl : ""
+        // obj.imageUrl ? `https://family-food-backend-production.up.railway.app` + obj.imageUrl : ""
       }
       category={obj.category}
       isEditable={userData.admin ? userData.admin : false}
