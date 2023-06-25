@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import instance from "../redux/dish/asynkActions";
 
 const FullPizza: React.FC = () => {
   const [pizza, setPizza] = React.useState<{
@@ -8,15 +9,18 @@ const FullPizza: React.FC = () => {
     title: string;
     price: number;
   }>();
-  const { _id } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
 
   React.useEffect(() => {
     async function fetchPizza() {
       try {
-        const { data } = await axios.get(
-          "https://63527937a9f3f34c373e9fa1.mockapi.io/Items/" + _id
+        // console.log(id)
+        const { data } = await instance.get(
+        `/dish/${id}` 
         );
+        // const { data } = await instance.get("/dish");
+  // return data;
         setPizza(data);
       } catch (error) {
         alert("Ошибка при получении пиццы");

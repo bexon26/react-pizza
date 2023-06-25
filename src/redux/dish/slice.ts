@@ -1,10 +1,11 @@
 import {  createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { fetchDish, fetchRemoveDish } from "./asynkActions";
+import { fetchDish,  fetchDishCount,  fetchRemoveDish } from "./asynkActions";
 import { Dish, DishSliceState, Status } from "./types";
 
 export const initialState: DishSliceState = {
   items1: [],
+  count:0,
   status1: Status.LOADING, // loading | success | error
 };
 
@@ -38,8 +39,14 @@ export const dishSlice = createSlice({
     });
     // Удаление блюда
     builder.addCase(fetchRemoveDish.pending, (state, action) => {
-      console.log(action)
+      // console.log(action)
       state.items1 = state.items1.filter(obj => obj._id !== action.meta.arg);
+    });
+    //  Получение количества блюд
+   
+    builder.addCase(fetchDishCount.fulfilled, (state, action) => {
+      
+       state.count = action.payload;
     });
   },
 });

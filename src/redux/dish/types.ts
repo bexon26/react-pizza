@@ -21,6 +21,7 @@ export type Dish = {
  
  export interface DishSliceState {
    items1: Dish[];
+   count:Number;
    status1: 'loading' | 'success' | 'error'
  }
  
@@ -29,10 +30,10 @@ export type Dish = {
 }
 
  
-//  export type SearchDishParams= {
-//    order:string;
-//    sortBy:string;
-//    category:string; 
-//    search:string;
-//    currentPage:string;
-//  }
+ export type SearchDishParams= {
+   order:string;
+   sortBy:string;
+   category:string; 
+   search:string;
+   currentPage:string;
+ }

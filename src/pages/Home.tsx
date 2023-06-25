@@ -76,9 +76,21 @@ const Home: React.FC = () => {
 
   React.useEffect(() => {
     // axios.get('http://localhost:4444/dish')
-    dispatch(fetchDish());
+    const order = sort.sortProperty.includes("-") ? "asc" : "desc";
+    const sortBy = sort.sortProperty.replace("-", "");
+    const category = categoryId > 0 ? `category=${categoryId}` : "";
+    const search = searchValue ? `&search=${searchValue}` : "";
+    dispatch(
+      fetchDish({
+        order,
+        sortBy,
+        category,
+        search,
+        currentPage: String(currentPage),
+      })
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
   const pizzas1 = items1.map((obj: any) => (
     <PizzaBlock
@@ -138,7 +150,7 @@ const Home: React.FC = () => {
         </div>
       ) : (
         <div className="content__items">
-          {status === "loading" ? skeletons : [...pizzas1, ...pizzas]}
+          {status === "loading" ? skeletons : [...pizzas1]}
         </div>
       )}
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />

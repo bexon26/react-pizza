@@ -64,7 +64,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   };
 
   const { t } = useTranslation();
-  console.log(i18n.language)
+  // console.log(i18n.language)
   const lang = i18n.language;
 
 
@@ -88,7 +88,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
             </IconButton>
           </div>
         )}
-        <Link key={_id} to={`pizza/${_id}`}>
+        <Link key={_id} to={`dish/${_id}`}>
           <div className="pizza-block-container">
             <img className="pizza-block__image" src={image} alt={image} />
           </div>

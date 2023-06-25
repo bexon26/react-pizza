@@ -41,7 +41,7 @@ type SortPopupProps = {
 };
 
 const SortPopup: React.FC<SortPopupProps> = React.memo(({ value }) => {
-  console.log(value);
+  // console.log(value);
   // sortList[4].sortProperty =  i18n.language === "en" ? SortPropertyEnum.TTTLE_DESC_EN : SortPropertyEnum.TITLE_DESC;
   // sortList[5].sortProperty =  i18n.language === "en" ? SortPropertyEnum.TTTLE_ASC_EN : SortPropertyEnum.TITLE_ASC;
   const dispatch = useDispatch();
@@ -59,7 +59,7 @@ const SortPopup: React.FC<SortPopupProps> = React.memo(({ value }) => {
 
   // Закрытие попап при нажатии на область вне попап
   React.useEffect(() => {
-    console.log(i18n.language);
+    // console.log(i18n.language);
 
     const handleClickOutside = (event: MouseEvent) => {
       const _event = event as PupupClick;

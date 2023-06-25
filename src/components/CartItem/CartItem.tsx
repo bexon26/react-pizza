@@ -42,7 +42,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
     }
   };
   const { t } = useTranslation();
-  console.log(title);
+  // console.log(title);
 
   return (
     <div className="cart__item">

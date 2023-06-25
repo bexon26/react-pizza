@@ -79,7 +79,7 @@ export const create = async (req, res) => {
 };
 
 export const update = async (req, res) => {
-  console.log(req.params)
+  // console.log(req.params)
   try {
     const dishId = req.params.id;
     const dish = await DishModel.findOneAndUpdate(

@@ -31,15 +31,15 @@ export const AddDish = () => {
   const inputFileRef = React.useRef(null);
 
   const isEditing = Boolean(id);
-  console.log(id);
+  // console.log(id);
   const handleChangeFile = async (event) => {
     try {
-      console.log(event)
+      // console.log(event)
       var reader = new FileReader();
       const file = event.target.files[0];
       reader.readAsDataURL(file)
       reader.onload =()=>{
-        console.log(reader.result)
+        // console.log(reader.result)
         const formData = new FormData();
   
         formData.set("image", reader.result);
@@ -112,7 +112,7 @@ export const AddDish = () => {
   React.useEffect(() => {
     if (id) {
       instance.get(`/dish/${id}`).then(({ data }) => {
-        console.log(id, data);
+        // console.log(id, data);
         setTitle(data.title);
         setDescription(data.description);
         setTitleEN(data.titleEN);
@@ -130,14 +130,14 @@ export const AddDish = () => {
     alert("dfsfs");
     // return <Navigate to="/react-pizza/" />;
   }
-  console.log(selectIsAuthAdmin, isAuthAdmin);
+  // console.log(selectIsAuthAdmin, isAuthAdmin);
 
   function convertToBase64(e){
-    console.log(e)
+    // console.log(e)
     var reader = new FileReader();
     reader.readAsDataURL(e.target.files[0])
     reader.onload =()=>{
-      console.log(reader.result)
+      // console.log(reader.result)
       setImageUrl(reader.result)
     }
     // reader.onerror('Error', error)

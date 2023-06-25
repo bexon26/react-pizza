@@ -1,6 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
+import { setCurrentPage } from "../../redux/filter/slice";
+import { useAppDispatch } from "../../redux/store";
+
 type CategoriesProps = {
   value: {};
   onChangeCategory: (idx: number) => void;
@@ -82,6 +85,9 @@ const listCategories = [
 const Categories: React.FC<CategoriesProps> = React.memo(
   ({ value, onChangeCategory }) => {
     const { t } = useTranslation();
+    // setCurrentPage(1);
+    const dispatch = useAppDispatch();
+    dispatch(setCurrentPage(1));
     return (
       <div className="categories">
         <ul>

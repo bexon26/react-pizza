@@ -38,7 +38,7 @@ function Header() {
     if (isMounted.current) {
       const json = JSON.stringify(items);
       localStorage.setItem("cart", json);
-      console.log(json);
+      // console.log(json);
     }
     isMounted.current = true;
   }, [items]);
