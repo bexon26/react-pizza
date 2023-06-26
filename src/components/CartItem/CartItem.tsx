@@ -9,8 +9,8 @@ import { CartItem } from "../../redux/cart/types";
 type CartItemProps = {
   _id: string;
   title: string;
+  titleEN: string;
   description: string;
-
   weight: number;
   price: number;
   count: number;
@@ -21,6 +21,7 @@ type CartItemProps = {
 export const CartItemBlock: React.FC<CartItemProps> = ({
   _id,
   title,
+  titleEN,
   description,
 
   weight,

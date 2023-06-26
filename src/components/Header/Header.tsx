@@ -22,6 +22,7 @@ function Header() {
     if (window.confirm("Вы действительно хотите выйти?")) {
       dispatch(logOut());
       window.localStorage.removeItem("token");
+      window.localStorage.removeItem("userId");
     }
   };
 

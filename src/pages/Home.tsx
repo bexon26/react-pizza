@@ -109,6 +109,7 @@ const Home: React.FC = () => {
         // obj.imageUrl ? `https://family-food-backend-production.up.railway.app` + obj.imageUrl : ""
       }
       category={obj.category}
+      
       isEditable={userData.admin ? userData.admin : false}
     />
   ));
@@ -125,6 +126,7 @@ const Home: React.FC = () => {
       price={obj.price}
       image={obj.imageUrl}
       category={obj.category}
+      
       isEditable={userData.admin ? userData.admin : false}
     />
   ));

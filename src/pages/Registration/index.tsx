@@ -40,6 +40,7 @@ export const Registration = () => {
     }
     if ("token" in data.payload) {
       window.localStorage.setItem("token", data.payload.token);
+      window.localStorage.setItem("userId", data.payload._id);
     }
   };
   if (isAuth) {

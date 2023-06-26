@@ -10,10 +10,10 @@ import EditIcon from "@mui/icons-material/Edit";
 
 import DeleteIcon from "@mui/icons-material/Clear";
 
-import { fetchRemoveDish } from "../../redux/dish/asynkActions";
+import instance, { fetchRemoveDish } from "../../redux/dish/asynkActions";
 import { useAppDispatch } from "../../redux/store";
 import i18n from "../../i18n";
-
+import { selectAuthData } from "../../redux/auth/selectors";
 
 type PizzaBlockProps = {
   _id: string;
@@ -27,6 +27,7 @@ type PizzaBlockProps = {
   price: number;
   image: string;
   category: number;
+  
   isEditable: boolean;
 };
 const PizzaBlock: React.FC<PizzaBlockProps> = ({
@@ -39,6 +40,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   price,
   image,
   category,
+  
   isEditable,
 }) => {
   const dispatch = useDispatch();
@@ -48,19 +50,22 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   // const [activeSize, setActiveSize] = React.useState(0);
 
   const addedCount = cartItem ? cartItem.count : 0;
-
-  const onClickAdd = () => {
+ 
+  const onClickAdd = async () => {
     const item: CartItem = {
       _id,
       title,
+      titleEN,
       description,
       weight,
       price,
       image,
       category,
+      userId: window.localStorage.getItem("userId"),
       count: 0,
     };
     dispatch(addItem(item));
+    await instance.post("/cart", item);
   };
 
   const { t } = useTranslation();
