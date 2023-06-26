@@ -92,6 +92,8 @@ const Home: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
+  
+
   const pizzas1 = items1.map((obj: any) => (
     <PizzaBlock
       key={obj._id}

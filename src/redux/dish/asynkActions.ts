@@ -21,7 +21,7 @@ instance.interceptors.request.use(
   },
   (error) => error
 );
-
+type category = string
 export const fetchDish = createAsyncThunk<Dish[], Record<string, string>>(
   "dish/fetchDishStatus",
   async (params) => {
@@ -34,10 +34,11 @@ export const fetchDish = createAsyncThunk<Dish[], Record<string, string>>(
   }
 );
 
-export const fetchDishCount = createAsyncThunk(
+export const fetchDishCount = createAsyncThunk<category,Record<string, string>>(
   "dish/fetchDishCount",
-  async () => {
-    const { data } = await instance.get(`/dish/count`);
+  async (params) => {
+    const { category } = params;
+    const { data } = await instance.get<category>(`/dish/count?${category}`);
     return data;
   }
 );

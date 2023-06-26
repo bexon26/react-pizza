@@ -46,7 +46,7 @@ export const dishSlice = createSlice({
    
     builder.addCase(fetchDishCount.fulfilled, (state, action) => {
       
-       state.count = action.payload;
+       state.count = Number(action.payload);
     });
   },
 });
