@@ -12,6 +12,7 @@ export type Dish = {
    
  }
  
+ 
  export enum Status {
    LOADING = 'loading',
    SUCCESS = 'success',

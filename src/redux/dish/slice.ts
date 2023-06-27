@@ -1,6 +1,6 @@
 import {  createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { fetchDish,  fetchDishCount,  fetchRemoveDish } from "./asynkActions";
+import { fetchCart, fetchDish,  fetchDishCount,  fetchRemoveDish } from "./asynkActions";
 import { Dish, DishSliceState, Status } from "./types";
 
 export const initialState: DishSliceState = {
@@ -48,6 +48,7 @@ export const dishSlice = createSlice({
       
        state.count = Number(action.payload);
     });
+    
   },
 });
 

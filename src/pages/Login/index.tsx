@@ -10,6 +10,7 @@ import { useAppDispatch } from "../../redux/store";
 import { fetchAuth, selectIsAuth } from "../../redux/auth/auth";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
+import { fetchCart } from "../../redux/dish/asynkActions";
 
 export const Login = () => {
   const isAuth = useSelector(selectIsAuth);
@@ -36,11 +37,15 @@ export const Login = () => {
     if ("token" in data.payload) {
       window.localStorage.setItem("token", data.payload.token);
       window.localStorage.setItem("userId", data.payload._id);
+      dispatch(fetchCart( data.payload._id ));
     }
   };
   if (isAuth) {
     return <Navigate to="/react-pizza/" />;
   }
+
+
+  
   return (
     <Paper classes={{ root: styles.root }}>
       <Typography classes={{ root: styles.title }} variant="h5">

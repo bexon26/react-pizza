@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { calcTotalPrice } from '../../utils/calcTotalPrice';
 import { getCartFromLS } from '../../utils/getCartFromLS';
+import { fetchCart } from '../dish/asynkActions';
 
 import { CartItem, CartSliceState } from './types';
 
@@ -27,9 +28,9 @@ export const cartSlice = createSlice({
           count: 1,
         });
       }
-
       state.totalPrice = calcTotalPrice(state.items)
     },
+    
 
     minusItem(state, action:PayloadAction<string>) {
       const findItem = state.items.find((obj) => obj._id === action.payload);
@@ -45,7 +46,16 @@ export const cartSlice = createSlice({
       state.items = [];
       state.totalPrice = 0;
     },
+    //  Получение корзины для каждого пользователя
   },
+  extraReducers: (builder) => {
+    builder.addCase(fetchCart.fulfilled, (state, action) => { 
+      console.log(action)
+      state.items = [...action.payload]
+      
+      // state.items = action.payload;
+   });
+  }
 });
 
 

@@ -14,6 +14,13 @@ export type CartItem = {
    userId:string|null;
 }
 
+export type CartUser = {
+  
+   dishes:[]
+   userId:string|null;
+   count:number;
+}
+
 
 export interface CartSliceState {
  totalPrice: number;

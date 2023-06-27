@@ -21,7 +21,7 @@ instance.interceptors.request.use(
   },
   (error) => error
 );
-type category = string
+type category = string;
 export const fetchDish = createAsyncThunk<Dish[], Record<string, string>>(
   "dish/fetchDishStatus",
   async (params) => {
@@ -34,18 +34,30 @@ export const fetchDish = createAsyncThunk<Dish[], Record<string, string>>(
   }
 );
 
-export const fetchDishCount = createAsyncThunk<category,Record<string, string>>(
-  "dish/fetchDishCount",
-  async (params) => {
-    const { category } = params;
-    const { data } = await instance.get<category>(`/dish/count?${category}`);
-    return data;
-  }
-);
+export const fetchDishCount = createAsyncThunk<
+  category,
+  Record<string, string>
+>("dish/fetchDishCount", async (params) => {
+  const { category } = params;
+  const { data } = await instance.get<category>(`/dish/count?${category}`);
+  return data;
+});
 export const fetchRemoveDish = createAsyncThunk(
   "dish/fetchRemoveDish",
   async (_id: String) => {
     const { data } = await instance.delete(`/dish/${_id}`);
+    return data;
+  }
+);
+type userID = string
+export const fetchCart = createAsyncThunk<[], Record<string, string>>(
+  "dish/fetchCartStatus",
+  async (userId) => {
+    // const { userID } = params;
+    console.log(userId)
+    const { data } = await instance.get<[]>(
+      `/cart?userId=${userId}`
+    );
     return data;
   }
 );

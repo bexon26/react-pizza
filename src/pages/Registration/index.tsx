@@ -11,6 +11,9 @@ import { fetchRegister, selectIsAuth } from "../../redux/auth/auth";
 import { useAppDispatch } from "../../redux/store";
 import { useForm } from "react-hook-form";
 import { Navigate } from "react-router-dom";
+import { CartUser } from "../../redux/cart/types";
+import { addItem } from "../../redux/cart/slice";
+import instance from "../../redux/dish/asynkActions";
 
 export const Registration = () => {
   const isAuth = useSelector(selectIsAuth);
@@ -41,11 +44,25 @@ export const Registration = () => {
     if ("token" in data.payload) {
       window.localStorage.setItem("token", data.payload.token);
       window.localStorage.setItem("userId", data.payload._id);
+      createEmptyCard()
     }
   };
   if (isAuth) {
     return <Navigate to="/react-pizza/" />;
   }
+
+  const createEmptyCard = async () => {
+    const item: CartUser = {
+      userId: window.localStorage.getItem("userId"),
+      dishes:[],
+      count: 0,
+    };
+    // dispatch(addItem(item));
+    await instance.post("/cart", item);
+  };
+
+
+
   return (
     <Paper classes={{ root: styles.root }}>
       <Typography classes={{ root: styles.title }} variant="h5">

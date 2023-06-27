@@ -19,15 +19,12 @@ type PizzaBlockProps = {
   _id: string;
   title: string;
   titleEN: string;
-
   description: string;
   descriptionEN: string;
-  
   weight: number;
   price: number;
   image: string;
   category: number;
-  
   isEditable: boolean;
 };
 const PizzaBlock: React.FC<PizzaBlockProps> = ({
@@ -40,7 +37,6 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   price,
   image,
   category,
-  
   isEditable,
 }) => {
   const dispatch = useDispatch();
@@ -65,7 +61,8 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
       count: 0,
     };
     dispatch(addItem(item));
-    await instance.post("/cart", item);
+    // await instance.post("/cart", item);
+    await instance.patch("/cart", item);
   };
 
   const { t } = useTranslation();

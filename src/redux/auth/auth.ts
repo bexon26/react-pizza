@@ -1,8 +1,9 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Status } from "../dish/types";
 import { RootState } from "../store";
 
 import instance from "../dish/asynkActions";
+import { CartUser } from "../cart/types";
 
 export const fetchAuth = createAsyncThunk(
   "auth/fetchAuth",
@@ -37,6 +38,18 @@ const authSlice = createSlice({
     logOut(state) {
       state.data = { admin: false };
     },
+    // addCart(state, action:PayloadAction<CartUser>) {
+    //   const findItem = state.items.find((obj) => obj._id === action.payload._id);
+    //   if (findItem) {
+    //     findItem.count++;
+    //   } else {
+    //     state.items.push({
+    //       ...action.payload,
+    //       count: 1,
+    //     });
+    //   }
+    //   state.totalPrice = calcTotalPrice(state.items)
+    // },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchAuth.pending, (state, action) => {
