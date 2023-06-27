@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { addItem, minusItem, removeItem } from "../../redux/cart/slice";
 import { CartItem } from "../../redux/cart/types";
+import i18n from "../../i18n";
+import i18next from "i18next";
 
 type CartItemProps = {
   _id: string;
@@ -30,6 +32,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
   image,
   category,
 }) => {
+  console.log(image)
   const dispatch = useDispatch();
   const onClickPlus = () => {
     dispatch(addItem({ _id } as CartItem));
@@ -43,6 +46,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
     }
   };
   const { t } = useTranslation();
+  const lang = i18n.language;
   // console.log(title);
 
   return (
@@ -51,7 +55,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
         <img className="pizza-block__image" src={image} alt="Pizza" />
       </div>
       <div className="cart__item-info">
-        <h3>{t(`${title}.title`)}</h3>
+        <h3>{lang === "ru"?title:titleEN}</h3>
 
         <p>
           {weight * count} {category !== 6 ? `${t("гр")}` : `${t("л")}`}

@@ -52,7 +52,7 @@ export const cartSlice = createSlice({
     builder.addCase(fetchCart.fulfilled, (state, action) => { 
       console.log(action)
       state.items = [...action.payload]
-      
+      state.totalPrice = calcTotalPrice(state.items)
       // state.items = action.payload;
    });
   }
