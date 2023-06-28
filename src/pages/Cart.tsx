@@ -106,9 +106,10 @@ const Cart: React.FC = () => {
           </div>
         </div>
         <div className="content__items">
-          {items.map((item: any) => (
-            <CartItem key={item.id} {...item} />
-          ))}
+          {items.map((item: any) => {
+            console.log(item)
+            return <CartItem key={item.id} {...item} />}
+          )}
         </div>
         <div className="cart__bottom">
           <div className="cart__bottom-details">

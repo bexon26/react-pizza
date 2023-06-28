@@ -8,7 +8,7 @@ export type Dish = {
    raiting:number; 
    weight:number;
    price:number; 
-   image:string; 
+   imageUrl:string; 
    
  }
  

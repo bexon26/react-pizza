@@ -23,7 +23,7 @@ type PizzaBlockProps = {
   descriptionEN: string;
   weight: number;
   price: number;
-  image: string;
+  imageUrl: string;
   category: number;
   isEditable: boolean;
 };
@@ -35,7 +35,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
   descriptionEN,
   weight,
   price,
-  image,
+  imageUrl,
   category,
   isEditable,
 }) => {
@@ -55,7 +55,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
       description,
       weight,
       price,
-      image,
+      imageUrl,
       category,
       userId: window.localStorage.getItem("userId"),
       count: 0,
@@ -92,7 +92,7 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
         )}
         <Link key={_id} to={`dish/${_id}`}>
           <div className="pizza-block-container">
-            <img className="pizza-block__image" src={image} alt={image} />
+            <img className="pizza-block__image" src={imageUrl} alt={imageUrl} />
           </div>
 
           <h4 className="pizza-block__title">{lang === "ru"?title:titleEN}</h4>

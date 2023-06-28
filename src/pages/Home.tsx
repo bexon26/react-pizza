@@ -104,7 +104,7 @@ const Home: React.FC = () => {
       descriptionEN={obj.descriptionEN}
       weight={obj.weight}
       price={obj.price}
-      image={
+      imageUrl={
         obj.imageUrl ? obj.imageUrl : ""
         // obj.imageUrl ? `https://family-food-backend-production.up.railway.app` + obj.imageUrl : ""
       }
@@ -124,7 +124,7 @@ const Home: React.FC = () => {
       descriptionEN={obj.descriptionEN}
       weight={obj.weight}
       price={obj.price}
-      image={obj.imageUrl}
+      imageUrl={obj.imageUrl}
       category={obj.category}
       
       isEditable={userData.admin ? userData.admin : false}

@@ -2,11 +2,12 @@ import clsx from "clsx";
 
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addItem, minusItem, removeItem } from "../../redux/cart/slice";
 import { CartItem } from "../../redux/cart/types";
 import i18n from "../../i18n";
-import i18next from "i18next";
+
+import instance from "../../redux/dish/asynkActions";
 
 type CartItemProps = {
   _id: string;
@@ -16,7 +17,7 @@ type CartItemProps = {
   weight: number;
   price: number;
   count: number;
-  image: string;
+  imageUrl: string;
   category: number;
 };
 
@@ -29,13 +30,16 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
   weight,
   price,
   count,
-  image,
+  imageUrl,
   category,
 }) => {
-  console.log(image)
+  const userId = localStorage.getItem("userId")
+  const data = {_id,count,userId}
+  // console.log(image)
   const dispatch = useDispatch();
-  const onClickPlus = () => {
+  const onClickPlus = async () => {
     dispatch(addItem({ _id } as CartItem));
+    await instance.patch(`/cart/plus`, data)
   };
   const onClickMinus = () => {
     dispatch(minusItem(_id));
@@ -52,7 +56,7 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
   return (
     <div className="cart__item">
       <div className="cart__item-img">
-        <img className="pizza-block__image" src={image} alt="Pizza" />
+        <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       </div>
       <div className="cart__item-info">
         <h3>{lang === "ru"?title:titleEN}</h3>

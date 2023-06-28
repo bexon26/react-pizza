@@ -13,6 +13,7 @@ import styles from "./Header.module.scss";
 import Container from "@mui/material/Container";
 import { logOut, selectIsAuth } from "../../redux/auth/auth";
 import { useAppDispatch } from "../../redux/store";
+import { clearItems } from "../../redux/cart/slice";
 
 function Header() {
   const dispatch = useAppDispatch();
@@ -23,6 +24,8 @@ function Header() {
       dispatch(logOut());
       window.localStorage.removeItem("token");
       window.localStorage.removeItem("userId");
+      window.localStorage.removeItem('cart');
+      dispatch(clearItems());
     }
   };
 

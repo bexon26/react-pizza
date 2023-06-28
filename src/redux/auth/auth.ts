@@ -37,6 +37,7 @@ const authSlice = createSlice({
   reducers: {
     logOut(state) {
       state.data = { admin: false };
+      
     },
     // addCart(state, action:PayloadAction<CartUser>) {
     //   const findItem = state.items.find((obj) => obj._id === action.payload._id);

@@ -8,7 +8,7 @@ export type CartItem = {
   
    weight:number;
    price:number;
-   image:string;
+   imageUrl:string;
    count:number;
    category:number;
    userId:string|null;
