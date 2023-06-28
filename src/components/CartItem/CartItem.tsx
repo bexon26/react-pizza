@@ -34,15 +34,22 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
   category,
 }) => {
   const userId = localStorage.getItem("userId")
-  const data = {_id,count,userId}
+  // const data = {_id,count,userId}
   // console.log(image)
   const dispatch = useDispatch();
   const onClickPlus = async () => {
     dispatch(addItem({ _id } as CartItem));
+    const countDish = count+1
+    console.log(countDish)
+    const data = {_id,countDish,userId}
     await instance.patch(`/cart/plus`, data)
   };
-  const onClickMinus = () => {
+  const onClickMinus = async() => {
     dispatch(minusItem(_id));
+    const countDish = count-1
+    const data = {_id,countDish,userId}
+    
+    await instance.patch(`/cart/plus`, data)
   };
   const onClickRemove = () => {
     if (window.confirm("Ты дейсвитльно хочешь удалить эту позицию")) {
