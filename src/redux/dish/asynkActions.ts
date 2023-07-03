@@ -3,8 +3,8 @@ import axios, { AxiosRequestConfig } from "axios";
 import { Dish } from "./types";
 
 const instance = axios.create({
-  baseURL: "http://localhost:4444",
-  // baseURL: "https://family-food-backend-production.up.railway.app",
+  // baseURL: "http://localhost:4444",
+  baseURL: "https://family-food-backend-production.up.railway.app",
   headers: {
     Accepted: "appication/json",
     "Content-Type": "application/json",
