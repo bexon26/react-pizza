@@ -9,7 +9,7 @@ type CategoriesProps = {
   onChangeCategory: (idx: number) => void;
 };
 
-const listCategories = [
+export const listCategories = [
   { name: "Все", image: "" },
   { name: "Салаты", image: "🥗" },
   { name: "Горячее", image: "🍲" },

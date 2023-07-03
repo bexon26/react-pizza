@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 // import {  useNavigate } from "react-router-dom";
 
-import Categories from "../components/Categories/Categories";
+import Categories, { listCategories } from "../components/Categories/Categories";
 
 import Sort from "../components/Sort/Sort";
 import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
@@ -141,14 +141,14 @@ const Home: React.FC = () => {
         <Categories value={categoryId} onChangeCategory={onChangeCategory} />
         <Sort value={sort} />
       </div>
-      <h2 className="content__title">Все пиццы</h2>
+      <h2 className="content__title">{listCategories[categoryId].name}</h2>
       {status === "error" ? (
         <div className="content__error-info">
           <h2>
             Произошла ошибка<span>😕</span>
           </h2>
           <p>
-            К сожалению, не удалось получить пиццы. Попробуйте повторить попытку
+            К сожалению, не удалось получить блюда. Попробуйте повторить попытку
             позже.
           </p>
         </div>

@@ -58,11 +58,20 @@ const PizzaBlock: React.FC<PizzaBlockProps> = ({
       imageUrl,
       category,
       userId: window.localStorage.getItem("userId"),
-      count: 0,
+      count: addedCount,
     };
+   console.log(item)
     dispatch(addItem(item));
-    // await instance.post("/cart", item);
-    await instance.patch("/cart", item);
+    if(!addedCount){
+      await instance.patch("/cart", item);
+
+    }else{
+      const _id = item._id
+      const countDish = addedCount+1
+      const userId = item.userId
+      const data = {_id,countDish,userId}
+      await instance.patch(`/cart/plus`, data)
+    }
   };
 
   const { t } = useTranslation();

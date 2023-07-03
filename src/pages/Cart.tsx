@@ -7,6 +7,8 @@ import { clearItems } from "../redux/cart/slice";
 import CartEmty from "./CartEmty";
 import { selectCart } from "../redux/cart/selectors";
 import { useTranslation } from "react-i18next";
+import instance from "../redux/dish/asynkActions";
+import { createEmptyCard } from "./Registration";
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch();
@@ -17,10 +19,18 @@ const Cart: React.FC = () => {
   );
   
 
-  const onClickClear = () => {
+  const onClickClear = async () => {
     if (window.confirm("Очистить корзину")) {
       dispatch(clearItems());
+      
+      const userId = localStorage.getItem("userId")
+      await instance.delete(`/cart/clear?userId=${userId}`);
+      createEmptyCard();
     }
+  };
+  const onClickSendTelegram = async () => {
+    const userId = localStorage.getItem("userId")
+    await instance.post(`/cart/sendMessage?userId=${userId}`);
   };
   const { t} = useTranslation();
 
@@ -143,7 +153,7 @@ const Cart: React.FC = () => {
 
               <span>{t('Вернуться назад')}</span>
             </Link>
-            <div className="button pay-btn">
+            <div  onClick={onClickSendTelegram} className="button pay-btn">
               <span>{t('Оплатить сейчас')}</span>
             </div>
           </div>

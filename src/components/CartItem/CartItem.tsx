@@ -8,6 +8,7 @@ import { CartItem } from "../../redux/cart/types";
 import i18n from "../../i18n";
 
 import instance from "../../redux/dish/asynkActions";
+import { createEmptyCard } from "../../pages/Registration";
 
 type CartItemProps = {
   _id: string;
@@ -40,9 +41,10 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
   const onClickPlus = async () => {
     dispatch(addItem({ _id } as CartItem));
     const countDish = count+1
-    console.log(countDish)
+   
     const data = {_id,countDish,userId}
     await instance.patch(`/cart/plus`, data)
+   
   };
   const onClickMinus = async() => {
     dispatch(minusItem(_id));
@@ -51,9 +53,11 @@ export const CartItemBlock: React.FC<CartItemProps> = ({
     
     await instance.patch(`/cart/plus`, data)
   };
-  const onClickRemove = () => {
+  const onClickRemove = async () => {
     if (window.confirm("Ты дейсвитльно хочешь удалить эту позицию")) {
       dispatch(removeItem(_id));
+      const data = {_id, userId}
+      await instance.patch(`/cart/clearDish`, data)
     }
   };
   const { t } = useTranslation();

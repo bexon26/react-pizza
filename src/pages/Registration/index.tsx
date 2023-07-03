@@ -15,6 +15,17 @@ import { CartUser } from "../../redux/cart/types";
 import { addItem } from "../../redux/cart/slice";
 import instance from "../../redux/dish/asynkActions";
 
+export const createEmptyCard = async () => {
+  const item: CartUser = {
+    userId: window.localStorage.getItem("userId"),
+    dishes:[],
+    count: 0,
+  };
+  // dispatch(addItem(item));
+  await instance.post("/cart", item);
+};
+
+
 export const Registration = () => {
   const isAuth = useSelector(selectIsAuth);
 
@@ -51,15 +62,7 @@ export const Registration = () => {
     return <Navigate to="/react-pizza/" />;
   }
 
-  const createEmptyCard = async () => {
-    const item: CartUser = {
-      userId: window.localStorage.getItem("userId"),
-      dishes:[],
-      count: 0,
-    };
-    // dispatch(addItem(item));
-    await instance.post("/cart", item);
-  };
+ 
 
 
 
