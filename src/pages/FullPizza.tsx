@@ -15,16 +15,10 @@ const FullPizza: React.FC = () => {
   React.useEffect(() => {
     async function fetchPizza() {
       try {
-        // console.log(id)
-        const { data } = await instance.get(
-        `/dish/${id}` 
-        );
-        // const { data } = await instance.get("/dish");
-  // return data;
+        const { data } = await instance.get(`/dish/${id}`);
         setPizza(data);
       } catch (error) {
-        alert("Ошибка при получении пиццы");
-     
+        alert("Ошибка при получении блюда");
         navigate("/react-pizza");
       }
     }
@@ -37,7 +31,7 @@ const FullPizza: React.FC = () => {
 
   return (
     <div className="container">
-      <img src={pizza.imageUrl} alt={pizza.imageUrl}/>
+      <img src={pizza.imageUrl} alt={pizza.imageUrl} />
       <h2>{pizza.title}</h2>
       <h4>{pizza.price} ₽</h4>
     </div>

@@ -24,8 +24,8 @@ const Home: React.FC = () => {
   const isSearch = React.useRef(false);
   // const isMounted = React.useRef(false);
 
-  const { items, status } = useSelector(selectPizzaData); // вытаскиваем данные из запроса к мокапи
-  const { items1 } = useSelector(selectDishData); // вытаскиваем данные из стэйта запроса к своему бекенду
+  // const { items, status } = useSelector(selectPizzaData); // вытаскиваем данные из запроса к мокапи
+  const { items1, status } = useSelector(selectDishData); // вытаскиваем данные из стэйта запроса к своему бекенду
   const userData = useSelector(selectAuthData); //  вытаскиваем данные о авторизованном пользователе
   //  console.log(userData.admin)
   const { categoryId, sort, currentPage, searchValue } = useSelector(
@@ -114,22 +114,22 @@ const Home: React.FC = () => {
     />
   ));
 
-  const pizzas = items.map((obj: any) => (
-    <PizzaBlock
-      key={obj._id}
-      _id={obj._id}
-      title={obj.title}
-      titleEN={obj.titleEN}
-      description={obj.description}
-      descriptionEN={obj.descriptionEN}
-      weight={obj.weight}
-      price={obj.price}
-      imageUrl={obj.imageUrl}
-      category={obj.category}
+  // const pizzas = items.map((obj: any) => (
+  //   <PizzaBlock
+  //     key={obj._id}
+  //     _id={obj._id}
+  //     title={obj.title}
+  //     titleEN={obj.titleEN}
+  //     description={obj.description}
+  //     descriptionEN={obj.descriptionEN}
+  //     weight={obj.weight}
+  //     price={obj.price}
+  //     imageUrl={obj.imageUrl}
+  //     category={obj.category}
       
-      isEditable={userData.admin ? userData.admin : false}
-    />
-  ));
+  //     isEditable={userData.admin ? userData.admin : false}
+  //   />
+  // ));
 
   const skeletons = [...new Array(8)].map((_, index) => (
     <Skeleton key={index} />

@@ -5,8 +5,6 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import FullPizza from "./pages/FullPizza";
 import NotFound from "./pages/NotFound";
-
-import "./scss/app.scss";
 import MainLayout from "./components/layouts/MainLayout";
 import About from "./pages/About";
 import Delivery from "./pages/Delivery";
@@ -16,22 +14,19 @@ import { Login, Registration } from "./pages";
 import { useAppDispatch } from "./redux/store";
 import { fetchAuthMe } from "./redux/auth/auth";
 import { AddDish } from "./components/AddDish";
+import "./scss/app.scss";
 
 function App() {
   const dispatch = useAppDispatch();
-  // const isAuth = useSelector(selectIsAuth);
   React.useEffect(() => {
-    
     dispatch(fetchAuthMe());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    // <div className="container">
     <>
       <Routes>
         <Route path="/react-pizza/" element={<MainLayout />}>
           <Route path="" element={<Home />} />
-
           <Route path="cart" element={<Cart />} />
           <Route path="dish/:id" element={<FullPizza />} />
           <Route path="dish/:id/edit" element={<AddDish />} />
@@ -47,7 +42,6 @@ function App() {
       </Routes>
     </>
     // {/* <NotFoundBlock /> */}
-    // </div>
   );
 }
 

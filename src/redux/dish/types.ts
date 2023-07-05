@@ -23,7 +23,7 @@ export type Dish = {
  export interface DishSliceState {
    items1: Dish[];
    count:Number;
-   status1: 'loading' | 'success' | 'error'
+   status: 'loading' | 'success' | 'error'
  }
  
  export type MetaDishParams= {

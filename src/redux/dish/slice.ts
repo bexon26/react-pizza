@@ -6,7 +6,7 @@ import { Dish, DishSliceState, Status } from "./types";
 export const initialState: DishSliceState = {
   items1: [],
   count:0,
-  status1: Status.LOADING, // loading | success | error
+  status: Status.LOADING, // loading | success | error
 };
 
 export const dishSlice = createSlice({
@@ -26,15 +26,15 @@ export const dishSlice = createSlice({
   extraReducers: (builder) => {
     //Получение блюда
     builder.addCase(fetchDish.pending, (state, action) => {
-      state.status1 = Status.LOADING;
+      state.status = Status.LOADING;
       state.items1 = [];
     });
     builder.addCase(fetchDish.fulfilled, (state, action) => {
-      state.status1 = Status.SUCCESS;
+      state.status = Status.SUCCESS;
       state.items1 = action.payload;
     });
     builder.addCase(fetchDish.rejected, (state, action) => {
-      state.status1 = Status.ERROR;
+      state.status = Status.ERROR;
       state.items1 = [];
     });
     // Удаление блюда
