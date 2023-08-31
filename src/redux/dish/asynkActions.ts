@@ -4,8 +4,8 @@ import { Dish } from "./types";
 
 const instance = axios.create({
   //  baseURL: "http://localhost:4444",
-   baseURL: "http://80.66.87.103:3000",
- // baseURL: "https://family-food-backend-production.up.railway.app",
+  baseURL: "https://80.66.87.103:3000",
+  // baseURL: "https://family-food-backend-production.up.railway.app",
   headers: {
     Accepted: "appication/json",
     "Content-Type": "application/json",
@@ -50,15 +50,13 @@ export const fetchRemoveDish = createAsyncThunk(
     return data;
   }
 );
-type userID = string
+type userID = string;
 export const fetchCart = createAsyncThunk<[], Record<string, string>>(
   "dish/fetchCartStatus",
   async (userId) => {
     // const { userID } = params;
-    console.log(userId)
-    const { data } = await instance.get<[]>(
-      `/cart?userId=${userId}`
-    );
+    console.log(userId);
+    const { data } = await instance.get<[]>(`/cart?userId=${userId}`);
     return data;
   }
 );
