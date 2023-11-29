@@ -4,7 +4,7 @@ import { Dish } from "./types";
 
 const instance = axios.create({
   //  baseURL: "http://localhost:4444",
-  baseURL: "https://80.66.87.103:3000",
+  baseURL: "http://80.66.87.103:3000",
   // baseURL: "https://family-food-backend-production.up.railway.app",
   headers: {
     Accepted: "appication/json",
